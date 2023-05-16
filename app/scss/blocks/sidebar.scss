@@ -1,0 +1,80 @@
+.sidebar{
+  position: fixed;
+  max-width: $width-sidebar;
+  width: 100%;
+  background-color: $white;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: $z-index-sidebar;
+  &__inner{
+    padding: 40px 53px 28px 60px;
+  }
+}
+.logo{
+  display: block;
+  margin-bottom: 40px;
+}
+.account{
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__image{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  &__name{
+    margin-bottom: 4px;
+  }
+  &__status{
+    color: $blue;
+  }
+}
+.nav{
+  &__menu-item{
+    &:not(:last-child){
+      margin-bottom: 24px;
+    }
+  }
+  &__menu-item--link{
+    display: flex;
+    gap: 16px;
+    svg{
+      fill: $gray;
+    }
+  }
+}
+.notification {
+    position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    width: 7px;
+    height: 7px;
+    background-color: $blue;
+    border-radius: 50%;
+  }
+}
+.bottom-line{
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 245px;
+    height: 1px;
+    background-color: $light-grey;
+    left: -23px;
+    bottom: 0;
+    
+  }
+}

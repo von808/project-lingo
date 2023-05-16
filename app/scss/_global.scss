@@ -1,0 +1,88 @@
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: $raleway;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+  padding-left: $width-sidebar;
+  background-color: $bg;
+  z-index: $z-index-main;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: 1530px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.text-1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.text-2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.text-3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.text-4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 145%;
+}
+
+.text-5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 145%;
+}
+
+.text-6 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 145%;
+}
+
+.text-7 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.text-8 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 145%;
+}
