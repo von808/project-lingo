@@ -89,7 +89,7 @@
 .lesson{
   height: 297px;
   padding: 32px 32px 18px;
-  background-image: url(../../images/apple-bg.svg);
+  background-image: url(../../images/apple-bg-blue.svg);
   background-repeat: no-repeat;
   background-position: 110% 115%;
   &__text{
@@ -136,6 +136,20 @@
 }
 .homework{
   height: 351px;
+  padding: 64px 32px;
+  &__list-item{
+    &:not(:last-child){
+      border-bottom: 1px $light-grey solid;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  &__text{
+    margin-bottom: 12px;
+  }
+  &__link{
+    color: $blue;
+  }
 }
 .stats{
   height: 351px;
@@ -144,11 +158,21 @@
   grid-template-columns: repeat(2, 232px);
   grid-template-rows: repeat(2, 165px);
   background: transparent;
+  color: $white;
 }
 .stat{
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  padding: 20px 24px;
+  position: relative;
+  &__text{
+    margin-bottom: 16px;
+  }
+  &__time{
+    max-width: 120px;
+    width: 100%;
+  }
   &-1{
     background: $grad1;
   }
@@ -161,7 +185,44 @@
   &-4{
     background: $grad4;
   }
+  .bg-i{
+    position: absolute;
+    right: -40px;
+    bottom: -35px;
+    scale: 0.8;
+  }
 }
 .grafik{
   height: 439px;
+  display: flex;
+  &__left{
+    max-width: 244px;
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 24px 0 24px 24px;
+  }
+  &__right{
+    width: 100%;
+  }
+  .tabs{
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-width: 220px;
+    margin: 0;
+  }
+  .tabs-btn{
+    max-width: 220px;
+    width: 100%;
+    min-height: 70px;
+    padding: 20px 16px 20px 16px;
+    font-size: 16px;
+    background-color: $bg;
+    &:not(:last-child){
+      margin-bottom: 8px;
+    }
+  }
+  &-btn-img{
+    margin-right: 9px;
+  }
 }

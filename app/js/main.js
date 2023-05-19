@@ -63,10 +63,20 @@ $(function () {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
-      easing: 'ease-in-out'
+      easing: 'ease-in-out',
     },
     load: {
-      filter: '.week , .pay-1'
+      filter: '.week , .pay-1 ,',
+    }
+  });
+  var mixer = mixitup('.grafik__right', {
+    animation: {
+      duration: 700,
+      effects: 'fade scale(0.41)',
+      easing: 'ease-in-out',
+    },
+    load: {
+      filter: '.grafik-1',
     }
   });
 
