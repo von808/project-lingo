@@ -1,0 +1,366 @@
+<!--=include header.html-->
+<!--=include sidebar.html-->
+<main class="main">
+    <section class="curs">
+      <div class="container-fluid">
+
+        <div class="tabs">
+          <button class="tabs-btn text-1" data-filter=".curs-1">Курсы</button>
+          <button class="tabs-btn text-1" data-filter=".curs-2">ТВ</button>
+          <button class="tabs-btn text-1" data-filter=".curs-3">Фильмы</button>
+        </div>
+
+        <div class="curs__tabs-item">
+
+            <div class="curs__inner mix curs-1">
+                <div class="curs__installation">
+                    <button class="curs__lessons-left" type="button">
+                        <p class="text-4">Ваш уровень владения языком</p>
+                        <p class="text-3">B2</p>
+                    </button>
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="dropdown__button text-4" data-value="all">Все</button>
+                            <ul class="dropdown__list">
+                            <li class="dropdown__list-item text-2" data-value="all">Все</li>
+                            <li class="dropdown__list-item text-2" data-value="a1">A1</li>
+                            <li class="dropdown__list-item text-2" data-value="a2">A2</li>
+                            <li class="dropdown__list-item text-2" data-value="b1">B1</li>
+                            <li class="dropdown__list-item text-2" data-value="b2">B2</li>
+                            <li class="dropdown__list-item text-2" data-value="c1">C1</li>
+                            <li class="dropdown__list-item text-2" data-value="c2">C2</li>
+                            </ul>
+                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="dropdown sort">
+                            <button class="dropdown__button text-4" data-value="education">Нравится: по возрастанию</button>
+                            <ul class="dropdown__list">
+                            <li class="dropdown__list-item text-2" data-value="education">Нравится: по возрастанию</li>
+                            <li class="dropdown__list-item text-2" data-value="energy">Нравится: по убыванию</li>
+                            </ul>
+                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+                        </div>
+                    </div>
+                    <input class="curs__search" type="text" placeholder="Поиск">
+                </div>
+
+                <div class="curs__content">
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-1.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-2.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans a">A1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-3.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans a">A2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-6.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="curs__inner mix curs-2">
+                <div class="curs__installation">
+                    <button class="curs__lessons-left" type="button">
+                        <p class="text-4">Ваш уровень владения языком</p>
+                        <p class="text-3">B2</p>
+                    </button>
+                    <input class="curs__search" type="text" placeholder="Поиск">
+                </div>
+
+                <div class="curs__content">
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-1.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-2.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-3.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <img class="curs__item-img" src="images/image-6.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="curs__inner mix curs-3">
+                <div class="curs__installation">
+                    <button class="curs__lessons-left" type="button">
+                        <p class="text-4">Ваш уровень владения языком</p>
+                        <p class="text-3">B2</p>
+                    </button>
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="dropdown__button text-4" data-value="all">Все</button>
+                            <ul class="dropdown__list">
+                            <li class="dropdown__list-item text-2" data-value="all">Все</li>
+                            <li class="dropdown__list-item text-2" data-value="a1">A1</li>
+                            <li class="dropdown__list-item text-2" data-value="a2">A2</li>
+                            <li class="dropdown__list-item text-2" data-value="b1">B1</li>
+                            <li class="dropdown__list-item text-2" data-value="b2">B2</li>
+                            <li class="dropdown__list-item text-2" data-value="c1">C1</li>
+                            <li class="dropdown__list-item text-2" data-value="c2">C2</li>
+                            </ul>
+                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="dropdown sort">
+                            <button class="dropdown__button text-4" data-value="education">Лайки: по возрастанию</button>
+                            <ul class="dropdown__list">
+                            <li class="dropdown__list-item text-2" data-value="education">Лайки: по возрастанию</li>
+                            <li class="dropdown__list-item text-2" data-value="energy">Лайки: по убыванию</li>
+                            </ul>
+                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="dropdown sort">
+                            <button class="dropdown__button text-4" data-value="education">Сначала длинные</button>
+                            <ul class="dropdown__list">
+                            <li class="dropdown__list-item text-2" data-value="education">Сначала длинные</li>
+                            <li class="dropdown__list-item text-2" data-value="energy">Сначала короткие</li>
+                            </ul>
+                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+                        </div>
+                    </div>
+                    <input class="curs__search" type="text" placeholder="Поиск">
+                </div>
+
+                <div class="curs__content">
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-1.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-2.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans a">A1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-3.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">11 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans a">A2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-4.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 457 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans c">C2</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-5.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">110 437 просмотров</span>
+                        </div>
+                    </div>
+                    <div class="curs__item">
+                        <div class="curs__item-lvl sans b">B1</div>
+                        <button type="button" class="curs__item-like sans"><span>123</span><span><img src="images/like.svg" alt=""></span></button>
+                        <img class="curs__item-img" src="images/image-6.jpg" alt="">
+                        <p class="curs__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="curs__item-subtitle text-6">Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitu...</p>
+                        <div class="curs__item-bottom">
+                            <a class="curs__item-link text-5" href="#">Перейти к курсу</a>
+                            <span class="curs__item-view text-6 sans">1 110 457 просмотров</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--=include footer.html-->

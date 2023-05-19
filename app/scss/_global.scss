@@ -22,15 +22,19 @@ body {
 }
 
 .container {
-  max-width: 1270px;
+  max-width: 1348px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 60px 0 48px;
 }
 
 .container-fluid {
-  max-width: 1530px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 57px 60px 33px 48px;
+}
+
+.sans {
+  font-family: sans-serif;
 }
 
 .title {
@@ -48,7 +52,7 @@ body {
 .text-2 {
   font-size: 20px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 116.6%;
 }
 
 .text-3 {
@@ -85,4 +89,155 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 145%;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 1000;
+}
+
+.dropdown__button {
+  position: relative;
+  display: block;
+  width: 131px;
+  text-align: left;
+
+  background: $white;
+  color: $blue;
+  border-radius: 10px;
+  height: 42px;
+
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 20px;
+
+  cursor: pointer;
+}
+
+// .dropdown__button:focus, .dropdown__button--active {
+// 	outline: none;
+// 	box-shadow: 0px 0px 0px 4px rgba(176, 198, 225, 0.6);
+// }
+
+.dropdown__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 11px;
+  background-image: url(../images/arrow-bottom.svg);
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+
+.dropdown__list {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  top: 52px;
+
+  margin: 0;
+  padding: 16px 20px;
+  list-style-type: none;
+
+  background: $white;
+  box-shadow: 0px 4px 8px rgba(176, 198, 225, 0.6);
+  overflow: hidden;
+  color: $black;
+
+  border: 1px solid $blue;
+  border-radius: 10px;
+  width: 100%;
+  height: 103px;
+
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.dropdown__list-item.mixitup-control-active {
+  color: $blue;
+}
+
+.dropdown__list--visible {
+  display: block;
+}
+
+.dropdown__list-item {
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown__list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.dropdown__input-hidden {
+  display: none;
+}
+
+.dropdown__list::-webkit-scrollbar {
+  width: 4px;
+  /* ширина всей полосы прокрутки */
+}
+
+.dropdown__list::-webkit-scrollbar-track {
+  background: transparent;
+  /* цвет зоны отслеживания */
+}
+
+.dropdown__list::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  /* цвет бегунка */
+  border-radius: 20px;
+  /* округлось бегунка */
+  border: 0px solid orange;
+  /* отступ вокруг бегунка */
+}
+
+
+.tabs {
+  width: 100%;
+  height: 99px;
+  margin-bottom: 55px;
+  display: flex;
+  gap: 20px;
+}
+
+.tabs-btn {
+  max-width: 350px;
+  width: 100%;
+  min-height: 99px;
+  background-color: $white;
+  border-radius: 20px;
+  text-align: left;
+  padding: 34px;
+  font-size: 26px;
+  color: $blue;
+  overflow: hidden;
+}
+.mixitup-control-active{
+  background: $grad1;
+  color: $white;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -18px;
+    background-image: url(../../images/apple-t.svg);
+    width: 70.01px;
+    height: 88.65px;
+    transform: rotate(-30deg);
+  }
 }

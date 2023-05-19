@@ -1,0 +1,34 @@
+.notifications {
+  &__inner {
+    padding: 57px 60px 97px 48px;
+  }
+  .title {
+    padding: 40px;
+  }
+  &__content {
+    padding: 0 40px 40px 40px;
+  }
+  &__items {
+    display: flex;
+    gap: 80px;
+    height: 72px;
+    align-items: center;
+    position: relative;
+    margin-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #D5DFF2;
+    p {
+      width: 100%;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  &__date {
+    width: 161px;
+  }
+}
