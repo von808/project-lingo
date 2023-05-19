@@ -1,0 +1,150 @@
+.curs {
+  .tabs-btn {
+    width: 232px;
+  }
+
+  &__inner {
+    padding: 57px 0 57px 0;
+  }
+
+  &__installation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+
+  &__lessons-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 358px;
+    width: 100%;
+    height: 58px;
+    padding: 0 16px;
+    color: $white;
+    background: $grad1;
+    border-radius: 10px;
+  }
+
+  &__search {
+    background: $white;
+    border-radius: 10px;
+    width: 100%;
+    height: 58px;
+    padding: 16px;
+  }
+
+  .dropdown__button {
+    height: 58px;
+  }
+
+  .dropdown__list {
+    height: 133px;
+  }
+
+  .sort .dropdown__button {
+    width: 300.69px;
+  }
+
+  .sort .dropdown__list {
+    height: 105px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 358px;
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    .a {
+      background: $grad2;
+    }
+
+    .b {
+      background: $grad3;
+    }
+
+    .c {
+      background: $grad4;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 224px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-lvl {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    width: 54px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 119.2%;
+    color: $white;
+  }
+
+  &__item-like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 85px;
+    padding: 10px;
+    background: $white;
+    backdrop-filter: blur(9px);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 115%;
+    color: $gray;
+  }
+
+  &__item-title {
+    padding: 24px 24px 16px;
+    color: $black;
+  }
+
+  &__item-subtitle {
+    padding: 0 24px 24px;
+  }
+
+  &__item-bottom {
+    padding: 0 24px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-link {
+    color: $blue;
+  }
+
+  &__item-view {
+    color: $grey;
+  }
+
+  .curs-3 {
+    .curs__item-like {
+      color: $blue;
+    }
+  }
+}

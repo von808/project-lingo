@@ -2,11 +2,13 @@
   &__inner {
     padding: 57px 0 57px 0;
   }
+
   &__installation {
     display: flex;
     gap: 20px;
     margin-bottom: 56px;
   }
+
   &__lessons-left {
     display: flex;
     align-items: center;
@@ -18,6 +20,7 @@
     background: $grad1;
     border-radius: 10px;
   }
+
   &__time-select {
     display: flex;
     align-items: center;
@@ -28,6 +31,7 @@
     color: $blue;
     border-radius: 10px;
   }
+
   &__time-item {
     padding: 16px 20px;
     width: 274px;
@@ -37,6 +41,7 @@
     display: flex;
     gap: 20px;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -46,11 +51,8 @@
     max-width: 484px;
     width: 100%;
     position: relative;
-    p {
-      color: $grey;
-      margin-bottom: 32px;
-    }
   }
+
   &__item-title {
     display: flex;
     flex-direction: column;
@@ -70,6 +72,7 @@
     padding: 0 8%;
     margin-bottom: 25px;
   }
+
   &__item-price {
     font-size: 60px;
     font-weight: 700;
@@ -77,6 +80,13 @@
     line-height: 116.6%;
     margin-bottom: 4px;
   }
+
+  &__item-text {
+    color: $grey;
+    margin-bottom: 32px;
+    padding: 0 40px;
+  }
+
   &__btn {
     max-width: 404px;
     width: 100%;
@@ -85,45 +95,88 @@
     color: $white;
     margin-bottom: 32px;
   }
+
   .lvl1 {
     .pay__item-title {
       background: $blue;
     }
+
     .pay__item-price {
       color: $blue;
     }
-    .pay__btn  {
+
+    .pay__btn {
       background: $grad1;
     }
   }
+
   .lvl2 {
     .pay__item-title {
       background: $purple;
     }
+
     .pay__item-price {
       color: $purple;
     }
-    .pay__btn  {
+
+    .pay__btn {
       background: $grad3;
     }
   }
+
   .lvl3 {
     .pay__item-title {
       background: $yellow;
     }
+
     .pay__item-price {
       color: $yellow;
     }
-    .pay__btn  {
+
+    .pay__btn {
       background: $grad4;
     }
   }
 
-  
-  .dropdown__button{
+  .dropdown__button {
     background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 274px;
+    height: 58px;
+    padding: 0 16px;
+    color: #5cb1ff;
+    border-radius: 10px;
   }
-  .tabs-btn{
+
+  .dropdown__list {
+    height: 133px;
+  }
+
+  .tabs-btn {
     max-width: 484px;
+  }
+
+  .pay-2 .pay__item .pay__item-text {
+    text-align: left;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .pay-3 .pay__item .pay__item-text {
+    text-align: left;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .apple {
+    margin-right: 12px;
   }
 }
