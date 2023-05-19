@@ -59,14 +59,14 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.lesson__progress , .pay__tabs-item', {
+  var mixer = mixitup('.lesson__progress , .pay__tabs-item, .curs__tabs-item, .club__tabs-item', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out'
     },
     load: {
-      filter: '.week , .pay-1'
+      filter: '.week , .pay-1, .curs-1, .club-1'
     }
   });
 
