@@ -1,11 +1,6 @@
 .pay {
   &__inner {
-    padding: 57px 60px 57px 48px;
-  }
-  &__tabs {
-    width: 100%;
-    height: 99px;
-    margin-bottom: 55px;
+    padding: 57px 0 57px 0;
   }
   &__installation {
     display: flex;
@@ -123,115 +118,12 @@
       background: $grad4;
     }
   }
-}
 
-.form-group {
-  display: block;
-}
-
-.dropdown {
-	position: relative;
-}
-
-.dropdown__button.mixitup-control-active{
-  color: $blue;
-  background-color: var(--var-dropdown-list-bg);
-}
-.dropdown__button {
-	position: relative;
-	display: block;
-	width: 100%;
-	text-align: left;
-
-	background: transparent;
-  color: $blue;
-  text-transform: uppercase;
-	border: 1px solid $blue;
-	border-radius: 60px;
-	height: 46px;
-
-  padding: 12px 68px 12px 30px;
-
-  font-family: $raleway;;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-
-	cursor: pointer;
-}
-
-.dropdown__button::after {
-	content: "";
-	position: absolute;
-	top: 55%;
-	right: 15px;
-	transform: translateY(-50%);
-
-	/* Рисуем треугольник */
-  width: 13px;
-  height: 7px;
-  background-image: url(../images/dropdown-arrow.svg);
-
-	/* Снимаем клик с треугольника */
-	pointer-events: none;
-}
-
-.dropdown__list {
-	display: none;
-
-	position: absolute;
-	left: 0;
-	top: 52px;
-
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-
-	background: var(--var-dropdown-list-bg);
-  color: $blue;
-	overflow: hidden;
-
-	border-radius: 22px;
-	width: 100%;
-  height: 131px;
-  overflow-y: scroll;
-
-	z-index: 2000;
-  .mixitup-control-active{
-    color: $blue;
-    background-color: var(--var-dropdown-list-bg);
+  
+  .dropdown__button{
+    background-color: $white;
   }
-}
-
-.dropdown__list--visible {
-	display: block;
-}
-
-.dropdown__list-item {
-	margin: 0;
-	padding: 0;
-	border: 1px solid $blue;
-	border-bottom: 0px;
-	padding: 12px 30px;
-  text-transform: uppercase;
-	cursor: pointer;
-}
-
-.dropdown__list-item:first-child {
-	border-radius: 22px 22px 0 0;
-}
-
-.dropdown__list-item:last-child {
-	border-radius: 0 0 22px 22px;
-	border-bottom: 1px solid $blue;
-}
-
-.dropdown__list-item:hover {
-  color: $white;
-	background: $blue;
-}
-
-.dropdown__input-hidden {
-	display: none;
+  .tabs-btn{
+    max-width: 484px;
+  }
 }

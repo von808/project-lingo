@@ -16,20 +16,22 @@
     </header>
     <aside class="sidebar">
       <div class="sidebar__inner">
-        <a class="logo">
+        <a class="logo" href="#">
           <img src="images/logo.svg" alt="logo">
         </a>
-        <a class="account">
-          <picture>
-            <source class="account__image" srcset="images/avatar-elena.avif" alt="avatar" type="image/avif">
-            <source class="account__image" srcset="images/avatar-elena.webp" alt="avatar" type="image/webp">
-            <img class="account__image" src="images/avatar-elena.jpg" alt="avatar">
-          </picture>
+        <div class="account">
+          <a class="account__avatar" href="#">
+            <picture>
+              <source class="account__avatar-image" srcset="images/avatar-elena.avif" alt="avatar" type="image/avif">
+              <source class="account__avatar-image" srcset="images/avatar-elena.webp" alt="avatar" type="image/webp">
+              <img class="account__avatar-image" src="images/avatar-elena.jpg" alt="avatar">
+            </picture>
+          </a>
           <div class="account__content">
-            <h1 class="account__name text-2">Елена</h1>
-            <p class="account__status text-4">Студент</p>
+            <a class="account__name text-2" href="#">Елена</a>
+            <a class="account__status text-4" href="#">Студент</a>
           </div>
-        </a>
+        </div>
         <div class="nav">
           <ul class="nav__menu bottom-line">
             <li class="nav__menu-item">
@@ -117,91 +119,257 @@
       </div>
     </aside>
 <main class="main">
-    <section class="pay">
-        <div class="container-fluid">
-            <div class="pay__inner">
-                <div class="pay__tabs">
+  <section class="pay">
+    <div class="container-fluid">
+      <div class="tabs">
+        <button class="tabs-btn text-1" data-filter=".pay-1">Уроки с учителем онлайн</button>
+        <button class="tabs-btn text-1" data-filter=".pay-2">Групповые занятия онлайн</button>
+        <button class="tabs-btn text-1" data-filter=".pay-3">Разговорный клуб</button>
+      </div>
+      <div class="pay__tabs-item">
+        <div class="pay__inner mix pay-1">
+          <div class="pay__installation">
+            <button class="pay__lessons-left" type="button">
+              <p class="text-4">Осталось уроков</p>
+              <p class="text-3">12</p>
+            </button>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>30 минут</option>
+              <option class="text-2 pay__time-item" value="2">60 минут</option>
+              <option class="text-2 pay__time-item" value="3">90 минут</option>
+              <option class="text-2 pay__time-item" value="4">120 минут</option>
+              <option class="text-2 pay__time-item" value="5">150 минут</option>
+              <option class="text-2 pay__time-item" value="6">180 минут</option>
+            </select>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>1 урок</option>
+              <option class="text-2 pay__time-item" value="2">5 уроков</option>
+              <option class="text-2 pay__time-item" value="3">10 уроков</option>
+              <option class="text-2 pay__time-item" value="4">15 уроков</option>
+              <option class="text-2 pay__time-item" value="5">20 уроков</option>
+              <option class="text-2 pay__time-item" value="6">25 уроков</option>
+            </select>
 
-                </div>
-                <div class="pay__installation">
-                    <button class="pay__lessons-left" type="button">
-                        <p class="text-4">Осталось уроков</p>
-                        <p class="text-3">12</p>
-                    </button>
-                    <select class="text-4 pay__time-select" name="select" size>
-                        <option class="text-2 pay__time-item" value="1" selected>30 минут</option>
-                        <option class="text-2 pay__time-item" value="2">60 минут</option>
-                        <option class="text-2 pay__time-item" value="3">90 минут</option>
-                        <option class="text-2 pay__time-item" value="4">120 минут</option>
-                        <option class="text-2 pay__time-item" value="5">150 минут</option>
-                        <option class="text-2 pay__time-item" value="6">180 минут</option>
-                    </select>
-                    <select class="text-4 pay__time-select" name="select" size>
-                        <option class="text-2 pay__time-item" value="1" selected>1 урок</option>
-                        <option class="text-2 pay__time-item" value="2">5 уроков</option>
-                        <option class="text-2 pay__time-item" value="3">10 уроков</option>
-                        <option class="text-2 pay__time-item" value="4">15 уроков</option>
-                        <option class="text-2 pay__time-item" value="5">20 уроков</option>
-                        <option class="text-2 pay__time-item" value="6">25 уроков</option>
-                    </select>
-
-                    <div class="form-group">
-                        <div class="dropdown">
-                            <button class="dropdown__button" data-value="education">Education</button>
-                            <ul class="dropdown__list">
-                                <li class="dropdown__list-item" data-filter=".education" data-value="education">Education</li>
-                                <li class="dropdown__list-item" data-filter=".energy" data-value="energy">energy</li>
-                                <li class="dropdown__list-item" data-filter=".finance" data-value="finance">Finance</li>
-                                <li class="dropdown__list-item" data-filter=".government" data-value="government">government</li>
-                                <li class="dropdown__list-item" data-filter=".healthcare" data-value="healthcare">healthcare</li>
-                                <li class="dropdown__list-item" data-filter=".logistics" data-value="logistics">logistics</li>
-                                <li class="dropdown__list-item" data-filter=".manufacturing" data-value="manufacturing">manufacturing</li>
-                                <li class="dropdown__list-item" data-filter=".retail" data-value="retail">retail</li>
-                                <li class="dropdown__list-item" data-filter=".sprots" data-value="sprots">sprots</li>
-                                <li class="dropdown__list-item" data-filter=".technology" data-value="technology">technology</li>
-                                <li class="dropdown__list-item" data-filter=".travel" data-value="travel">travel</li>
-                                <li class="dropdown__list-item" data-filter=".transportation" data-value="transportation">transportation</li>
-                            </ul>
-                            <input type="text" name="select-category" value="education" class="dropdown__input-hidden" >
-                        </div>
-                    </div>
-
-                </div>
-                <div class="pay__content">
-                    <div class="pay__item lvl1">
-                        <div class="pay__item-title">
-                            Русскоязычный учитель
-                        </div>
-                        <div class="pay__item-price">
-                            <span>7</span><span> &#8364</span>
-                        </div>
-                        <p class="text-5">за урок</p>
-                        <button class="pay__btn" type="button">Оплатить</button>
-                    </div>
-                    <div class="pay__item lvl2">
-                        <div class="pay__item-title">
-                            Носитель языка
-                        </div>
-                        <div class="pay__item-price">
-                            <span>11</span><span> &#8364</span>
-                        </div>
-                        <p class="text-5">за урок</p>
-                        <button class="pay__btn" type="button">Оплатить</button>
-                    </div>
-                    <div class="pay__item lvl3">
-                        <div class="pay__item-title">
-                            Носители Premium
-                        </div>
-                        <div class="pay__item-price">
-                            <span>20</span><span> &#8364</span>
-                        </div>
-                        <p class="text-5">за урок</p>
-                        <button class="pay__btn" type="button">Оплатить</button>
-                    </div>
-                </div>
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button" data-value="education">Education</button>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item" data-filter=".education" data-value="education">Education</li>
+                  <li class="dropdown__list-item" data-filter=".energy" data-value="energy">energy</li>
+                  <li class="dropdown__list-item" data-filter=".finance" data-value="finance">Finance</li>
+                  <li class="dropdown__list-item" data-filter=".government" data-value="government">government</li>
+                  <li class="dropdown__list-item" data-filter=".healthcare" data-value="healthcare">healthcare</li>
+                  <li class="dropdown__list-item" data-filter=".logistics" data-value="logistics">logistics</li>
+                  <li class="dropdown__list-item" data-filter=".manufacturing" data-value="manufacturing">manufacturing
+                  </li>
+                  <li class="dropdown__list-item" data-filter=".retail" data-value="retail">retail</li>
+                  <li class="dropdown__list-item" data-filter=".sprots" data-value="sprots">sprots</li>
+                  <li class="dropdown__list-item" data-filter=".technology" data-value="technology">technology</li>
+                  <li class="dropdown__list-item" data-filter=".travel" data-value="travel">travel</li>
+                  <li class="dropdown__list-item" data-filter=".transportation" data-value="transportation">transportation
+                  </li>
+                </ul>
+                <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+              </div>
             </div>
+
+          </div>
+          <div class="pay__content">
+            <div class="pay__item lvl1">
+              <div class="pay__item-title">
+                Русскоязычный учитель
+              </div>
+              <div class="pay__item-price">
+                <span>7</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl2">
+              <div class="pay__item-title">
+                Носитель языка
+              </div>
+              <div class="pay__item-price">
+                <span>11</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl3">
+              <div class="pay__item-title">
+                Носители Premium
+              </div>
+              <div class="pay__item-price">
+                <span>20</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="pay__inner mix pay-2">
+          <div class="pay__installation">
+            <button class="pay__lessons-left" type="button">
+              <p class="text-4">Осталось уроков</p>
+              <p class="text-3">12</p>
+            </button>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>30 минут</option>
+              <option class="text-2 pay__time-item" value="2">60 минут</option>
+              <option class="text-2 pay__time-item" value="3">90 минут</option>
+              <option class="text-2 pay__time-item" value="4">120 минут</option>
+              <option class="text-2 pay__time-item" value="5">150 минут</option>
+              <option class="text-2 pay__time-item" value="6">180 минут</option>
+            </select>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>1 урок</option>
+              <option class="text-2 pay__time-item" value="2">5 уроков</option>
+              <option class="text-2 pay__time-item" value="3">10 уроков</option>
+              <option class="text-2 pay__time-item" value="4">15 уроков</option>
+              <option class="text-2 pay__time-item" value="5">20 уроков</option>
+              <option class="text-2 pay__time-item" value="6">25 уроков</option>
+            </select>
+
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button" data-value="education">Education</button>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item" data-filter=".education" data-value="education">Education</li>
+                  <li class="dropdown__list-item" data-filter=".energy" data-value="energy">energy</li>
+                  <li class="dropdown__list-item" data-filter=".finance" data-value="finance">Finance</li>
+                  <li class="dropdown__list-item" data-filter=".government" data-value="government">government</li>
+                  <li class="dropdown__list-item" data-filter=".healthcare" data-value="healthcare">healthcare</li>
+                  <li class="dropdown__list-item" data-filter=".logistics" data-value="logistics">logistics</li>
+                  <li class="dropdown__list-item" data-filter=".manufacturing" data-value="manufacturing">manufacturing
+                  </li>
+                  <li class="dropdown__list-item" data-filter=".retail" data-value="retail">retail</li>
+                  <li class="dropdown__list-item" data-filter=".sprots" data-value="sprots">sprots</li>
+                  <li class="dropdown__list-item" data-filter=".technology" data-value="technology">technology</li>
+                  <li class="dropdown__list-item" data-filter=".travel" data-value="travel">travel</li>
+                  <li class="dropdown__list-item" data-filter=".transportation" data-value="transportation">transportation
+                  </li>
+                </ul>
+                <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+              </div>
+            </div>
+
+          </div>
+          <div class="pay__content">
+            <div class="pay__item lvl1">
+              <div class="pay__item-title">
+                Русскоязычный учитель
+              </div>
+              <div class="pay__item-price">
+                <span>7</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl2">
+              <div class="pay__item-title">
+                Носитель языка
+              </div>
+              <div class="pay__item-price">
+                <span>11</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl3">
+              <div class="pay__item-title">
+                Носители Premium
+              </div>
+              <div class="pay__item-price">
+                <span>20</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+          </div>
+        </div>
+        <div class="pay__inner mix pay-3">
+          <div class="pay__installation">
+            <button class="pay__lessons-left" type="button">
+              <p class="text-4">Осталось уроков</p>
+              <p class="text-3">12</p>
+            </button>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>30 минут</option>
+              <option class="text-2 pay__time-item" value="2">60 минут</option>
+              <option class="text-2 pay__time-item" value="3">90 минут</option>
+              <option class="text-2 pay__time-item" value="4">120 минут</option>
+              <option class="text-2 pay__time-item" value="5">150 минут</option>
+              <option class="text-2 pay__time-item" value="6">180 минут</option>
+            </select>
+            <select class="text-4 pay__time-select" name="select" size>
+              <option class="text-2 pay__time-item" value="1" selected>1 урок</option>
+              <option class="text-2 pay__time-item" value="2">5 уроков</option>
+              <option class="text-2 pay__time-item" value="3">10 уроков</option>
+              <option class="text-2 pay__time-item" value="4">15 уроков</option>
+              <option class="text-2 pay__time-item" value="5">20 уроков</option>
+              <option class="text-2 pay__time-item" value="6">25 уроков</option>
+            </select>
+
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button" data-value="education">Education</button>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item" data-filter=".education" data-value="education">Education</li>
+                  <li class="dropdown__list-item" data-filter=".energy" data-value="energy">energy</li>
+                  <li class="dropdown__list-item" data-filter=".finance" data-value="finance">Finance</li>
+                  <li class="dropdown__list-item" data-filter=".government" data-value="government">government</li>
+                  <li class="dropdown__list-item" data-filter=".healthcare" data-value="healthcare">healthcare</li>
+                  <li class="dropdown__list-item" data-filter=".logistics" data-value="logistics">logistics</li>
+                  <li class="dropdown__list-item" data-filter=".manufacturing" data-value="manufacturing">manufacturing
+                  </li>
+                  <li class="dropdown__list-item" data-filter=".retail" data-value="retail">retail</li>
+                  <li class="dropdown__list-item" data-filter=".sprots" data-value="sprots">sprots</li>
+                  <li class="dropdown__list-item" data-filter=".technology" data-value="technology">technology</li>
+                  <li class="dropdown__list-item" data-filter=".travel" data-value="travel">travel</li>
+                  <li class="dropdown__list-item" data-filter=".transportation" data-value="transportation">transportation
+                  </li>
+                </ul>
+                <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
+              </div>
+            </div>
+
+          </div>
+          <div class="pay__content">
+            <div class="pay__item lvl1">
+              <div class="pay__item-title">
+                Русскоязычный учитель
+              </div>
+              <div class="pay__item-price">
+                <span>7</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl2">
+              <div class="pay__item-title">
+                Носитель языка
+              </div>
+              <div class="pay__item-price">
+                <span>11</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+            <div class="pay__item lvl3">
+              <div class="pay__item-title">
+                Носители Premium
+              </div>
+              <div class="pay__item-price">
+                <span>20</span><span> &#8364</span>
+              </div>
+              <p class="text-5">за урок</p>
+              <button class="pay__btn" type="button">Оплатить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
     <footer class="footer">
       
@@ -211,61 +379,4 @@
 </body>
 
 </html>
-<script>
-    if (window.NodeList && !NodeList.prototype.forEach) {
-	NodeList.prototype.forEach = function (callback, thisArg) {
-		thisArg = thisArg || window;
-		for (var i = 0; i < this.length; i++) {
-			callback.call(thisArg, this[i], i, this);
-		}
-	};
-}
-
-    document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-	const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-
-	dropDownBtn.addEventListener('click', function (e) {
-		dropDownList.classList.toggle('dropdown__list--visible');
-		this.classList.add('dropdown__button--active');
-	});
-
-	dropDownListItems.forEach(function (listItem) {
-		listItem.addEventListener('click', function (e) {
-			e.stopPropagation();
-			dropDownBtn.innerText = this.innerText;
-			dropDownBtn.focus();
-			dropDownInput.value = this.dataset.value;
-			dropDownList.classList.remove('dropdown__list--visible');
-		});
-	});
-
-	document.addEventListener('click', function (e) {
-		if (e.target !== dropDownBtn) {
-			dropDownBtn.classList.remove('dropdown__button--active');
-			dropDownList.classList.remove('dropdown__list--visible');
-		}
-	});
-
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Tab' || e.key === 'Escape') {
-			dropDownBtn.classList.remove('dropdown__button--active');
-			dropDownList.classList.remove('dropdown__list--visible');
-		}
-	});
-});
-$(function () {
-    var mixer = mixitup('.tabs__inner', {
-		animation: {
-			duration: 700,
-			effects: 'stagger(34ms) fade scale(0.41)',
-			easing: 'ease'
-		},
-		load: {
-			filter: '.education'
-		}
-	});
-});
 </script>

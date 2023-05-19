@@ -69,7 +69,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.js',
-    'app/js/main.js'
+    'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -93,7 +93,7 @@ function watching() {
     }
   });
   watch(['app/scss/**/*.scss'], styles);
-  // watch(['app/images/src'], images);
+  watch(['app/images/src'], images);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/components/*', 'app/pages/*'], pages);
   watch(['app/*.html']).on('change', browserSync.reload);
@@ -111,7 +111,7 @@ function cleanDist() {
 function building() {
   return src([
     'app/css/style.min.css',
-    // 'app/images/*.*',
+    'app/images/*.*',
     // '!app/images/*.svg',
     // 'app/images/sprite.svg',
     'app/fonts/*.*',
