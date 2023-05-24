@@ -1,20 +1,20 @@
-const {src, dest, watch, parallel, series } = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss         = require('gulp-sass')(require('sass'));
-const concat       = require('gulp-concat');
-const uglify       = require('gulp-uglify-es').default;
-const browserSync  = require('browser-sync').create();
+const scss = require('gulp-sass')(require('sass'));
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
+const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 // const clean        = require('gulp-clean');
-const del          = require('del');
+const del = require('del');
 // const avif         = require('gulp-avif');
 // const webp         = require('gulp-webp');
 // const imagemin     = require('gulp-imagemin');
-const newer        = require('gulp-newer');
-const fonter       = require('gulp-fonter');
-const ttf2woff2    = require('gulp-ttf2woff2');
+const newer = require('gulp-newer');
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
 // const svgSprite    = require('gulp-svg-sprite');
-const include      = require('gulp-include');
+const include = require('gulp-include');
 
 
 function pages() {
@@ -69,6 +69,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'app/js/main.js',
   ])
     .pipe(concat('main.min.js'))
@@ -79,7 +80,7 @@ function scripts() {
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(autoprefixer({overrideBrowserslist: ['last 10 version']}))
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
     .pipe(concat('style.min.css'))
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(dest('app/css'))

@@ -1,0 +1,45 @@
+<!--=include header.html-->
+<!--=include sidebar.html-->
+<main class="main">
+  <section class="book book-open">
+    <div class="container-fluid">
+      <div class="tabs">
+        <button class="tabs-btn text-1" data-filter=".book-1">Книги</button>
+        <button class="tabs-btn text-1" data-filter=".book-2">Статьи</button>
+      </div>
+
+      <div class="book__inner">
+        <div class="book__content">
+          <div class="book__item  book-open__item">
+            <picture>
+              <source class="book__cover" srcset="../images/book-1.avif" alt="cover" type="image/avif" />
+              <source class="book__cover" srcset="../images/book-1.webp" alt="cover" type="image/webp" />
+              <img class="book__cover" src="../images/book-1.png" alt="cover" />
+            </picture>
+            <div class="book__info book-open__info">
+              <p class="book__item-title book-open__item-title title">
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+              <button type="button" class="book-open__item-like sans">
+                <span><img src="images/like.svg" alt=""></span>
+                <span>122</span>
+              </button>
+              <div class="book__item-author book-open__item-author">
+                <p class="text-5">Автор</p>
+                <p class="text-6">J. M. Barrie</p>
+              </div>
+              <p class="book-open__item-subtitle text-6">
+                Peter Pan is a fictional character created by Scottish novelist and playwright J. M. Barrie. A
+                free-spirited and mischievous young boy who can fly and never grows up, Peter Pan spends his
+                never-ending childhood having adventures on the mythical island of Neverland as the leader of the Lost
+                Boys, interacting with fairies, pirates, mermaids, Native Americans, and occasionally ordinary children
+                from the world outside Neverland.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html-->

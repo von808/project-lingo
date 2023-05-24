@@ -1,0 +1,49 @@
+.book-open {
+  &__item {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  &__info {
+    max-width: 1055px;
+    margin-left: 40px;
+  }
+
+  &__item-title {
+    max-width: 419px;
+    margin-bottom: 24px;
+  }
+
+  &__item-like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 85px;
+    padding: 10px;
+    background: $white;
+    backdrop-filter: blur(9px);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 115%;
+    color: $gray;
+  }
+
+  &__item-author {
+    justify-content: flex-start;
+    gap: unset;
+    margin-bottom: 24px;
+
+    p:first-child {
+      margin-right: 100px;
+    }
+  }
+
+  &__item-subtitle {
+    margin-bottom: 40px;
+  }
+}
