@@ -53,7 +53,7 @@
               </a>
             </li>
             <li class="nav__menu-item">
-              <a class="nav__menu-item--link" href="https://von808.github.io/Lingolands/lessons">
+              <a class="nav__menu-item--link" href="#">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2940_5550)" fill=""><path d="M23.467 2.833L12.17.021a.702.702 0 00-.34 0L.533 2.833a.703.703 0 000 1.365L11.83 7.011a.71.71 0 00.34 0l10.424-2.596v3.32a.703.703 0 101.406 0v-4.22a.703.703 0 00-.533-.682z"/><path d="M12.51 8.375a2.113 2.113 0 01-1.02 0L3.562 6.401v6.724h16.875V6.401L12.51 8.375zM24 15.235a.703.703 0 00-.703-.704H3.516A3.52 3.52 0 000 18.047a3.52 3.52 0 003.516 3.515h19.78a.703.703 0 000-1.406H3.517a2.112 2.112 0 01-2.11-2.11c0-1.162.947-2.108 2.11-2.108h19.78a.703.703 0 00.704-.704z"/><path d="M2.813 18.047c0 .388.315.703.703.703h19.078v-1.406H3.516a.704.704 0 00-.704.703z"/></g><defs><clipPath id="clip0_2940_5550"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
                 <h2 class="text-4">Уроки</h2>
               </a>
@@ -119,207 +119,196 @@
       </div>
     </aside>
 <main class="main">
-    <section class="club">
+    <section class="book">
         <div class="container-fluid">
-
             <div class="tabs">
-                <button class="tabs-btn text-1" data-filter=".club-1">Клуб</button>
-                <button class="tabs-btn text-1" data-filter=".club-2">Запись голоса</button>
+                <button class="tabs-btn text-1" data-filter=".book-1">Книги</button>
+                <button class="tabs-btn text-1" data-filter=".book-2">Статьи</button>
             </div>
 
-            <div class="club__tabs-item">
+            <div class="book__tabs-item">
 
-                <div class="club__inner mix club-1">
-                    <div class="club__installation">
-                        <button class="club__lessons-left" type="button">
-                            <img class="arrow-left" src="images/arrow-bottom.svg" alt="">
-                            <p class="text-4">24 апреля - 30 апреля, 2023 г.</p>
-                            <img class="arrow-right" src="images/arrow-bottom.svg" alt="">
-                        </button>
+                <div class="book__inner mix book-1">
+
+                    <div class="book__installation">
+                        <div class="book__search">
+                            <input class="book__search-item text-4" type="text" placeholder="Поиск">
+                        </div>
                         <div class="form-group">
                             <div class="dropdown">
                                 <button class="dropdown__button text-4" data-value="all">Все</button>
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__list-item text-2" data-value="all">Все</li>
-                                    <li class="dropdown__list-item text-2" data-value="a1">A1</li>
-                                    <li class="dropdown__list-item text-2" data-value="a2">A2</li>
-                                    <li class="dropdown__list-item text-2" data-value="b1">B1</li>
-                                    <li class="dropdown__list-item text-2" data-value="b2">B2</li>
-                                    <li class="dropdown__list-item text-2" data-value="c1">C1</li>
-                                    <li class="dropdown__list-item text-2" data-value="c2">C2</li>
+                                <li class="dropdown__list-item text-2" data-value="all">Все</li>
+                                <li class="dropdown__list-item text-2" data-value="a1">A1</li>
+                                <li class="dropdown__list-item text-2" data-value="a2">A2</li>
+                                <li class="dropdown__list-item text-2" data-value="b1">B1</li>
+                                <li class="dropdown__list-item text-2" data-value="b2">B2</li>
+                                <li class="dropdown__list-item text-2" data-value="c1">C1</li>
+                                <li class="dropdown__list-item text-2" data-value="c2">C2</li>
                                 </ul>
-                                <input type="text" name="select-category" value="education"
-                                    class="dropdown__input-hidden">
+                                <input type="text" name="select-category" value="education" class="dropdown__input-hidden">
                             </div>
                         </div>
                     </div>
+    
+                    <div class="book__content">
 
-                    <div class="club__content">
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-1.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-1.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-1.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-2.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-2.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-2.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-3.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-3.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-3.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-4.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-4.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-4.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-5.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-5.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-5.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
+                        <div class="book__item">
+                            <picture>
+                                <source class="book__cover" srcset="../images/book-6.avif" alt="cover" type="image/avif">
+                                <source class="book__cover" srcset="../images/book-6.webp" alt="cover" type="image/webp">
+                                <img class="book__cover" src="../images/book-6.png" alt="cover">
+                            </picture>
+                            <div class="book__info">
+                                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                                <div class="book__item-author">
+                                    <p class="text-5">Автор</p>
+                                    <p class="text-6">J. M. Barrie</p>
                                 </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
+                                <div class="book__item-lvl">
+                                    <p class="text-5">Уровень владения языком</p>
+                                    <p class="text-6 sans">A1</p>
                                 </div>
+                                <div class="book__item-like">
+                                    <p class="text-5">Отметок Нравится</p>
+                                    <p class="text-6 sans">123</p>
+                                </div>
+                                <a class="book__item-link text-5" href="#">Читать</a>
+                                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
-                                </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="club__item">
-                                <div class="club__item-lvl sans b">B2</div>
-                                <img class="club__item-img" src="images/image-3.jpg" alt="">
-                                <div class="club__item-time text-4 sans">
-                                    <p>24.04, <span>12:00-12:45</span></p>
-                                </div>
-                                <p class="club__item-title text-1">Lorem ipsum dolor sit amet consectetur.</p>
-                                <p class="club__item-subtitle text-6">Lorem ipsum dolor sit amet consectetur. Ligula
-                                    sagittis integer scelerisque aliquam ut velit. Pellentesque et consequat a urna</p>
-                                <a class="club__item-link text-5" href="#">Перейти к курсу</a>
-                                <div class="club__item-author">
-                                    <img class="photo" src="images/avatar-diana.png" alt="">
-                                    <p class="text-6">Диана Смолова</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-
-                <div class="club__inner mix club-2">
-                    <div class="club__installation">
-                        <button class="club__lessons-left" type="button">
-                            <p class="text-4">Ваш уровень владения языком</p>
-                            <p class="text-3">B2</p>
-                        </button>
-                        <div class="club__search">
-                            <input class="club__search-item text-4" type="text" placeholder="Поиск">
-                        </div>
-                    </div>
-
-                    <p class="title">
-                        Запись голоса
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
-  </main>
-      <footer class="footer">
-        
-      </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
-  
-  </html>
+</main>
+    <footer class="footer">
+      
+    </footer>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

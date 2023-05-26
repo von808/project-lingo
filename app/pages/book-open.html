@@ -1,0 +1,225 @@
+<!--=include sprite.html-->
+<!--=include header.html-->
+<!--=include sidebar.html-->
+<main class="main">
+  <section class="book book-open">
+    <div class="container-fluid">
+      <div class="tabs">
+        <button class="tabs-btn text-1" data-filter=".book-open-1">Книги</button>
+        <button class="tabs-btn text-1" data-filter=".book-open-2">Статьи</button>
+      </div>
+      <div class="book-open__tabs-item">
+        <div class="book__inner mix book-open-1">
+          <div class="book__content">
+            <div class="book-open__item">
+              <picture>
+                <source class="book-open__cover" srcset="../images/book-1.avif" alt="cover" type="image/avif" />
+                <source class="book-open__cover" srcset="../images/book-1.webp" alt="cover" type="image/webp" />
+                <img class="book-open__cover" src="../images/book-1.png" alt="cover" />
+              </picture>
+              <div class="book__info book-open__info">
+                <p class="book__item-title book-open__item-title title">
+                  Lorem ipsum dolor sit amet consectetur
+                </p>
+                <div class="book-open__like-dislike">
+                  <button type="button" class="book-open__item-like sans">
+                    <svg class="like">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                    <span>122</span>
+                  </button>
+                  <button type="button" class="book-open__item-like sans">
+                    <svg class="dislike">
+                      <use xlink:href="#dislike"></use>
+                    </svg>
+                    <span>0</span>
+                  </button>
+                </div>
+                <div class="book__item-author book-open__item-author">
+                  <p class="text-5">Автор</p>
+                  <p class="text-6">J. M. Barrie</p>
+                </div>
+                <p class="book-open__item-subtitle text-6">
+                  Peter Pan is a fictional character created by Scottish novelist and playwright J. M. Barrie. A
+                  free-spirited and mischievous young boy who can fly and never grows up, Peter Pan spends his
+                  never-ending childhood having adventures on the mythical island of Neverland as the leader of the Lost
+                  Boys, interacting with fairies, pirates, mermaids, Native Americans, and occasionally ordinary
+                  children
+                  from the world outside Neverland.
+                </p>
+              </div>
+              <div class="book-open__buttons">
+                <button class="book-open__button book-open__button-listen" id="listenToggle">
+                  <svg class="icon">
+                    <use xlink:href="#listen"></use>
+                  </svg>
+                  <span class="text-6">Слушать</span>
+                </button>
+                <button class="book-open__button book-open__button-read">
+                  <svg class="icon">
+                    <use xlink:href="#read"></use>
+                  </svg>
+                  <span class="text-6">Читать онлайн</span>
+                </button>
+                <button class="book-open__button book-open__button-download-txt">
+                  <svg class="icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                  <span class="text-6">txt</span>
+                </button>
+                <button class="book-open__button book-open__button-download-pdf">
+                  <svg class="icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                  <span class="text-6">pdf</span>
+                </button>
+                <button class="book-open__button book-open__button-download-epub">
+                  <svg class="icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                  <span class="text-6">epub</span>
+                </button>
+                <button class="book-open__button book-open__button-download-mobi">
+                  <svg class="icon">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                  <span class="text-6">mobi</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="book-open__item book-open__item-audio" id="listenBlock">
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+              <div class="book-open__audio">
+                <p class="text-6">
+                  Часть 1
+                </p>
+                <audio class="book-open__audio-item" src="#" controls></audio>
+              </div>
+            </div>
+
+            <div class="book__item">
+              <picture>
+                <source class="book__cover" srcset="../images/book-2.avif" alt="cover" type="image/avif">
+                <source class="book__cover" srcset="../images/book-2.webp" alt="cover" type="image/webp">
+                <img class="book__cover" src="../images/book-2.png" alt="cover">
+              </picture>
+              <div class="book__info">
+                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="book__item-author">
+                  <p class="text-5">Автор</p>
+                  <p class="text-6">J. M. Barrie</p>
+                </div>
+                <div class="book__item-lvl">
+                  <p class="text-5">Уровень владения языком</p>
+                  <p class="text-6 sans">A1</p>
+                </div>
+                <div class="book__item-like">
+                  <p class="text-5">Отметок Нравится</p>
+                  <p class="text-6 sans">123</p>
+                </div>
+                <a class="book__item-link text-5" href="#">Читать</a>
+                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
+              </div>
+            </div>
+            <div class="book__item">
+              <picture>
+                <source class="book__cover" srcset="../images/book-3.avif" alt="cover" type="image/avif">
+                <source class="book__cover" srcset="../images/book-3.webp" alt="cover" type="image/webp">
+                <img class="book__cover" src="../images/book-3.png" alt="cover">
+              </picture>
+              <div class="book__info">
+                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="book__item-author">
+                  <p class="text-5">Автор</p>
+                  <p class="text-6">J. M. Barrie</p>
+                </div>
+                <div class="book__item-lvl">
+                  <p class="text-5">Уровень владения языком</p>
+                  <p class="text-6 sans">A1</p>
+                </div>
+                <div class="book__item-like">
+                  <p class="text-5">Отметок Нравится</p>
+                  <p class="text-6 sans">123</p>
+                </div>
+                <a class="book__item-link text-5" href="#">Читать</a>
+                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
+              </div>
+            </div>
+            <div class="book__item">
+              <picture>
+                <source class="book__cover" srcset="../images/book-4.avif" alt="cover" type="image/avif">
+                <source class="book__cover" srcset="../images/book-4.webp" alt="cover" type="image/webp">
+                <img class="book__cover" src="../images/book-4.png" alt="cover">
+              </picture>
+              <div class="book__info">
+                <p class="book__item-title text-1">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="book__item-author">
+                  <p class="text-5">Автор</p>
+                  <p class="text-6">J. M. Barrie</p>
+                </div>
+                <div class="book__item-lvl">
+                  <p class="text-5">Уровень владения языком</p>
+                  <p class="text-6 sans">A1</p>
+                </div>
+                <div class="book__item-like">
+                  <p class="text-5">Отметок Нравится</p>
+                  <p class="text-6 sans">123</p>
+                </div>
+                <a class="book__item-link text-5" href="#">Читать</a>
+                <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="book__inner mix book-open-2">
+          <div class="book__content">
+            <div class="text-1">Статьи</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html-->

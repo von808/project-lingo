@@ -224,21 +224,30 @@ body {
   font-size: 26px;
   color: $blue;
   overflow: hidden;
-  &.mixitup-control-active{
-    background: $grad1;
-    color: $white;
-    position: relative;
-    &::after{
-      content: '';
-      position: absolute;
-      right: -6px;
-      bottom: -18px;
-      background-image: url(../../images/apple-t.svg);
-      width: 70.01px;
-      height: 88.65px;
-      transform: rotate(-30deg);
-    }
+}
+
+.tabs-btn.mixitup-control-active {
+  background: $grad1;
+  color: $white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -18px;
+    background-image: url(../../images/apple-t.svg);
+    width: 70.01px;
+    height: 88.65px;
+    transform: rotate(-30deg);
   }
+}
+
+.like,
+.dislike {
+  width: 24px;
+  height: 24px;
+  fill: $gray;
 }
 
 .btn{

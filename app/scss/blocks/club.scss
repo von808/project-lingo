@@ -1,10 +1,15 @@
 .club {
+
+  .container-fluid {
+    padding-right: 0;
+  }
+
   .tabs-btn {
     width: 295px;
   }
 
   &__inner {
-    padding: 57px 0 57px 0;
+    padding: 0 0 38px 0;
   }
 
   &__installation {
@@ -32,18 +37,47 @@
     }
   }
 
+  &__search {
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../../images/src/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
+    background: $white;
+    border-radius: 10px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
   &__content {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
   }
 
   &__item {
-    width: 358px;
+    max-width: 358px;
     background: $white;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    margin-right: 20px;
 
     .a {
       background: $grad2;
@@ -124,5 +158,9 @@
 
   .dropdown__list {
     height: 133px;
+  }
+
+  .slick-list {
+    padding: 0 5% 0 0;
   }
 }

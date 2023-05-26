@@ -34,3 +34,20 @@
     grid-template-rows: repeat(2, 1fr);
   }
 }
+@media (max-width:1600px) {
+  .book-open__item {
+    display: grid;
+    grid-template-columns: 225px 2fr;
+    row-gap: 24px;
+  }
+
+  .book-open__buttons {
+    grid-column: 1/3;
+    row-gap: 20px;
+    margin-left: 0;
+  }
+
+  .book-open__item-subtitle {
+    margin-bottom: 0;
+  }
+}
