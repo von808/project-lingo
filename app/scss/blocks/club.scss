@@ -72,7 +72,7 @@
   }
 
   &__item {
-    width: 358px;
+    max-width: 358px;
     background: $white;
     border-radius: 20px;
     overflow: hidden;

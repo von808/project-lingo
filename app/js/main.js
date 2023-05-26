@@ -59,14 +59,14 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.lesson__progress , .pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item', {
+  var mixer = mixitup('.lesson__progress , .pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item, .book-open__tabs-item', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.week , .pay-1 , .curs-1, .club-1, .book-1',
+      filter: '.week , .pay-1 , .curs-1, .club-1, .book-1, .book-open-1',
     }
   });
   var mixer = mixitup('.grafik__right', {
@@ -88,6 +88,39 @@ $(document).ready(function () {
     arrows: false,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+$(function () {
+  let listen = $("#listenBlock");
+  let listenToggle = $("#listenToggle");
+
+  listenToggle.on("click", function (event) {
+    event.preventDefault();
+    listen.toggleClass("show");
   });
 });

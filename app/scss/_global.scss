@@ -243,3 +243,10 @@ body {
     transform: rotate(-30deg);
   }
 }
+
+.like,
+.dislike {
+  width: 24px;
+  height: 24px;
+  fill: $gray;
+}
