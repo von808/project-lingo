@@ -4,11 +4,12 @@
   }
 
   &__inner {
-    padding: 57px 0 57px 0;
+    padding: 0 0 38px 0;
   }
 
   &__installation {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 56px;
   }
@@ -17,8 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 358px;
-    width: 100%;
+    min-width: 358px;
+    width: 358px;
     height: 58px;
     padding: 0 16px;
     color: $white;
@@ -27,11 +28,33 @@
   }
 
   &__search {
+    max-width: 100%;
+    min-width: 200px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/src/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
     background: $white;
     border-radius: 10px;
     width: 100%;
     height: 58px;
-    padding: 16px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
   }
 
   .dropdown__button {
@@ -42,18 +65,25 @@
     height: 133px;
   }
 
-  .sort .dropdown__button {
-    width: 300.69px;
+  .dropdown-like .dropdown__button {
+    width: 301px;
   }
 
-  .sort .dropdown__list {
+  .dropdown-like .dropdown__list {
     height: 105px;
+  }
+
+  .dropdown-sort .dropdown__button {
+    width: 254px;
   }
 
   &__content {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: flex-start;
   }
 
   &__item {
@@ -81,6 +111,7 @@
     height: 224px;
     position: relative;
     z-index: 1;
+    object-fit: cover;
   }
 
   &__item-lvl {
@@ -102,7 +133,7 @@
   &__item-like {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     position: absolute;
     top: 16px;
     right: 16px;
@@ -112,10 +143,15 @@
     background: $white;
     backdrop-filter: blur(9px);
     border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 115%;
     color: $gray;
+
+    &:active {
+      color: $blue;
+
+      .like {
+        fill: $blue;
+      }
+    }
   }
 
   &__item-title {
@@ -143,8 +179,13 @@
   }
 
   .curs-3 {
+
     .curs__item-like {
       color: $blue;
+    }
+
+    .like {
+      fill: $blue;
     }
   }
 }

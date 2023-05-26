@@ -1,0 +1,116 @@
+.book {
+
+  .tabs-btn {
+    width: 232px;
+  }
+
+  &__inner {
+    padding: 0 0 38px 0;
+  }
+
+  &__installation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__search {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/src/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
+    background: $white;
+    border-radius: 10px;
+    max-width: 484px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    max-width: 484px;
+    width: 100%;
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cover {
+    width: 169px;
+    height: 269px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &__info {
+    display: block;
+    margin-left: 32px;
+  }
+
+  &__item-title {
+    color: $black;
+    margin-bottom: 24px;
+  }
+
+  &__item-author,
+  &__item-lvl,
+  &__item-like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__item-like {
+    margin-bottom: 24px;
+  }
+
+  &__item-link {
+    display: block;
+    color: $blue;
+    margin-bottom: 16px;
+  }
+
+  &__item-view {
+    display: block;
+    color: $grey;
+  }
+
+  .dropdown__button {
+    height: 58px;
+  }
+
+  .dropdown__list {
+    height: 133px;
+  }
+}
