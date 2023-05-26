@@ -45,14 +45,14 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item', {
+  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item, .book-open__tabs-item', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.pay-1, .curs-1, .club-1',
+      filter: '.pay-1, .curs-1, .club-1, .book-1, .book-open-1',
     }
   });
 })
@@ -81,6 +81,49 @@ $(function () {
   });
 
 });
+
+$(function () {
+  $('.club__content').slick({
+    pagination: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+})
+
+$(function () {
+  let listen = $("#listenBlock");
+  let listenToggle = $("#listenToggle");
+
+  listenToggle.on("click", function (event) {
+    event.preventDefault();
+    listen.toggleClass("show");
+  });
+})
 
 // grafik==========
 let ctx = document.querySelector('#myChart').getContext('2d');
@@ -129,46 +172,3 @@ let myChart = new Chart(ctx, {
     maintainAspectRatio: false,
   }
 })
-
-$(document).ready(function () {
-  $('.club__content').slick({
-    pagination: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 1366,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
-
-$(function () {
-  let listen = $("#listenBlock");
-  let listenToggle = $("#listenToggle");
-
-  listenToggle.on("click", function (event) {
-    event.preventDefault();
-    listen.toggleClass("show");
-  });
-});
