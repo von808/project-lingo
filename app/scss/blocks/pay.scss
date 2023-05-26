@@ -1,6 +1,6 @@
 .pay {
   &__inner {
-    padding: 57px 0 57px 0;
+    padding: 0 0 38px 0;
   }
 
   &__installation {
@@ -39,6 +39,7 @@
 
   &__content {
     display: flex;
+    // grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 
@@ -50,6 +51,7 @@
 
     max-width: 484px;
     width: 100%;
+    padding: 0 40px;
     position: relative;
   }
 
