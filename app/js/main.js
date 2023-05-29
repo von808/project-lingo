@@ -59,14 +59,14 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.lesson__progress , .pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item, .book-open__tabs-item', {
+  var mixer = mixitup('.lesson__progress , .pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item, .book-open__tabs-item, .radio__tabs-item', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.week , .pay-1 , .curs-1, .club-1, .book-1, .book-open-1',
+      filter: '.week , .pay-1 , .curs-1, .club-1, .book-1, .book-open-1, .radio-1',
     }
   });
   var mixer = mixitup('.grafik__right', {
@@ -116,11 +116,37 @@ $(document).ready(function () {
 });
 
 $(function () {
-  let listen = $("#listenBlock");
+  let listenBlock = $("#listenBlock");
   let listenToggle = $("#listenToggle");
 
   listenToggle.on("click", function (event) {
     event.preventDefault();
-    listen.toggleClass("show");
+    listenBlock.toggleClass("show");
+  });
+});
+
+// Radio button play/pause
+$(function () {
+  let close = $(".radio__player-close");
+  let radioBtn = $(".radio__item-button");
+  let radioPlayer = $(".radio__player");
+  let radioPlayerBtn = $(".radio__player-button");
+
+  radioBtn.on("click", function (event) {
+    event.preventDefault();
+    radioBtn.toggleClass("active");
+    radioPlayer.toggleClass("active");
+  });
+
+  radioPlayerBtn.on("click", function (event) {
+    event.preventDefault();
+    radioPlayerBtn.toggleClass("active");
+  });
+
+
+  close.on("click", function (event) {
+    event.preventDefault();
+    radioBtn.toggleClass("active");
+    radioPlayer.toggleClass("active");
   });
 });

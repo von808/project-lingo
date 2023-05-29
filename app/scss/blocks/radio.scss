@@ -1,0 +1,314 @@
+.radio {
+
+  .tabs-btn {
+    width: 232px;
+  }
+
+  .dropdown-radio .dropdown__button {
+    width: 236px;
+    height: 58px;
+  }
+
+  &__inner {
+    padding: 0 0 38px 0;
+  }
+
+  &__installation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__search {
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../../images/src/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
+    background: $white;
+    border-radius: 10px;
+    max-width: 484px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    width: 358px;
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    picture {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item-cover {
+    width: auto;
+    height: 186px;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  .cover-auto {
+    display: block;
+    width: 100%;
+
+    .radio__item-cover {
+      width: 100%;
+    }
+  }
+
+  &__item-content {
+    padding: 24px 26px 18px;
+  }
+
+  &__item-title {
+    color: $black;
+    margin-bottom: 16px;
+  }
+
+  &__item-listener {
+    color: $grey;
+    margin-bottom: 24px;
+  }
+
+  &__item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__item-button {
+    background: transparent;
+    position: relative;
+
+    svg {
+      fill: $white;
+      position: absolute;
+      top: 35px;
+      z-index: 1;
+      width: 29px;
+      height: 34px;
+    }
+
+    .play {
+      left: 21px;
+      opacity: 1;
+    }
+
+    .pause {
+      left: 19px;
+      opacity: 0;
+      width: 28px;
+      height: 31px;
+    }
+
+  }
+
+  .radio__item-button.active,
+  .radio__player-button.active {
+
+    .play {
+      opacity: 0;
+    }
+
+    .pause {
+      opacity: 1;
+    }
+
+    .radio__player {
+      display: block;
+    }
+
+  }
+
+  .radio__player.active {
+    display: block;
+  }
+
+  .heart {
+    width: 28px;
+    height: 25px;
+    fill: $gray;
+
+    &:active {
+      fill: $blue;
+    }
+  }
+
+  &__player {
+    display: none;
+
+    width: 508px;
+    height: 213px;
+    position: fixed;
+    top: 57px;
+    right: 60px;
+    z-index: 9999999;
+    border-radius: 20px;
+    padding: 24px;
+    background: $grad1;
+  }
+
+  &__player-top {
+    margin-bottom: 23px;
+  }
+
+  &__player-top {
+    display: flex;
+  }
+
+  &__player-cover {
+    width: 104px;
+    height: 104px;
+    margin-right: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .radio__item-cover {
+      width: 100%;
+      height: 104px;
+    }
+  }
+
+  &__player-title {
+    color: $white;
+    margin-bottom: 16px;
+    max-width: 306px;
+  }
+
+  &__player-listener {
+    color: $white;
+  }
+
+  &__player-bottom {
+    position: relative;
+    height: 61px;
+
+    svg {
+      top: 37px;
+    }
+
+    .play,
+    .pause {
+      fill: $blue;
+    }
+  }
+
+  &__player-audio {
+    height: 38px;
+
+    &::-webkit-media-controls-timeline,
+    &::-webkit-media-controls-timeline-container,
+    &::-webkit-media-controls-current-time-display,
+    &::-webkit-media-controls-time-remaining-display,
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-rewind-button,
+    &::-webkit-media-controls-return-to-realtime-button,
+    &::-webkit-media-controls-seek-back-button,
+    &::-webkit-media-controls-seek-forward-button,
+    &::-webkit-media-controls-fullscreen-button,
+    &::-webkit-media-controls-toggle-closed-captions-button {
+      display: none;
+    }
+
+    &::-webkit-media-controls-panel {
+      background: transparent;
+    }
+
+    &::-webkit-media-controls-mute-button {
+      position: relative;
+      left: 0;
+    }
+  }
+
+  &__player-button {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    background: transparent;
+
+    svg {
+      position: absolute;
+      top: 35px;
+      z-index: 1;
+      width: 29px;
+      height: 34px;
+    }
+
+    .play {
+      left: 21px;
+      opacity: 1;
+    }
+
+    .pause {
+      left: 19px;
+      opacity: 0;
+      width: 28px;
+      height: 31px;
+    }
+  }
+
+  &__player-img {
+    width: 65px;
+    height: 82px;
+  }
+
+  &__player-close {
+    opacity: 0.5;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .close {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    fill: $white;
+  }
+}
