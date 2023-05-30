@@ -1,15 +1,13 @@
 <!--=include sprite.html-->
 <!--=include header.html-->
-<!--=include sidebar.html-->
-<main class="main">
+<div class="wrapper-read">
+  <!--=include sidebar.html-->
+</div>
+<main class="main book">
   <section class="book book-open">
     <div class="container-fluid">
-      <div class="tabs">
-        <button class="tabs-btn text-1" data-filter=".book-open-1">Книги</button>
-        <button class="tabs-btn text-1" data-filter=".book-open-2">Статьи</button>
-      </div>
       <div class="book-open__tabs-item">
-        <div class="book__inner mix book-open-1">
+        <div class="book__inner">
           <div class="book__content">
             <div class="book-open__item">
               <picture>
@@ -88,7 +86,7 @@
               </div>
             </div>
 
-            <div class="book-open__item book-open__item-audio" id="listenBlock">
+            <div class="book-open__item-audio" id="listenBlock">
               <div class="book-open__audio">
                 <p class="text-6">
                   Часть 1
@@ -211,11 +209,6 @@
                 <span class="book__item-view text-6 sans">1 110 437 просмотров</span>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="book__inner mix book-open-2">
-          <div class="book__content">
-            <div class="text-1">Статьи</div>
           </div>
         </div>
       </div>

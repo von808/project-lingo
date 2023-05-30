@@ -45,19 +45,19 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item, .book__tabs-item, .book-open__tabs-item', {
+  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.pay-1, .curs-1, .club-1, .book-1, .book-open-1',
+      filter: '.pay-1 , .curs-1, .club-1',
     }
   });
 })
 $(function () {
-  var mixer = mixitup('.grafik__tabs-items', {
+  var grafik = mixitup('.grafik__tabs-items', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
@@ -69,7 +69,7 @@ $(function () {
   });
 })
 $(function () {
-  var mixer = mixitup('.lesson__progress', {
+  var lesson = mixitup('.lesson__progress', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
@@ -79,7 +79,6 @@ $(function () {
       filter: '.week',
     }
   });
-
 });
 
 $(function () {
@@ -116,16 +115,67 @@ $(function () {
 })
 
 $(function () {
-  let listen = $("#listenBlock");
+  let listenBlock = $("#listenBlock");
   let listenToggle = $("#listenToggle");
 
   listenToggle.on("click", function (event) {
     event.preventDefault();
-    listen.toggleClass("show");
+    listenBlock.toggleClass("show");
+  });
+});
+
+// Radio button play/pause
+$(function () {
+  let close = $(".radio__player-close");
+  let radioBtn = $(".radio__item-button");
+  let radioPlayer = $(".radio__player");
+  let radioPlayerBtn = $(".radio__player-button");
+
+  radioBtn.on("click", function (event) {
+    event.preventDefault();
+    radioBtn.toggleClass("active");
+    radioPlayer.toggleClass("active");
+  });
+
+  radioPlayerBtn.on("click", function (event) {
+    event.preventDefault();
+    radioPlayerBtn.toggleClass("active");
+  });
+
+
+  close.on("click", function (event) {
+    event.preventDefault();
+    radioBtn.toggleClass("active");
+    radioPlayer.toggleClass("active");
   });
 })
 
-// grafik==========
+$(function () {
+  let viewList = $(".items__view-item--list");
+  let viewTable = $(".items__view-item--table");
+  let viewContent = $(".lessons__item");
+  let viewContentHomework = $(".homework__item");
+
+  viewList.on("click", function (event) {
+    event.preventDefault();
+    viewTable.removeClass("items__view-item--active");
+    viewList.addClass("items__view-item--active");
+    viewContent.removeClass("items__view-item--table");
+    viewContent.addClass("items__view-item--list");
+    viewContentHomework.removeClass("items__view-item--table");
+    viewContentHomework.addClass("items__view-item--list");
+  });
+  viewTable.on("click", function (event) {
+    event.preventDefault();
+    viewList.removeClass("items__view-item--active");
+    viewTable.addClass("items__view-item--active");
+    viewContent.removeClass("items__view-item--list");
+    viewContent.addClass("items__view-item--table");
+    viewContentHomework.removeClass("items__view-item--list");
+    viewContentHomework.addClass("items__view-item--table");
+  });
+})
+
 let ctx = document.querySelector('#myChart').getContext('2d');
 ctx.canvas.parentNode.style.width = '696px';
 ctx.canvas.parentNode.style.height = '278px';
@@ -171,4 +221,4 @@ let myChart = new Chart(ctx, {
   options: {
     maintainAspectRatio: false,
   }
-})
+});

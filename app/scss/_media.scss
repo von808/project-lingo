@@ -9,7 +9,7 @@
     max-width: $width-sidebar-1900;
   }
   .sidebar__inner {
-    padding: 40px 32px 28px 40px;
+    padding: 40px 32px 28px 37px;
   }
   .dashboard__inner {
     display: grid;
@@ -49,5 +49,9 @@
 
   .book-open__item-subtitle {
     margin-bottom: 0;
+  }
+  .lessons__item{
+    grid-template-columns: auto auto auto;
+    background-size: 0;
   }
 }

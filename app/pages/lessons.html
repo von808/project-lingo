@@ -1,17 +1,19 @@
 <!--=include header.html-->
-<!--=include sidebar.html-->
+<div class="wrapper-lessons">
+  <!--=include sidebar.html-->
+</div>
 <main class="main">
   <section class="lessons">
     <div class="container-fluid">
       <div class="tabs">
-        <button class="tabs-btn text-1" data-filter=".lessons-1">Уроки</button>
-        <button class="tabs-btn text-1" data-filter=".lessons-2">Домашнее задание</button>
-        <button class="tabs-btn text-1" data-filter=".lessons-2">Календарь</button>
+        <a class="tabs-btn tabs-btn--active text-1" href="">Уроки</a>
+        <a class="tabs-btn text-1" href="https://von808.github.io/Lingolands/homework">Домашнее задание</a>
+        <a class="tabs-btn text-1" href="https://von808.github.io/Lingolands/calendar">Календарь</a>
       </div>
 
       <div class="lessons__tabs-item">
 
-        <div class="lessons__inner mix lessons-1">
+        <div class="lessons__inner">
 
           <div class="lessons__installation">
             <div class="lessons__search">
@@ -27,6 +29,14 @@
                 </ul>
                 <input type="text" name="select-category" value="scheduled" class="dropdown__input-hidden">
               </div>
+            </div>
+            <div class="items__view">
+              <button class="items__view-item items__view-item--list items__view-item--active">
+                <svg width="24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.791.013H2.21C.99.013 0 1.003 0 2.223A2.21 2.21 0 002.209 4.43H21.79a2.21 2.21 0 002.209-2.208c0-1.22-.99-2.21-2.209-2.21zm0 6.778H2.21a2.21 2.21 0 10-.001 4.417H21.79A2.21 2.21 0 0023.999 9c0-1.22-.99-2.21-2.209-2.21zm0 6.778H2.21c-1.218 0-2.209.99-2.209 2.21a2.21 2.21 0 002.209 2.209h19.58a2.212 2.212 0 002.209-2.21c0-1.218-.99-2.21-2.209-2.21z" fill="#D5DFF2"/></svg>
+              </button>
+              <button class="items__view-item items__view-item--table">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.795 0H2.05C.919 0 0 .92 0 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049V2.05C10.844.919 9.924 0 8.795 0zm13.156 0h-6.746c-1.13 0-2.049.92-2.049 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049V2.05C24 .919 23.08 0 21.951 0zM8.795 13.156H2.05c-1.13 0-2.049.92-2.049 2.049v6.746A2.05 2.05 0 002.049 24h6.746c1.13 0 2.049-.92 2.049-2.049v-6.746c0-1.13-.92-2.049-2.049-2.049zm13.156 0h-6.746c-1.13 0-2.049.92-2.049 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049v-6.746c0-1.13-.92-2.049-2.049-2.049z" fill="#D5DFF2"/></svg>
+              </button>
             </div>
           </div>
 

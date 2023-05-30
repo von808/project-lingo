@@ -13,6 +13,7 @@
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    max-width: 1240px;
   }
 
   &__search {
@@ -24,7 +25,7 @@
       content: "";
       width: 24px;
       height: 24px;
-      background-image: url(../images/src/search.svg);
+      background-image: url(../images/search.svg);
       background-repeat: no-repeat;
       position: absolute;
       top: 17px;
@@ -167,5 +168,64 @@
 
   .dropdown__list {
     height: 104px;
+  }
+}
+
+.lessons__item.items__view-item--table{
+  max-width: 610px;
+  width: 100%;
+  min-height: 610px;
+  column-gap: 24px;
+  row-gap: 24px;
+  grid-template-columns: 287px 235px;
+  grid-template-rows: auto auto auto;
+  background-position: 529px 0;
+  .lessons__text {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .lessons__stats {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .lessons__skills {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: -61px;
+    justify-content: flex-start;
+  }
+  .lessons__feadback {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .lessons__btn {
+    max-width: 287px;
+  }
+  .lessons__text-title {
+    min-height: 72px;
+  }
+  .lessons__skills-items{
+    margin-bottom: 16px;
+  }
+  .lessons__skills-item--1 {
+    grid-column: 1/3;
+  }
+  .lessons__skills-item--2 {
+    grid-column: 1/3;
+  }
+  .lessons__skills-item--3 {
+    grid-column: 1/2;
+  }
+  .lessons__skills-item--4 {
+    grid-column: 2/3;
+  }
+  .feadback__other-score{
+    height: 30px;
+    img{
+      transform: rotate(90deg);
+    }
+  }
+  .feadback__circle:hover .feadback__other-score {
+    transform: translate3d(-77px, -90px, 10px)rotate(-90deg);
   }
 }

@@ -1,0 +1,265 @@
+.homework {
+
+  .tabs-btn {
+    max-width: 358px;
+    width: 100%;
+  }
+
+  &__inner {
+    padding: 0 0 38px 0;
+  }
+
+  &__installation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    max-width: 1240px;
+  }
+
+  &__search {
+    max-width: 484px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
+    background: $white;
+    border-radius: 10px;
+    max-width: 484px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    max-width: 1240px;
+    width: 100%;
+    min-height: 370px;
+    background: $white;
+    border-radius: 20px;
+    padding: 32px;
+    display: grid;
+    column-gap: 57px;
+    row-gap: 32px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background-repeat: no-repeat;
+    background-position: 439px 0;
+  }
+  &__text{
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  &__text-title{
+    margin-bottom: 24px;
+  }
+  &__text-subtitle{
+    margin-bottom: 16px;
+  }
+  &__text-text{
+    margin-bottom: 40px;
+  }
+  &__btn{
+    max-width: 100%;
+    width: 100%;
+    height: 43px;
+    border: 1px $blue solid;
+    color: $black;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  &__stats{
+    grid-row: 1/3;
+  }
+  &__stat{
+    width: 310px;
+    height: 53px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    margin-bottom: 16px;
+  }
+  .checked{
+    background: $grad1;
+  }
+  .set{
+    background: $grad2;
+  }
+  &__teacher-score{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__date{
+    border-radius: 20px;
+    background-color: $bg;
+    padding: 24px;
+    max-width: 310px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  &__teacher{
+    display: flex;
+    gap: 24px;
+    height: 70px;
+  }
+  &__teacher-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__teacher-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  &__feadback{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dropdown__button {
+    height: 58px;
+    padding: 16px 34px 16px 16px;
+    width: 200px;
+    &::after{
+      top: 53%;
+    }
+  }
+
+  .dropdown__list {
+    height: 104px;
+  }
+}
+
+.homework__item.items__view-item--table{
+  max-width: 610px;
+  width: 100%;
+  min-height: 610px;
+  column-gap: 24px;
+  row-gap: 24px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  .homework__text {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .homework__text-title {
+    min-height: 72px;
+  }
+  .homework__text-text{
+    margin-bottom: 24px;
+  }
+  .feadback__other-score{
+    height: 30px;
+    img{
+      transform: rotate(90deg);
+    }
+  }
+  .feadback__circle:hover .feadback__other-score {
+    transform: translate3d(-77px, -90px, 10px)rotate(-90deg);
+  }
+  .homework__btn{
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .homework__stats {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 231px auto;
+    grid-template-rows: auto auto;
+  }
+  .homework__stat {
+    max-width: 231px;
+    margin: 0;
+    height: 63px;
+  }
+  .homework__teacher{
+    margin: auto 0;
+    height: 63px;
+  }
+  .homework__teacher-score{
+    max-width: 283px;
+    margin: 0 0 0 32px;
+  }
+  .homework__date{
+    margin: 0 24px 0 0;
+    padding: 16px 24px;
+    height: 92px;
+  }
+}
+.feadback__apple {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 69px;
+}
+
+// media
+// .homework__item.items__view-item--table{
+//   max-width: 728px;
+//   width: 100%;
+//   min-height: 610px;
+//   column-gap: 57px;
+//   row-gap: 24px;
+//   grid-template-columns: auto auto;
+//   grid-template-rows: auto auto;
+//   background-position: 529px 0;
+// .homework__text {
+//   grid-column: 1/2;
+//   grid-row: 1/2;
+// }
+// .homework__text-title {
+//   min-height: 72px;
+// }
+// .homework__text-text{
+//   margin-bottom: 24px;
+// }
+// .feadback__other-score{
+//   height: 30px;
+//   img{
+//     transform: rotate(90deg);
+//   }
+// }
+// .feadback__circle:hover .feadback__other-score {
+//   transform: translate3d(-77px, -90px, 10px)rotate(-90deg);
+// }
+// .homework__btn{
+//   grid-column: 1/3;
+// }
+// .homework__stats {
+//   grid-row: 1/2;
+// }
+// }

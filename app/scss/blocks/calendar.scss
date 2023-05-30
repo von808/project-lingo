@@ -1,0 +1,131 @@
+.calendar {
+
+  .tabs-btn {
+    max-width: 358px;
+    width: 100%;
+  }
+
+  &__inner {
+    padding: 0 0 38px 0;
+  }
+
+  &__installation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    max-width: 1240px;
+  }
+
+  &__search {
+    max-width: 484px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/search.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 17px;
+      left: 16px;
+      z-index: 1;
+    }
+  }
+
+  &__search-item {
+    background: $white;
+    border-radius: 10px;
+    max-width: 484px;
+    width: 100%;
+    height: 58px;
+    padding: 16px 0 16px 56px;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    overflow-x: auto;
+    &::-webkit-scrollbar { width: 0; };
+    margin-right: -45px;
+  }
+
+  &__day {
+    min-width: 196px;
+    min-height: 278px;
+    height: fit-content;
+    background: $white;
+    border-radius: 20px;
+    padding: 24px 18px;
+  }
+  &__title{
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px $light-grey solid;
+  }
+  &__item{
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &:not(:last-child){
+      margin-bottom: 8px;
+    }
+  }
+  &__item-status{
+    padding-left: 16px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__item-complete{
+    width: 100%;
+    color: $blue;
+    background-color: rgba($blue, .1);
+    .calendar__item-status{
+      &::before{
+        background-color: $blue;
+      }
+    }
+  }
+  &__item-planned{
+    width: 100%;
+    color: $yellow;
+    background-color: rgba($yellow, .1);
+    .calendar__item-status{
+      &::before{
+        background-color: $yellow;
+      }
+    }
+  }
+  &__item-canceled{
+    width: 100%;
+    color: $red;
+    background-color: rgba($red, .1);
+    .calendar__item-status{
+      &::before{
+        background-color: $red;
+      }
+    }
+  }
+  &__item-classes,
+  &__item-classes{
+    color: $black;
+  }
+}
