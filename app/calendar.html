@@ -119,173 +119,95 @@
       </div>
     </aside>
 <main class="main">
-  <section class="lessons">
+  <section class="calendar">
     <div class="container-fluid">
       <div class="tabs">
-        <a class="tabs-btn tabs-btn--active text-1" href="">Уроки</a>
+        <a class="tabs-btn text-1" href="https://von808.github.io/Lingolands/lessons">Уроки</a>
         <a class="tabs-btn text-1" href="https://von808.github.io/Lingolands/homework">Домашнее задание</a>
-        <a class="tabs-btn text-1" href="https://von808.github.io/Lingolands/calendar">Календарь</a>
+        <a class="tabs-btn tabs-btn--active text-1" href="">Календарь</a>
       </div>
 
-      <div class="lessons__tabs-item">
+      <div class="calendar__tabs-item">
 
-        <div class="lessons__inner">
+        <div class="calendar__inner">
 
-          <div class="lessons__installation">
-            <div class="lessons__search">
-              <input class="lessons__search-item text-4" type="text" placeholder="Поиск">
-            </div>
-            <div class="form-group">
-              <div class="dropdown">
-                <button class="dropdown__button text-4" data-value="scheduled">Запланировано</button>
-                <ul class="dropdown__list">
-                  <li class="dropdown__list-item text-2" data-value="passed">Пройдено</li>
-                  <li class="dropdown__list-item text-2" data-value="scheduled">Запланировано</li>
-                  <li class="dropdown__list-item text-2" data-value="postponed">Отложено</li>
-                </ul>
-                <input type="text" name="select-category" value="scheduled" class="dropdown__input-hidden">
-              </div>
-            </div>
-            <div class="items__view">
-              <button class="items__view-item items__view-item--list items__view-item--active">
-                <svg width="24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.791.013H2.21C.99.013 0 1.003 0 2.223A2.21 2.21 0 002.209 4.43H21.79a2.21 2.21 0 002.209-2.208c0-1.22-.99-2.21-2.209-2.21zm0 6.778H2.21a2.21 2.21 0 10-.001 4.417H21.79A2.21 2.21 0 0023.999 9c0-1.22-.99-2.21-2.209-2.21zm0 6.778H2.21c-1.218 0-2.209.99-2.209 2.21a2.21 2.21 0 002.209 2.209h19.58a2.212 2.212 0 002.209-2.21c0-1.218-.99-2.21-2.209-2.21z" fill="#D5DFF2"/></svg>
-              </button>
-              <button class="items__view-item items__view-item--table">
-                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.795 0H2.05C.919 0 0 .92 0 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049V2.05C10.844.919 9.924 0 8.795 0zm13.156 0h-6.746c-1.13 0-2.049.92-2.049 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049V2.05C24 .919 23.08 0 21.951 0zM8.795 13.156H2.05c-1.13 0-2.049.92-2.049 2.049v6.746A2.05 2.05 0 002.049 24h6.746c1.13 0 2.049-.92 2.049-2.049v-6.746c0-1.13-.92-2.049-2.049-2.049zm13.156 0h-6.746c-1.13 0-2.049.92-2.049 2.049v6.746c0 1.13.92 2.049 2.049 2.049h6.746c1.13 0 2.049-.92 2.049-2.049v-6.746c0-1.13-.92-2.049-2.049-2.049z" fill="#D5DFF2"/></svg>
-              </button>
+          <div class="calendar__installation">
+            <div class="calendar__search">
+              <input class="calendar__search-item text-4" type="text" placeholder="Поиск">
             </div>
           </div>
 
-          <div class="lessons__content">
+          <div class="calendar__content">
 
-            <div class="lessons__item" style="background-image: url(images/flag-yellow.svg);">
-              <div class="lessons__text">
-                <h2 class="lessons__text-title  title">
-                  Урок 1. Аудирование и письмо
-                </h2>
-                <p class="lessons__text-subtitle text-5">Цель урока:</p>
-                <p class="lessons__text-text text-6">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet pharetra enim sit diam mi penatibus. Enim lorem eget eu est. Orci nibh vitae sed lorem porttitor fermentum. Est ullamcorper est dui amet at ornare.
-                </p>
-                <a class="btn lessons__btn" href="#">Перейти к  уроку</a>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">24.04</h2>
+              <div class="calendar__item calendar__item-complete">
+                <span class="calendar__item-status text-5">Пройдено</span>
+                <span class="calendar__item-time text-5 sans">10.30-11.25</span>
+                <p class="calendar__item-classes text-6">Урок 1. Аудирование и письмо</p>
               </div>
-              <ul class="lessons__stats">
-                <li class="lessons__stat">
-                  <p class="text-3">Статус</p>
-                  <p class="text-6">Запланировано</p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Время</p>
-                  <p class="text-6"><span class="sans">15:00</span></p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Длительность</p>
-                  <p class="text-6"><span class="sans">45</span> мин</p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Дата</p>
-                  <p class="text-6"><span class="sans">12.12.2022</span></p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Уровень</p>
-                  <p class="text-6">Профи</p>
-                </li>
-              </ul>
-              <div class="lessons__skills">
-                <div class="lessons__skills-items">
-                  <div class="lessons__skills-item lessons__skills-item--1 btn">Говорение</div>
-                  <div class="lessons__skills-item lessons__skills-item--2 btn">Прослушивание</div>
-                  <div class="lessons__skills-item lessons__skills-item--3 btn">Письмо</div>
-                  <div class="lessons__skills-item lessons__skills-item--4 btn">Чтение</div>
-                </div>
-                <div class="lessons__skills-homework btn">Домашнее задание</div>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">11.30-11.45</span>
+                <p class="calendar__item-classes text-6">Урок 2. Разговорный</p>
               </div>
-              <div class="lessons__feadback text-6">
-                <p class="lessons__feadback-text">Оцените урок</p>
-                <div class="feadback__circle">
-                  <span class="feadback__numb text-5">5</span>
-                  <button>
-                    <img class="feadback__apple" src="images/score-red.png" alt="5">
-                  </button>
-                  <div class="feadback__other-score">
-                    <button class="feadback__apple--orange">
-                      <img src="images/score-orange.png" alt="4">
-                    </button>
-                    <button class="feadback__apple--yellow">
-                      <img src="images/score-yellow.png" alt="3">
-                    </button>
-                    <button class="feadback__apple--green">
-                      <img src="images/score-green.png" alt="2">
-                    </button>
-                    <button class="feadback__apple--blue">
-                      <img src="images/score-blue.png" alt="1">
-                    </button>
-                  </div>
-                </div>
+              <div class="calendar__item calendar__item-canceled">
+                <span class="calendar__item-status text-5">Отменено</span>
+                <span class="calendar__item-time text-5 sans">11.50-12.45</span>
+                <p class="calendar__item-classes text-6">Урок 3. Углублённое изучение</p>
               </div>
             </div>
-            <div class="lessons__item" style="background-image: url(images/flag-blue.svg);">
-              <div class="lessons__text">
-                <h2 class="lessons__text-title  title">
-                  Урок 2. Разговорный
-                </h2>
-                <p class="lessons__text-subtitle text-5">Цель урока:</p>
-                <p class="lessons__text-text text-6">
-                  Lorem ipsum dolor sit amet consectetur. Laoreet pharetra enim sit diam mi penatibus. Enim lorem eget eu est. Orci nibh vitae sed lorem porttitor fermentum. Est ullamcorper est dui amet at ornare.
-                </p>
-                <a class="btn lessons__btn" href="#">Перейти к  уроку</a>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">25.04</h2>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">11.30-11.45</span>
+                <p class="calendar__item-classes text-6">Урок 2. Разговорный</p>
               </div>
-              <ul class="lessons__stats">
-                <li class="lessons__stat">
-                  <p class="text-3">Статус</p>
-                  <p class="text-6">Пройдено</p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Время</p>
-                  <p class="text-6"><span class="sans">20:00</span></p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Длительность</p>
-                  <p class="text-6"><span class="sans">15</span> мин</p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Дата</p>
-                  <p class="text-6"><span class="sans">13.12.2022</span></p>
-                </li>
-                <li class="lessons__stat">
-                  <p class="text-3">Уровень</p>
-                  <p class="text-6">Профи</p>
-                </li>
-              </ul>
-              <div class="lessons__skills">
-                <div class="lessons__skills-items">
-                  <div class="lessons__skills-item lessons__skills-item--1 btn">Говорение</div>
-                  <div class="lessons__skills-item lessons__skills-item--2 btn">Прослушивание</div>
-                </div>
-                <div class="lessons__skills-homework btn">Домашнее задание</div>
+            </div>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">26.04</h2>
+            </div>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">27.04</h2>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">11.30-11.45</span>
+                <p class="calendar__item-classes text-6">Урок 2. Разговорный</p>
               </div>
-              <div class="lessons__feadback text-6">
-                <p class="lessons__feadback-text">Оцените урок</p>
-                <div class="feadback__circle">
-                  <span class="feadback__numb text-5">5</span>
-                  <button>
-                    <img class="feadback__apple" src="images/score-red.png" alt="5">
-                  </button>
-                  <div class="feadback__other-score">
-                    <button class="feadback__apple--orange">
-                      <img src="images/score-orange.png" alt="4">
-                    </button>
-                    <button class="feadback__apple--yellow">
-                      <img src="images/score-yellow.png" alt="3">
-                    </button>
-                    <button class="feadback__apple--green">
-                      <img src="images/score-green.png" alt="2">
-                    </button>
-                    <button class="feadback__apple--blue">
-                      <img src="images/score-blue.png" alt="1">
-                    </button>
-                  </div>
-                </div>
+            </div>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">28.04</h2>
+            </div>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">29.04</h2>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">10.30-11.25</span>
+                <p class="calendar__item-classes text-6">Урок 1. Аудирование и письмо</p>
+              </div>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">11.30-11.45</span>
+                <p class="calendar__item-classes text-6">Урок 2. Разговорный</p>
+              </div>
+            </div>
+            <div class="calendar__day">
+              <h2 class="calendar__title title sans">30.04</h2>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">10.30-11.25</span>
+                <p class="calendar__item-classes text-6">Урок 1. Аудирование и письмо</p>
+              </div>
+              <div class="calendar__item calendar__item-planned">
+                <span class="calendar__item-status text-5">Запланировано</span>
+                <span class="calendar__item-time text-5 sans">11.30-11.45</span>
+                <p class="calendar__item-classes text-6">Урок 2. Разговорный</p>
+              </div>
+              <div class="calendar__item calendar__item-canceled">
+                <span class="calendar__item-status text-5">Отменено</span>
+                <span class="calendar__item-time text-5 sans">11.50-12.45</span>
+                <p class="calendar__item-classes text-6">Урок 3. Углублённое изучение</p>
               </div>
             </div>
 

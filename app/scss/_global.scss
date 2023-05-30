@@ -243,6 +243,23 @@ body {
   }
 }
 
+.tabs-btn--active{
+  background: $grad1;
+  color: $white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -18px;
+    background-image: url(../../images/apple-t.svg);
+    width: 70.01px;
+    height: 88.65px;
+    transform: rotate(-30deg);
+  }
+}
+
 .like,
 .dislike {
   width: 24px;
@@ -300,5 +317,28 @@ body {
   }
   &__apple--blue{
     border-radius: 20px;
+  }
+}
+
+.items__view{
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+  &-item{
+    width: 56px;
+    height: 56px;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-item--active{
+    svg{
+      path{
+        fill: #5CB1FF;
+      }
+    }
   }
 }
