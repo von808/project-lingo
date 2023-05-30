@@ -78,3 +78,24 @@
     
   }
 }
+
+.wrapper-main .sidebar-main,
+.wrapper-profile .sidebar-profile,
+.wrapper-pay .sidebar-pay,
+.wrapper-lessons .sidebar-lessons,
+.wrapper-watch .sidebar-watch,
+.wrapper-listen .sidebar-listen,
+.wrapper-read .sidebar-read,
+.wrapper-talk .sidebar-talk,
+.wrapper-dictionary .sidebar-dictionary,
+.wrapper-support .sidebar-support,
+.wrapper-notification .sidebar-notification,
+.wrapper-setting .sidebar-settings,
+.wrapper-exit .sidebar-exit{
+  svg{
+    fill: $blue;
+  }
+  .nav__menu-item--link{
+    color: $blue;
+  }
+}
