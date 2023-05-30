@@ -205,7 +205,6 @@ body {
   /* отступ вокруг бегунка */
 }
 
-
 .tabs {
   width: 100%;
   height: 99px;
@@ -249,4 +248,57 @@ body {
   width: 24px;
   height: 24px;
   fill: $gray;
+}
+
+.btn{
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.feadback{
+  &__circle{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: $light-grey;
+    position: relative;
+    z-index: 2;
+    &:hover{
+      .feadback__other-score{
+        visibility: visible;
+      }
+    }
+  }
+  &__numb{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+  &__apple{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+  &__other-score{
+    width: 150px;
+    height: 27px;
+    background-color: $light-grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 35px;
+    z-index: -1;
+    padding-left: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+  }
+  &__apple--blue{
+    border-radius: 20px;
+  }
 }

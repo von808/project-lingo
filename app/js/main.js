@@ -8,20 +8,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
-$(function () {
-  var mixer = mixitup('.lesson__progress', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease'
-    },
-    load: {
-      filter: '.week'
-    }
-  });
-
-})
-
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
   const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
@@ -69,7 +55,9 @@ $(function () {
       filter: '.week , .pay-1 , .curs-1, .club-1, .book-1, .book-open-1, .radio-1',
     }
   });
-  var mixer = mixitup('.grafik__right', {
+})
+$(function () {
+  var mixer = mixitup('.grafik__tabs-items', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
@@ -79,10 +67,22 @@ $(function () {
       filter: '.grafik-1',
     }
   });
-
 })
+$(function () {
+  var mixer = mixitup('.lesson__progress', {
+    animation: {
+      duration: 700,
+      effects: 'fade scale(0.41)',
+      easing: 'ease-in-out',
+    },
+    load: {
+      filter: '.week',
+    }
+  });
 
-$(document).ready(function () {
+});
+
+$(function () {
   $('.club__content').slick({
     pagination: false,
     arrows: false,
@@ -113,7 +113,7 @@ $(document).ready(function () {
       }
     ]
   });
-});
+})
 
 $(function () {
   let listenBlock = $("#listenBlock");
@@ -149,4 +149,52 @@ $(function () {
     radioBtn.toggleClass("active");
     radioPlayer.toggleClass("active");
   });
-});
+})
+
+// grafik==========
+let ctx = document.querySelector('#myChart').getContext('2d');
+ctx.canvas.parentNode.style.width = '696px';
+ctx.canvas.parentNode.style.height = '278px';
+let myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+    datasets: [{
+      label: 'book',
+      data: [6, 2, 1, 1, 2, 1, 6],
+      backgroundColor: [
+        '#5728DB'
+      ],
+      borderColor: [
+        '#5728DB',
+        '#5728DB',
+        '#5728DB',
+        '#5728DB',
+        '#5728DB',
+        '#5728DB',
+        '#5728DB',
+      ],
+      borderWidth: 4
+    },
+    {
+      label: 'articles',
+      data: [6, 8, 4, 6, 1, 4, 0],
+      backgroundColor: [
+        '#5CB1FF'
+      ],
+      borderColor: [
+        '#5CB1FF',
+        '#5CB1FF',
+        '#5CB1FF',
+        '#5CB1FF',
+        '#5CB1FF',
+        '#5CB1FF',
+        '#5CB1FF',
+      ],
+      borderWidth: 4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+  }
+})

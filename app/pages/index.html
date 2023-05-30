@@ -58,46 +58,44 @@
               <p class="lesson__text-subtitle text-5">Занимайтесь регулярно для достижения максимального эффекта</p>
             </div>
             <div class="lesson__progress">
-              <div class="lesson__progress-tabs">
-                <div class="lesson__progress-tab mix day">
-                  <h4 class="lesson__progress-precent title sans">100%</h4>
-                  <div class="lesson__progress-line-bg">
-                    <span class="lesson__progress-line" style="width: 100%;"></span>
-                  </div>
-                  <div class="lesson__progress-plan text-5">
-                    <span class="lesson__progress-plan-complete text-1">2</span> / <span
-                      class="lesson__progress-plan-full">2</span> запланировано
-                  </div>
+              <div class="lesson__progress-tab mix day">
+                <h4 class="lesson__progress-precent title sans">100%</h4>
+                <div class="lesson__progress-line-bg">
+                  <span class="lesson__progress-line" style="width: 100%;"></span>
                 </div>
-                <div class="lesson__progress-tab mix week">
-                  <h4 class="lesson__progress-precent title sans">50%</h4>
-                  <div class="lesson__progress-line-bg">
-                    <span class="lesson__progress-line" style="width: 50%;"></span>
-                  </div>
-                  <div class="lesson__progress-plan text-5">
-                    <span class="lesson__progress-plan-complete text-1">6</span> / <span
-                      class="lesson__progress-plan-full">12</span> запланировано
-                  </div>
+                <div class="lesson__progress-plan text-5">
+                  <span class="lesson__progress-plan-complete text-1">2</span> / <span
+                    class="lesson__progress-plan-full">2</span> запланировано
                 </div>
-                <div class="lesson__progress-tab mix month">
-                  <h4 class="lesson__progress-precent title sans">25%</h4>
-                  <div class="lesson__progress-line-bg">
-                    <span class="lesson__progress-line" style="width: 25%;"></span>
-                  </div>
-                  <div class="lesson__progress-plan text-5">
-                    <span class="lesson__progress-plan-complete text-1">12</span> / <span
-                      class="lesson__progress-plan-full">48</span> запланировано
-                  </div>
+              </div>
+              <div class="lesson__progress-tab mix week">
+                <h4 class="lesson__progress-precent title sans">50%</h4>
+                <div class="lesson__progress-line-bg">
+                  <span class="lesson__progress-line" style="width: 50%;"></span>
                 </div>
-                <div class="lesson__progress-tab mix year">
-                  <h4 class="lesson__progress-precent title sans">10%</h4>
-                  <div class="lesson__progress-line-bg">
-                    <span class="lesson__progress-line" style="width: 10%;"></span>
-                  </div>
-                  <div class="lesson__progress-plan text-5">
-                    <span class="lesson__progress-plan-complete text-1">10</span> / <span
-                      class="lesson__progress-plan-full">100</span> запланировано
-                  </div>
+                <div class="lesson__progress-plan text-5">
+                  <span class="lesson__progress-plan-complete text-1">6</span> / <span
+                    class="lesson__progress-plan-full">12</span> запланировано
+                </div>
+              </div>
+              <div class="lesson__progress-tab mix month">
+                <h4 class="lesson__progress-precent title sans">25%</h4>
+                <div class="lesson__progress-line-bg">
+                  <span class="lesson__progress-line" style="width: 25%;"></span>
+                </div>
+                <div class="lesson__progress-plan text-5">
+                  <span class="lesson__progress-plan-complete text-1">12</span> / <span
+                    class="lesson__progress-plan-full">48</span> запланировано
+                </div>
+              </div>
+              <div class="lesson__progress-tab mix year">
+                <h4 class="lesson__progress-precent title sans">10%</h4>
+                <div class="lesson__progress-line-bg">
+                  <span class="lesson__progress-line" style="width: 10%;"></span>
+                </div>
+                <div class="lesson__progress-plan text-5">
+                  <span class="lesson__progress-plan-complete text-1">10</span> / <span
+                    class="lesson__progress-plan-full">100</span> запланировано
                 </div>
               </div>
             </div>
@@ -152,34 +150,57 @@
         <div class="dashboard__columns dashboard__columns--4">
           <div class="grafik dashboard-block">
             <div class="grafik__left">
-              <div class="tabs">
-                <button class="tabs-btn text-5" data-filter=".grafik-1">
+              <div class="tabs-grafik">
+                <button class="tabs-btn-grafik text-5" data-filter=".grafik-1">
                   <img class="grafik-btn-img" src="images/grafik-radio.svg" alt="radio">
                   Прослушано радио
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-2">
+                <button class="tabs-btn-grafik text-5" data-filter=".grafik-2">
                   <img class="grafik-btn-img" src="images/grafik-video.svg" alt="video">
                   Просмотр видео
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-3">
+                <button class="tabs-btn-grafik text-5" data-filter=".grafik-3">
                   <img class="grafik-btn-img" src="images/grafik-read.svg" alt="read">
                   Чтение
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-4">
+                <button class="tabs-btn-grafik text-5" data-filter=".grafik-4">
                   <img class="grafik-btn-img" src="images/grafik-talk.svg" alt="talk">
                   Говорение
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-5">
+                <button class="tabs-btn-grafik text-5" data-filter=".grafik-5">
                   <img class="grafik-btn-img" src="images/grafik-dictionary.svg" alt="dictionary">
                   Словарь
                 </button>
               </div>
             </div>
-            <div class="grafik__right">
-              <div class="ASDF mix grafik-1">A</div>
-              <div class="ASDF mix grafik-2">S</div>
-              <div class="ASDF mix grafik-3">D</div>
-              <div class="ASDF mix grafik-4">F</div>
+            <div class="grafik__tabs-items">
+              <div class="grafik__tabs-item mix grafik-1">
+                <div class="form-group">
+                  <div class="dropdown">
+                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
+                    <ul class="dropdown__list text-2">
+                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
+                    </ul>
+                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
+                  </div>
+                </div>
+                <canvas id="myChart" width="696px" height="278px"></canvas>
+              </div>
+              <div class="grafik__tabs-item mix grafik-2">
+
+              </div>
+              <div class="grafik__tabs-item mix grafik-3">
+
+              </div>
+              <div class="grafik__tabs-item mix grafik-4">
+
+              </div>
+              <div class="grafik__tabs-item mix grafik-5">
+
+              </div>
             </div>
           </div>
         </div>
