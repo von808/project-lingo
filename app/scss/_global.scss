@@ -243,7 +243,7 @@ body {
   }
 }
 
-.tabs-btn--active{
+.tabs-btn--active {
   background: $grad1;
   color: $white;
   position: relative;
@@ -267,40 +267,44 @@ body {
   fill: $gray;
 }
 
-.btn{
+.btn {
   border-radius: 10px;
   padding: 10px;
   text-align: center;
   display: inline-block;
 }
 
-.feadback{
-  &__circle{
+.feadback {
+  &__circle {
     width: 66px;
     height: 66px;
     border-radius: 50%;
     background-color: $light-grey;
     position: relative;
     z-index: 2;
-    &:hover{
-      .feadback__other-score{
+
+    &:hover {
+      .feadback__other-score {
         visibility: visible;
       }
     }
   }
-  &__numb{
+
+  &__numb {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 10px;
   }
-  &__apple{
+
+  &__apple {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
   }
-  &__other-score{
+
+  &__other-score {
     width: 150px;
     height: 27px;
     background-color: $light-grey;
@@ -315,16 +319,18 @@ body {
     align-items: center;
     visibility: hidden;
   }
-  &__apple--blue{
+
+  &__apple--blue {
     border-radius: 20px;
   }
 }
 
-.items__view{
+.items__view {
   display: flex;
   gap: 16px;
   margin-left: auto;
-  &-item{
+
+  &-item {
     width: 56px;
     height: 56px;
     background-color: $white;
@@ -334,11 +340,16 @@ body {
     justify-content: center;
     align-items: center;
   }
-  &-item--active{
-    svg{
-      path{
+
+  &-item--active {
+    svg {
+      path {
         fill: #5CB1FF;
       }
     }
   }
+}
+
+svg {
+  cursor: pointer;
 }
