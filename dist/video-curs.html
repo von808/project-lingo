@@ -167,7 +167,7 @@
     <header class="header">
       
     </header>
-<div class="wrapper-main">
+<div class="wrapper-page">
   <aside class="sidebar">
     <div class="sidebar__inner">
       <a class="logo" href="https://von808.github.io/Lingolands">
@@ -370,269 +370,135 @@
   </aside>
 </div>
 <main class="main">
-  <section class="dashboard">
+  <section class="video-curs">
     <div class="container-fluid">
-      <div class="dashboard__inner">
-        <div class="dashboard__columns dashboard__columns--1">
-          <div class="referal dashboard-block">
-            <p class="referal__subtitle text-4">Поделись ссылкой и получи урок </p>
-            <h3 class="title">БЕСПЛАТНО</h3>
-            <picture>
-              <source class="referal__apple-teacher" srcset="images/apple-teacher.avif" alt="apple-teacher"
-                type="image/avif">
-              <source class="referal__apple-teacher" srcset="images/apple-teacher.webp" alt="apple-teacher"
-                type="image/webp">
-              <img class="referal__apple-teacher" src="images/apple-teacher.png" alt="apple-teacher">
-            </picture>
+      <div class="video-curs__inner">
+
+        <div class="video-curs__block">
+          <div class="video-curs__item">
+            <p class="video-curs__info-title title">
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+            <p class="video-curs__info-subtitle text-6">
+              Posuere rhoncus id cras urna in. Sagittis nisl nulla in arcu duis malesuada curabitur ut viverra. Eget
+              aliquam phasellus turpis non gravida nunc ut urna. Viverra in integer ullamcorper nulla viverra tristique
+              posuere.
+            </p>
+            <div class="video-curs__info-lvl">
+              <p class="text-6">Необходимый уровень владения навыка</p>
+              <p class="text-5 sans">B2</p>
+            </div>
+            <div class="video-curs__info-evaluation">
+              <button type="button" class="video-curs__info-like sans">
+                <svg class="like">
+                  <use xlink:href="#like"></use>
+                </svg>
+                <span class="text-1">122</span>
+              </button>
+              <button type="button" class="video-curs__info-dislike sans">
+                <svg class="dislike">
+                  <use xlink:href="#dislike"></use>
+                </svg>
+                <span class="text-1">0</span>
+              </button>
+            </div>
+            <div class="video-curs__warning">
+              <svg>
+                <use xlink:href="#warning"></use>
+              </svg>
+            </div>
           </div>
-          <div class="student dashboard-block">
-            <div class="student__top">
-              <h3 class="title">English</h3>
-              <p class="title">B<span class="sans">2</span></p>
-            </div>
-            <div class="student__content">
-              <ul class="student__content-list">
-                <li class="student__content-item text-4">
-                  <p>Осталось уроков</p>
-                  <p class="sans">12</p>
-                </li>
-                <li class="student__content-item text-4">
-                  <p>Дата начала обучения</p>
-                  <p class="sans">12.03.2021</p>
-                </li>
-                <li class="student__content-item text-4">
-                  <p>Времени за обучением</p>
-                  <p class="sans">100 264 ч</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="lesson dashboard-block">
-            <div class="lesson__text">
-              <div class="lesson__text-top">
-                <h4 class="text-1">Пройденных уроков</h4>
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".day" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".week" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".month" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".year" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-              </div>
-              <p class="lesson__text-subtitle text-5">Занимайтесь регулярно для достижения максимального эффекта</p>
-            </div>
-            <div class="lesson__progress">
-              <div class="lesson__progress-tab mix day">
-                <h4 class="lesson__progress-precent title sans">100%</h4>
-                <div class="lesson__progress-line-bg">
-                  <span class="lesson__progress-line" style="width: 100%;"></span>
-                </div>
-                <div class="lesson__progress-plan text-5">
-                  <span class="lesson__progress-plan-complete text-1">2</span> / <span
-                    class="lesson__progress-plan-full">2</span> запланировано
-                </div>
-              </div>
-              <div class="lesson__progress-tab mix week">
-                <h4 class="lesson__progress-precent title sans">50%</h4>
-                <div class="lesson__progress-line-bg">
-                  <span class="lesson__progress-line" style="width: 50%;"></span>
-                </div>
-                <div class="lesson__progress-plan text-5">
-                  <span class="lesson__progress-plan-complete text-1">6</span> / <span
-                    class="lesson__progress-plan-full">12</span> запланировано
-                </div>
-              </div>
-              <div class="lesson__progress-tab mix month">
-                <h4 class="lesson__progress-precent title sans">25%</h4>
-                <div class="lesson__progress-line-bg">
-                  <span class="lesson__progress-line" style="width: 25%;"></span>
-                </div>
-                <div class="lesson__progress-plan text-5">
-                  <span class="lesson__progress-plan-complete text-1">12</span> / <span
-                    class="lesson__progress-plan-full">48</span> запланировано
-                </div>
-              </div>
-              <div class="lesson__progress-tab mix year">
-                <h4 class="lesson__progress-precent title sans">10%</h4>
-                <div class="lesson__progress-line-bg">
-                  <span class="lesson__progress-line" style="width: 10%;"></span>
-                </div>
-                <div class="lesson__progress-plan text-5">
-                  <span class="lesson__progress-plan-complete text-1">10</span> / <span
-                    class="lesson__progress-plan-full">100</span> запланировано
-                </div>
-              </div>
-            </div>
+          <div class="video-curs__item">
+            <p class="video-curs__item-title text-1">
+              Упражнение на закрепление материала
+            </p>
+            <a href="#" class="video-curs__item-button">
+              Перейти к упражнениям
+            </a>
           </div>
         </div>
-        <div class="dashboard__columns dashboard__columns--2">
-          <div class="homework dashboard-block">
-            <ul class="homework__list">
-              <li class="homework__list-item">
-                <p class="homework__text text-4">
-                  Обучающее задание на знание английского языка
-                </p>
-                <a class="homework__link text-6" href="#">
-                  Перейти к уроку
-                </a>
+
+        <div class="video-curs__block">
+          <div class="video-curs__video">
+            <video width="100%" height="443" controls="controls" poster="images/image-1.jpg" preload="auto">
+              <source src="video/duel.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2">
+              <source src="video/duel.ogv" type="video/ogg" codecs="theora, vorbis">
+              <source src="video/duel.webm" type="video/webm" codecs="vp8, vorbis">
+            </video>
+          </div>
+          <div class="video-curs__item">
+            <p class="video-curs__item-title text-1">
+              Рекомендуемые слова
+            </p>
+            <ul class="video-curs__item-words">
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">matter</span> - имеет значение</p>
               </li>
-              <li class="homework__list-item">
-                <p class="homework__text text-4">
-                  Как научиться говорить на английском более литературно
-                </p>
-                <a class="homework__link text-6" href="#">
-                  Перейти к домашнему заданию
-                </a>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">give up</span> - сдаваться</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">dream</span> - сон</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">go back</span> - вернуться</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">hi</span> - привет</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">follow</span> - следовать</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">triggered</span> - взволнованный</p>
+              </li>
+              <li class="video-curs__words">
+                <div class="video-curs__words-icon">
+                  <svg>
+                    <use xlink:href="#sound"></use>
+                  </svg>
+                </div>
+                <p class="text-4"><span class="text-3">sign</span> - знак</p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="dashboard__columns dashboard__columns--3">
-          <div class="stats dashboard-block">
-            <div class="stat stat-1">
-              <p class="stat__text text-4">Просмотрено видео</p>
-              <div class="stat__time title sans">1 320ч 15 м</div>
-              <img class="bg-i" src="images/apple-bg.svg" alt="apple">
-            </div>
-            <div class="stat stat-2">
-              <p class="stat__text text-4">Чтение</p>
-              <div class="stat__time title sans">198 ч 57 м</div>
-              <img class="bg-i" src="images/apple-bg.svg" alt="apple">
-            </div>
-            <div class="stat stat-3">
-              <p class="stat__text text-4">Прослушано радио</p>
-              <div class="stat__time title sans">88 ч 06 м</div>
-              <img class="bg-i" src="images/apple-bg.svg" alt="apple">
-            </div>
-            <div class="stat stat-4">
-              <p class="stat__text text-4">Говорение</p>
-              <div class="stat__time title sans">200 ч 01 м</div>
-              <img class="bg-i" src="images/apple-bg.svg" alt="apple">
-            </div>
-          </div>
-        </div>
-        <div class="dashboard__columns dashboard__columns--4">
-          <div class="grafik dashboard-block">
-            <div class="grafik__left">
-              <div class="tabs-grafik">
-                <button class="tabs-btn text-5" data-filter=".grafik-1">
-                  <svg class="grafik-btn-img">
-                    <use xlink:href="#grafik-radio"></use>
-                  </svg>
-                  Прослушано радио
-                </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-2">
-                  <svg class="grafik-btn-img">
-                    <use xlink:href="#grafik-video"></use>
-                  </svg>
-                  Просмотр видео
-                </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-3">
-                  <svg class="grafik-btn-img">
-                    <use xlink:href="#grafik-read"></use>
-                  </svg>
-                  Чтение
-                </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-4">
-                  <svg class="grafik-btn-img">
-                    <use xlink:href="#grafik-talk"></use>
-                  </svg>
-                  Говорение
-                </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-5">
-                  <svg class="grafik-btn-img">
-                    <use xlink:href="#grafik-dictionary"></use>
-                  </svg>
-                  Словарь
-                </button>
-              </div>
-            </div>
-            <div class="grafik__tabs-items">
 
-              <div class="grafik__tabs-item mix grafik-1">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas id="myChart" width="696px" height="278px"></canvas>
-              </div>
-              <div class="grafik__tabs-item mix grafik-2">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas id="myChart" width="696px" height="278px"></canvas>
-              </div>
-              <div class="grafik__tabs-item mix grafik-3">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas id="myChart" width="696px" height="278px"></canvas>
-              </div>
-              <div class="grafik__tabs-item mix grafik-4">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas id="myChart" width="696px" height="278px"></canvas>
-              </div>
-              <div class="grafik__tabs-item mix grafik-5">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas id="myChart" width="696px" height="278px"></canvas>
-              </div>
-
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
