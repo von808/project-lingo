@@ -1,8 +1,168 @@
+<!--=include sprite.html-->
 <!--=include header.html-->
 <div class="wrapper-setting">
-    <!--=include sidebar.html-->
+  <!--=include sidebar.html-->
 </div>
-    <main class="main">
-      
-    </main>
+<main class="main">
+  <section class="settings">
+    <div class="container-fluid">
+      <div class="settings__tabs-item">
+        <div class="settings__inner">
+          <div class="settings__content">
+
+            <div class="settings__tabs">
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#profile"></use>
+                </svg>
+                <a href="#">Личные данные</a>
+              </div>
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#language"></use>
+                </svg>
+                <a href="">Язык</a>
+              </div>
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#lock"></use>
+                </svg>
+                <a href="#">Безопасность</a>
+              </div>
+            </div>
+
+            <div class="settings__block">
+              <div class="settings__personal">
+                <h1 class="title">
+                  Личные данные
+                </h1>
+                <div class="settings__personal-data">
+                  <img class="settings__personal-avatar" src="images/avatar-elena.jpg" alt="">
+                  <div class="settings__personal-item">
+                    <p class="settings__personal-name text-2">Елена Крузова</p>
+                    <label class="settings__personal-change">
+                      <input type="file" name="photo" accept="image/*,image/jpeg">
+                      <span class="settings__personal-btn text-6">Изменить фото</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <form class="settings__form" action="" method="post">
+                <div class="settings__form-item">
+                  <label class="settings__label text-2" for="">Имя<input class="settings__input text-4" type="text"
+                      required></label>
+                  <label class="settings__label text-2" for="">Фамилия<input class="settings__input text-4" type="text"
+                      required></label>
+                  <label class="settings__label text-2" for="">Пол
+                    <div class="form-group">
+                      <div class="dropdown">
+                        <button class="dropdown__button settings__label text-4" data-value="gender">Мужчина</button>
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item text-2" data-value="male">Мужчина</li>
+                          <li class="dropdown__list-item text-2" data-value="female">Женщина</li>
+                        </ul>
+                        <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                      </div>
+                    </div>
+                  </label>
+                  <label class="settings__label text-2 sans" for="">Дата рождения<input class="settings__input text-4"
+                      type="date" required></label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label text-2 sans" for="">Телефон<input class="settings__input text-4"
+                      type="text" required></label>
+                  <label class="settings__label text-2 sans" for="">Скайп<input class="settings__input text-4"
+                      type="text" required></label>
+                  <label class="settings__label text-2" for="">Родной язык
+                    <div class="form-group">
+                      <div class="dropdown">
+                        <button class="dropdown__button settings__label text-4" data-value="language">Русский</button>
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item text-2" data-value="russian">Русский</li>
+                          <li class="dropdown__list-item text-2" data-value="english">Английский</li>
+                        </ul>
+                        <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label text-2 sans" for="">Telegram<input class="settings__input text-4"
+                      type="text" required></label>
+                  <label class="settings__label text-2 sans" for="">Viber<input class="settings__input text-4"
+                      type="tel" required></label>
+                  <label class="settings__label text-2 sans" for="">WhatsApp<input class="settings__input text-4"
+                      type="tel" required></label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label text-2" for="">Страна<input class="settings__input text-4" type="text"
+                      required></label>
+                  <label class="settings__label text-2" for="">Город<input class="settings__input text-4" type="text"
+                      required></label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label text-2" for="">Цель
+                    <div class="form-group">
+                      <div class="dropdown">
+                        <button class="dropdown__button settings__label text-4" data-value="goals">Говорить на
+                          английском более свободно</button>
+                        <ul class="dropdown__list">
+                          <li class="dropdown__list-item text-2" data-value="goals">Говорить на английском более
+                            свободно</li>
+                          <li class="dropdown__list-item text-2" data-value="goals">Говорить на русском более свободно
+                          </li>
+                        </ul>
+                        <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label settings__label-curs text-2" for="">Тип курсов
+                    <div class="settings__checkbox">
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="general">Общий</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="business">Бизнес</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school">Школа</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="IELTS">IELTS</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="TEFL">TEFL</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school-exams">Школьные экзамены
+                      </p>
+                    </div>
+                  </label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label settings__label-curs text-2" for="">Курсы
+                    <div class="settings__checkbox">
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="individual">Индивидуальные онлайн
+                      </p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="club">Club</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="class-online">Class Online</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="settings__form-item">
+                  <label class="settings__label settings__label-curs text-2" for="">Интересы
+                    <div class="settings__checkbox">
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="general">Путешествия</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="business">Спорт</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school">Фотография</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="IELTS">Ремесло</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="TEFL">Готовка</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school-exams">Общение</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school">Религия</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="IELTS">Игры</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="TEFL">Туризм</p>
+                      <p><input class="text-4" type="checkbox" name="curs-type" value="school-exams">Образование</p>
+                    </div>
+                  </label>
+                </div>
+                <button class="settings__btn text-5">Сохранить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <!--=include footer.html-->

@@ -8,6 +8,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
+$('.input-file input[type=file]').on('change', function () {
+  let file = this.files[0];
+  $(this).closest('.input-file').find('.input-file-text').html(file.name);
+});
+
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
   const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
@@ -182,7 +187,7 @@ ctx.canvas.parentNode.style.height = '278px';
 let myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
       label: 'book',
       data: [6, 2, 1, 1, 2, 1, 6],
