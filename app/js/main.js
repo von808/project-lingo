@@ -8,6 +8,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
+$('.input-file input[type=file]').on('change', function () {
+  let file = this.files[0];
+  $(this).closest('.input-file').find('.input-file-text').html(file.name);
+});
+
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
   const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
@@ -45,17 +50,18 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item', {
+  var mixer = mixitup('.lesson__progress', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.pay-1 , .curs-1, .club-1',
+      filter: '.week',
     }
   });
-})
+});
+
 $(function () {
   var grafik = mixitup('.grafik__tabs-items', {
     animation: {
@@ -68,18 +74,6 @@ $(function () {
     }
   });
 })
-$(function () {
-  var lesson = mixitup('.lesson__progress', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease-in-out',
-    },
-    load: {
-      filter: '.week',
-    }
-  });
-});
 
 $(function () {
   $('.club__content').slick({
@@ -182,7 +176,7 @@ ctx.canvas.parentNode.style.height = '278px';
 let myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
       label: 'book',
       data: [6, 2, 1, 1, 2, 1, 6],

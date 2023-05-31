@@ -1,0 +1,173 @@
+.settings {
+  &__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    background: $white;
+    border-radius: 20px;
+    width: 358px;
+    height: fit-content;
+  }
+
+  &__tabs-btn {
+    display: flex;
+    align-items: center;
+    color: $blue;
+
+    .icon {
+      margin-right: 16px;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    background: $white;
+    border-radius: 20px;
+    padding: 56px;
+  }
+
+  &__personal {
+    margin-bottom: 40px;
+
+    .title {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__personal-data {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__personal-avatar {
+    width: 115px;
+    height: 115px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__personal-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__personal-change {
+    position: relative;
+    display: inline-block;
+
+    input[type=file] {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      display: block;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__personal-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: $grey;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__form-item {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    .dropdown__button {
+      background: $bg;
+      padding: 16px;
+      height: auto;
+    }
+
+    .dropdown__button::after {
+      transform: rotate(-90deg);
+      margin-top: -7px;
+    }
+
+    .dropdown__list {
+      top: 62px;
+    }
+
+    .dropdown__list--visible .dropdown__button::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__input {
+    border-radius: 10px;
+    background-color: $bg;
+    padding: 16px;
+    color: $blue;
+
+    &::-webkit-calendar-picker-indicator {
+      color: transparent;
+      opacity: 1;
+      background: url(../images/calendar.svg) no-repeat center;
+      background-size: contain;
+    }
+    
+  }
+
+  &__label-curs {
+    gap: 16px;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  &__btn {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background: $grad1;
+    padding: 10px 0;
+    width: 186px;
+  }
+}
