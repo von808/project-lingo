@@ -45,17 +45,18 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 });
 
 $(function () {
-  var mixer = mixitup('.pay__tabs-item, .curs__tabs-item, .club__tabs-item', {
+  var mixer = mixitup('.lesson__progress', {
     animation: {
       duration: 700,
       effects: 'fade scale(0.41)',
       easing: 'ease-in-out',
     },
     load: {
-      filter: '.pay-1 , .curs-1, .club-1',
+      filter: '.week',
     }
   });
-})
+});
+
 $(function () {
   var grafik = mixitup('.grafik__tabs-items', {
     animation: {
@@ -68,18 +69,6 @@ $(function () {
     }
   });
 })
-$(function () {
-  var lesson = mixitup('.lesson__progress', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease-in-out',
-    },
-    load: {
-      filter: '.week',
-    }
-  });
-});
 
 $(function () {
   $('.club__content').slick({

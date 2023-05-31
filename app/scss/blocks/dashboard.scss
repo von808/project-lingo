@@ -206,6 +206,9 @@
   }
   &-btn-img{
     margin-right: 9px;
+    width: 24px;
+    height: 24px;
+    fill: $blue;
   }
   &__tabs-items{
     padding: 130px 24px 31px;
@@ -228,13 +231,7 @@
   margin: 0;
 }
 .tabs-btn-grafik{
-  max-width: 220px;
-  width: 100%;
-  min-height: 70px;
-  padding: 20px 16px 20px 16px;
-  font-size: 16px;
-  text-align: left;
-  background-color: $bg;
+
   &:not(:last-child){
     margin-bottom: 8px;
   }
@@ -242,5 +239,37 @@
     background: $grad1;
     color: $white;
     position: relative;
+  }
+}
+.grafik__left{
+  .tabs-btn{
+    max-width: 220px;
+    width: 100%;
+    min-height: 70px;
+    padding: 20px 16px 20px 16px;
+    font-size: 16px;
+    text-align: left;
+    background-color: $bg;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  // .grafik-btn-img.svg {
+  //   fill: red;
+  // }
+
+  .mixitup-control-active{
+    // color: red;
+    .grafik-btn-img {
+      fill: $white;
+    }
+  }
+  // .mixitup-control-active.grafik-btn-img{
+  //     fill: red;
+  // }
+  .tabs-btn.mixitup-control-active::after{
+    bottom: -45px;
+    transform: rotate(-15deg) scale(-1, 1);
   }
 }
