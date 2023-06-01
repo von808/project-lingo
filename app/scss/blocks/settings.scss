@@ -118,7 +118,7 @@
       top: 62px;
     }
 
-    .dropdown__list--visible .dropdown__button::after {
+    .dropdown__button--active::after {
       transform: rotate(0deg);
     }
   }
@@ -135,7 +135,11 @@
       background: url(../images/calendar.svg) no-repeat center;
       background-size: contain;
     }
-    
+
+    &::placeholder {
+      color: $blue;
+    }
+
   }
 
   &__label-curs {
@@ -152,7 +156,7 @@
       align-items: center;
     }
 
-    input {
+    input[type=checkbox] {
       width: 24px;
       height: 24px;
       margin-right: 10px;

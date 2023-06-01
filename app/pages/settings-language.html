@@ -1,0 +1,72 @@
+<!--=include sprite.html-->
+<!--=include header.html-->
+<div class="wrapper-page">
+  <!--=include sidebar.html-->
+</div>
+<main class="main">
+  <section class="settings-language-language">
+    <div class="container-fluid">
+      <div class="settings-language__tabs-item">
+        <div class="settings-language__inner">
+          <div class="settings__content">
+
+            <div class="settings__tabs">
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#profile"></use>
+                </svg>
+                <a href="#">Личные данные</a>
+              </div>
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#language"></use>
+                </svg>
+                <a href="">Язык</a>
+              </div>
+              <div class="settings__tabs-btn text-4">
+                <svg class="icon">
+                  <use xlink:href="#lock"></use>
+                </svg>
+                <a href="#">Безопасность</a>
+              </div>
+            </div>
+            <div class="settings__block">
+              <div class="settings__personal">
+                <h1 class="title">
+                  Язык и регион
+                </h1>
+              </div>
+              <div class="settings__form-item">
+                <label class="settings__label text-2" for="">Изучаемый язык
+                  <div class="form-group">
+                    <div class="dropdown">
+                      <button class="dropdown__button settings__label text-4" data-value="english">Английский</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item text-2" data-value="english">Английский</li>
+                        <li class="dropdown__list-item text-2" data-value="russian">Русский</li>
+                      </ul>
+                      <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                    </div>
+                  </div>
+                </label>
+                <label class="settings__label text-2" for="">Язык интерфейса
+                  <div class="form-group">
+                    <div class="dropdown">
+                      <button class="dropdown__button settings__label text-4" data-value="russian">Русский</button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__list-item text-2" data-value="russian">Русский</li>
+                        <li class="dropdown__list-item text-2" data-value="english">Английский</li>
+                      </ul>
+                      <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html-->

@@ -15,6 +15,19 @@
     border-radius: 20px;
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
+  }
+
+  &__item-after {
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      background-image: url(../images/apple-bg-opacity-1.svg);
+      width: 116px;
+      height: 147px;
+    }
   }
 
   &__info-title {
@@ -97,19 +110,7 @@
   }
 
   &__item-button {
-    display: flex;
-    justify-content: center;
     width: 256px;
-    padding: 10px 0;
-    border-radius: 10px;
-    border: 1px solid $blue;
-    color: $black;
-
-    &:hover,
-    &:active {
-      background: $grad1;
-      color: $white;
-    }
   }
 
   &__video {
@@ -119,8 +120,11 @@
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 20px;
+    position: relative;
 
     video {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }

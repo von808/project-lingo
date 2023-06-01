@@ -1,0 +1,99 @@
+.level-scale {
+
+  &__block {
+    background-color: $white;
+    border-radius: 20px;
+    position: relative;
+    padding: 40px;
+    display: flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 63px;
+      bottom: -50px;
+      background-image: url(../../images/scale-apple-face.png);
+      background-repeat: no-repeat;
+      width: 212px;
+      height: 210px;
+    }
+  }
+
+  &__scale {
+    margin-right: 40px;
+    border-radius: 20px;
+    background-color: $bg;
+    width: 212px;
+    height: auto;
+  }
+
+  &__scale-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 21px;
+    padding: 0 24px;
+    height: 56px;
+    border-radius: 20px;
+  }
+
+  &__scale-title {
+    text-transform: uppercase;
+    color: $blue;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__scale-image {
+    display: none;
+    width: 52px;
+    height: 66px;
+  }
+
+  &__scale-value {
+    display: none;
+  }
+
+  &__scale-item.active {
+    background: $grad1;
+    color: $white;
+    height: 161px;
+    align-items: center;
+
+    .level-scale__scale-title {
+      color: $white;
+    }
+
+    .level-scale__scale-image {
+      display: block;
+    }
+
+    .level-scale__scale-value {
+      display: block;
+    }
+  }
+
+  &__desc {
+    max-width: 1066px;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 52px 0 40px;
+    color: $blue;
+  }
+
+  &__items {
+    column-width: 48%;
+    column-count: 2;
+    column-gap: 4%;
+  }
+
+  &__item {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+}

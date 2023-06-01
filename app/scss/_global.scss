@@ -214,13 +214,15 @@ body {
 }
 
 .tabs-btn {
+  display: flex;
+  align-items: center;
   max-width: 350px;
   width: 100%;
   min-height: 99px;
   background-color: $white;
   border-radius: 20px;
   text-align: left;
-  padding: 34px;
+  padding: 10px 34px;
   font-size: 26px;
   color: $blue;
   overflow: hidden;
@@ -271,8 +273,19 @@ body {
 .btn {
   border-radius: 10px;
   padding: 10px;
+  height: 43px;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px $blue solid;
+  color: $black;
+
+  &:hover {
+    background: $grad1;
+    color: $white;
+    border: none;
+  }
 }
 
 .feadback {
@@ -353,4 +366,78 @@ body {
 
 svg {
   cursor: pointer;
+}
+
+// Video
+#video-over {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+#video-play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 56px;
+  height: 56px;
+  z-index: 1;
+  cursor: pointer;
+  transition: .2s ease;
+  transition-property: opacity, visibility;
+}
+
+.video-is-playing {
+  #video-over {
+    display: block;
+  }
+
+  #video-play {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover #video-play {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.video-control__play {
+  display: block;
+  width: 89px;
+  height: 103px;
+  fill: $blue;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.video-control__play.hidden {
+  display: none;
+}
+
+.video-control__pause {
+  display: none;
+  width: 89px;
+  height: 103px;
+  fill: $blue;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.video-control__pause.visible {
+  display: block;
 }

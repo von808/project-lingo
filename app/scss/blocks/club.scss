@@ -27,6 +27,7 @@
     align-items: center;
     gap: 16px;
     color: $blue;
+    border-radius: 10px;
 
     .arrow-left {
       transform: rotate(90deg);
@@ -116,7 +117,8 @@
   }
 
   &__item-time {
-    padding: 24px 24px 0;
+    margin: 24px 0;
+    padding: 0 24px;
 
     span {
       color: $blue;
@@ -124,12 +126,24 @@
   }
 
   &__item-title {
-    padding: 24px 24px 16px;
+    display: block;
+    padding: 0 24px;
     color: $black;
   }
 
   &__item-subtitle {
-    padding: 0 24px 24px;
+    padding: 0 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    margin: 16px 0 24px;
   }
 
   &__item-link {

@@ -13,6 +13,45 @@ $('.input-file input[type=file]').on('change', function () {
   $(this).closest('.input-file').find('.input-file-text').html(file.name);
 });
 
+$(function () {
+  var $videoContainer = $('#video'),
+    $videoControls = $('.video-control'),
+    $video = $('#myVideo')[0],
+    $playVideo = $(".video-control__play"),
+    $pauseVideo = $(".video-control__pause");
+
+  $videoControls.click(function () {
+    if ($video.paused) {
+      $video.play();
+      $playVideo.addClass('hidden');
+      $pauseVideo.addClass('visible');
+      $videoContainer.addClass('video-is-playing');
+      $video.setAttribute("controls", "controls");
+    } else {
+      $video.pause();
+      $playVideo.removeClass('hidden');
+      $pauseVideo.removeClass('visible');
+      $videoContainer.removeClass('video-is-playing');
+    }
+  });
+});
+
+
+var acc = document.getElementsByClassName("faq__accardion-items");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
   const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
