@@ -8,6 +8,9 @@
 
   &__tabs-item {
     overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__inner {
