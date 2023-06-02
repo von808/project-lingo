@@ -114,6 +114,29 @@ $(function () {
   });
 })
 
+// $(function () {
+//   $('.tabs-grafik').slick({
+//     pagination: false,
+//     arrows: false,
+//     infinite: true,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     centerMode: true,
+//     useCSS: false,
+//     centerPadding: '100px',
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           useCSS: true,
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       }
+//     ]
+//   });
+// })
+
 $(function () {
   $('.club__content').slick({
     pagination: false,
@@ -210,8 +233,8 @@ $(function () {
 })
 
 let ctx = document.querySelector('#myChart').getContext('2d');
-ctx.canvas.parentNode.style.width = '696px';
-ctx.canvas.parentNode.style.height = '278px';
+// ctx.canvas.parentNode.style.width = '696px';
+// ctx.canvas.parentNode.style.height = '278px';
 let myChart = new Chart(ctx, {
   type: 'line',
   data: {
