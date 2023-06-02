@@ -45,6 +45,7 @@
     padding: 12px 24px;
     border-radius: 20px;
     position: relative;
+    overflow: hidden;
 
     &::after {
       content: '';
@@ -106,5 +107,10 @@
     background: $blue;
     color: $white;
     padding: 32px;
+  }
+
+  .profile .tabs-btn {
+    min-width: 282px;
+    width: 282px;
   }
 }
