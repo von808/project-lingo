@@ -58,14 +58,14 @@
   }
 
   &__content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-content: flex-start;
   }
 
   &__item {
-    width: 358px;
+    // width: 358px;
     background: $white;
     border-radius: 20px;
     overflow: hidden;
