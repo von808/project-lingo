@@ -212,6 +212,9 @@ body {
   display: flex;
   gap: 20px;
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .tabs-btn {
