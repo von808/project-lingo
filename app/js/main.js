@@ -101,18 +101,18 @@ $(function () {
   });
 });
 
-$(function () {
-  var grafik = mixitup('.grafik__tabs-items', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease-in-out',
-    },
-    load: {
-      filter: '.grafik-1',
-    }
-  });
-})
+// $(function () {
+//   var grafik = mixitup('.grafik__tabs-items', {
+//     animation: {
+//       duration: 700,
+//       effects: 'fade scale(0.41)',
+//       easing: 'ease-in-out',
+//     },
+//     load: {
+//       filter: '.grafik-1',
+//     }
+//   });
+// })
 
 
 // $(function () {

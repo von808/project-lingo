@@ -10,6 +10,20 @@
     padding: 40px 53px 28px 60px;
   }
 }
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 20px;
+  border: 0px solid orange;
+}
+
 .logo{
   display: block;
   margin-bottom: 40px;
