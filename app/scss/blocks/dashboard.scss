@@ -74,7 +74,7 @@
     padding: 0 33px;
   }
   &__content{
-    padding: 32px 33px;
+    padding: 32px;
     color: $black;
   }
   &__content-item{
@@ -255,19 +255,11 @@
     align-items: center;
   }
 
-  // .grafik-btn-img.svg {
-  //   fill: red;
-  // }
-
   .mixitup-control-active{
-    // color: red;
     .grafik-btn-img {
       fill: $white;
     }
   }
-  // .mixitup-control-active.grafik-btn-img{
-  //     fill: red;
-  // }
   .tabs-btn.mixitup-control-active::after{
     bottom: -45px;
     transform: rotate(-15deg) scale(-1, 1);

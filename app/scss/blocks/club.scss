@@ -73,7 +73,8 @@
   }
 
   &__item {
-    max-width: 358px;
+    min-width: 358px;
+    width: 358px;
     background: $white;
     border-radius: 20px;
     overflow: hidden;
