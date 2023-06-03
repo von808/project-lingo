@@ -101,41 +101,19 @@ $(function () {
   });
 });
 
-$(function () {
-  var grafik = mixitup('.grafik__tabs-items', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease-in-out',
-    },
-    load: {
-      filter: '.grafik-1',
-    }
-  });
-})
-
 // $(function () {
-//   $('.tabs-grafik').slick({
-//     pagination: false,
-//     arrows: false,
-//     infinite: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     centerMode: true,
-//     useCSS: false,
-//     centerPadding: '100px',
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           useCSS: true,
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
-//     ]
+//   var grafik = mixitup('.grafik__tabs-items', {
+//     animation: {
+//       duration: 700,
+//       effects: 'fade scale(0.41)',
+//       easing: 'ease-in-out',
+//     },
+//     load: {
+//       filter: '.grafik-1',
+//     }
 //   });
 // })
+
 
 // $(function () {
 //   $('.club__content').slick({
@@ -179,6 +157,29 @@ $(function () {
     listenBlock.toggleClass("show");
   });
 });
+
+
+
+$(function () {
+  let menuWrapper = $("#menu__wrapper");
+  let menuToggle = $("#menu__toggle");
+  const body = document.body;
+
+  menuToggle.on("click", function (event) {
+    event.preventDefault();
+    menuWrapper.toggleClass("show");
+    body.classList.add('no-scroll');
+  });
+
+  menuWrapper.on("click", function (event) {
+    event.preventDefault();
+    menuWrapper.toggleClass("show");
+    body.classList.remove('no-scroll');
+  });
+
+});
+
+
 
 // Radio button play/pause
 $(function () {
