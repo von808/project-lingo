@@ -1,7 +1,26 @@
+html{
+  overflow-x: hidden;
+}
 body {
   overflow-x: hidden;
   min-width: 320px;
   font-family: $raleway;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  /* цвет бегунка */
+  border-radius: 20px;
+  /* округлось бегунка */
+  border: 0px solid orange;
+  /* отступ вокруг бегунка */
 }
 
 .wrapper {
