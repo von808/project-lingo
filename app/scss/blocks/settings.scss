@@ -32,6 +32,11 @@
     padding: 56px;
   }
 
+  &__block-security,
+  &__block-language {
+    padding: 40px;
+  }
+
   &__personal {
     margin-bottom: 40px;
 
@@ -107,6 +112,7 @@
       background: $bg;
       padding: 16px;
       height: auto;
+      gap: 10px;
     }
 
     .dropdown__button::after {
@@ -128,6 +134,8 @@
     background-color: $bg;
     padding: 16px;
     color: $blue;
+    max-width: 100%;
+    width: 100%;
 
     &::-webkit-calendar-picker-indicator {
       color: transparent;
@@ -139,7 +147,6 @@
     &::placeholder {
       color: $blue;
     }
-
   }
 
   &__label-curs {
