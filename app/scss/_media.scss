@@ -340,12 +340,6 @@
     column-gap: 40px;
     row-gap: 24px;
   }
-}
-
-@media (max-width:1000px) {
-  .container-fluid {
-    padding: 32px 20px;
-  }
 
   .settings__block,
   .settings__block-security,
@@ -425,9 +419,6 @@
   .student__content-item p {
     max-width: 150px;
   }
-}
-
-@media (max-width:768px) {
 
   .header__right {
     display: none;
@@ -651,6 +642,13 @@
   }
 }
 
+@media (max-width:700px) {
+
+  .profile__block {
+    flex-direction: column;
+  }
+}
+
 @media (max-width:700px){
   .lessons .lessons__installation,
   .homework .homework__installation{
@@ -853,10 +851,6 @@
   .level-scale .tabs-btn {
     min-width: 300px;
     width: 300px;
-  }
-
-  .profile__block {
-    flex-direction: column;
   }
 
   .profile__block:first-child .profile__item:first-child {
