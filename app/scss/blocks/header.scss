@@ -47,6 +47,10 @@
     gap: 9px;
   }
 
+  & h2 {
+    color: $black;
+  }
+
   .nav__menu-item {
     margin: 0;
     max-width: 177px;
@@ -62,14 +66,23 @@
     &:not(:last-child) {
       margin-right: 0;
     }
+
+    h2 {
+      color: $black;
+    }
   }
 
   .nav__menu-item--link {
     padding: 24px;
+    width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
     gap: 6px;
+
+    &:active svg  {
+      fill: $blue;
+    }
   }
 
   .nav__menu-item--link svg {

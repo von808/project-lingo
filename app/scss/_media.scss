@@ -154,7 +154,8 @@
     width: 100%;
   }
 
-  .video-curs__item-words {
+  .video-curs__item-words,
+  .video-film-words {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
   }
@@ -356,12 +357,13 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .curs__content,
+  .curs.watch-curs .curs__content,
   .radio__content {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .video-curs__inner {
+  .video-curs__inner,
+  .video-film__inner {
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -370,14 +372,18 @@
 
   .video-curs__item,
   .video-curs__video,
-  .video-curs__rec {
+  .video-curs__rec,
+  .video-film__item,
+  .video-film__video,
+  .video-film__rec {
     width: 100%;
     height: fit-content;
     position: relative;
     top: 0;
   }
 
-  .video-curs__video {
+  .video-curs__video,
+  .video-film__video {
     order: -1;
   }
 
@@ -435,12 +441,13 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .curs__content,
+  .curs.watch-curs .curs__content,
   .radio__content {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .video-curs__inner {
+  .video-curs__inner,
+  .video-film__inner {
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -449,14 +456,18 @@
 
   .video-curs__item,
   .video-curs__video,
-  .video-curs__rec {
+  .video-curs__rec,
+  .video-film__item,
+  .video-film__video,
+  .video-film__rec {
     width: 100%;
     height: fit-content;
     position: relative;
     top: 0;
   }
 
-  .video-curs__video {
+  .video-curs__video,
+  .video-film__video {
     order: -1;
   }
 
@@ -722,9 +733,9 @@
 }
   
   @media (max-width:700px){
-    .profile__block {
-      flex-direction: column;
-    }
+  .profile__block {
+    flex-direction: column;
+  }
   .lessons .lessons__installation,
   .homework .homework__installation{
     flex-direction: column;
@@ -806,6 +817,10 @@
   .homework__item .feadback__other-score img {
     transform: rotate(90deg);
   }
+  .video-curs__item-words,
+  .video-film__item-words {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:600px) {
@@ -855,7 +870,7 @@
     right: 0;
   }
 
-  .curs__content,
+  .curs.watch-curs .curs__content,
   .radio__content {
     grid-template-columns: 1fr;
   }
@@ -881,15 +896,18 @@
     display: none;
   }
 
-  .video-curs__item-words {
+  .video-curs__item-words,
+  .video-film__item-words {
     grid-template-columns: 1fr;
   }
 
-  .video-curs__item {
+  .video-curs__item,
+  .video-film__item {
     padding: 24px;
   }
 
   .video-curs__item-button,
+  .video-film__item-button,
   .video-tv__item-button {
     width: 100%;
   }
@@ -1018,5 +1036,31 @@
   .club .club__lessons-left,
   .club .dropdown__button {
     width: 100%;
+  }
+
+  .radio__player {
+    height: auto;
+  }
+
+  .radio__player-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .radio__player-bottom {
+    height: auto;
+  }
+
+  .radio__player-title {
+    padding-right: 34px;
+  }
+
+  .radio__player-button {
+    right: 0;
+    bottom: 0;
+  }
+
+  .radio__player-audio {
+    width: 70%;
   }
 }
