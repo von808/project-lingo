@@ -183,25 +183,20 @@ $(function () {
 
 
 $(function () {
+  let wrapper = $(".wrapper");
   let menuWrapper = $("#menu__wrapper");
   let menuToggle = $("#menu__toggle");
+  let menuBox = $("#menu__box");
   const body = document.body;
 
   menuToggle.on("click", function (event) {
     event.preventDefault();
+    menuToggle.toggleClass("active");
     menuWrapper.toggleClass("show");
-    body.classList.add('no-scroll');
-  });
-
-  menuWrapper.on("click", function (event) {
-    event.preventDefault();
-    menuWrapper.toggleClass("show");
-    body.classList.remove('no-scroll');
+    body.toggleClass('no-scroll');
   });
 
 });
-
-
 
 // Radio button play/pause
 $(function () {
