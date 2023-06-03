@@ -12,7 +12,7 @@
       position: absolute;
       right: 63px;
       bottom: -50px;
-      background-image: url(../../images/scale-apple-face.png);
+      background-image: url(../images/scale-apple-face.png);
       background-repeat: no-repeat;
       width: 212px;
       height: 210px;
@@ -46,9 +46,16 @@
   }
 
   &__scale-image {
-    display: none;
     width: 52px;
     height: 66px;
+  }
+
+  &__scale-image.hidden {
+    display: none;
+  }
+
+  &__scale-image.visible {
+    display: none;
   }
 
   &__scale-value {
@@ -65,8 +72,12 @@
       color: $white;
     }
 
-    .level-scale__scale-image {
+    .level-scale__scale-image.hidden {
       display: block;
+    }
+
+    .level-scale__scale-image.visible {
+      display: none;
     }
 
     .level-scale__scale-value {

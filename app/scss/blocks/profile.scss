@@ -34,10 +34,12 @@
 
   &__item-avatar {
     border-radius: 20px;
+    object-fit: cover;
   }
 
   &__left-lessons {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
     background: $grad2;
@@ -45,6 +47,7 @@
     padding: 12px 24px;
     border-radius: 20px;
     position: relative;
+    overflow: hidden;
 
     &::after {
       content: '';
@@ -69,6 +72,7 @@
 
   &__informaion-item {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
     text-align: right;
@@ -106,5 +110,10 @@
     background: $blue;
     color: $white;
     padding: 32px;
+  }
+
+  .profile .tabs-btn {
+    min-width: 282px;
+    width: 282px;
   }
 }

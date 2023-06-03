@@ -38,8 +38,8 @@
   }
 
   &__content {
-    display: flex;
-    // grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 
@@ -49,10 +49,11 @@
     align-items: center;
     text-align: center;
 
-    max-width: 484px;
     width: 100%;
     padding: 0 40px;
     position: relative;
+    border-radius: 20px;
+    background-color: $white;
   }
 
   &__item-title {
@@ -68,7 +69,6 @@
     text-align: center;
     color: $white;
 
-    width: 280px;
     height: 132px;
     border-radius: 20px;
     padding: 0 8%;
@@ -157,7 +157,7 @@
   }
 
   .tabs-btn {
-    max-width: 484px;
+    min-width: 484px;
   }
 
   .pay-2 .pay__item .pay__item-text {
@@ -181,11 +181,13 @@
   .apple {
     margin-right: 12px;
   }
-  .mixitup-control-active{
+
+  .mixitup-control-active {
     background: $grad1;
     color: $white;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       right: -6px;

@@ -105,6 +105,9 @@
     visibility: visible;
     left: -2px;
     overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 #menu__toggle-inner {
