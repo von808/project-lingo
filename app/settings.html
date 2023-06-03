@@ -229,7 +229,7 @@
                   </a>
                 </div>
                 <div class="nav__menu-item sidebar-profile">
-                  <a class="nav__menu-item--link" href="https://von808.github.io/Lingolands/profile">
+                  <a class="nav__menu-item--link" href="https://von808.github.io/Lingolands/profile" onclick="window.open('/Lingolands/profile')">
                     <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.492 11A7.431 7.431 0 0110 12.488 7.43 7.43 0 015.508 11C2.816 12.458 1 15.183 1 18.298v3.049c0 .36.313.653.698.653h16.604c.386 0 .698-.293.698-.654v-3.048c0-3.115-1.816-5.84-4.508-7.298z"
@@ -714,7 +714,7 @@
                   <label class="settings__label text-2" for="">Пол
                     <div class="form-group">
                       <div class="dropdown">
-                        <button class="dropdown__button settings__label text-4" data-value="gender">Мужчина</button>
+                        <button class="dropdown__button settings__label text-4" data-value="gender" type="button">Мужчина</button>
                         <ul class="dropdown__list">
                           <li class="dropdown__list-item text-2" data-value="male">Мужчина</li>
                           <li class="dropdown__list-item text-2" data-value="female">Женщина</li>
@@ -734,7 +734,7 @@
                   <label class="settings__label text-2" for="">Родной язык
                     <div class="form-group">
                       <div class="dropdown">
-                        <button class="dropdown__button settings__label text-4" data-value="language">Русский</button>
+                        <button class="dropdown__button settings__label text-4" data-value="language" type="button">Русский</button>
                         <ul class="dropdown__list">
                           <li class="dropdown__list-item text-2" data-value="russian">Русский</li>
                           <li class="dropdown__list-item text-2" data-value="english">Английский</li>
@@ -745,12 +745,9 @@
                   </label>
                 </div>
                 <div class="settings__form-item">
-                  <label class="settings__label text-2 sans" for="">Telegram<input class="settings__input text-4"
-                      type="text" required></label>
-                  <label class="settings__label text-2 sans" for="">Viber<input class="settings__input text-4"
-                      type="tel" required></label>
-                  <label class="settings__label text-2 sans" for="">WhatsApp<input class="settings__input text-4"
-                      type="tel" required></label>
+                  <label class="settings__label text-2 sans" for="">Telegram<input class="settings__input text-4" type="text" required></label>
+                  <label class="settings__label text-2 sans" for="">Viber<input class="settings__input text-4" type="tel" required></label>
+                  <label class="settings__label text-2 sans" for="">WhatsApp<input class="settings__input text-4" type="tel" required></label>
                 </div>
                 <div class="settings__form-item">
                   <label class="settings__label text-2" for="">Страна<input class="settings__input text-4" type="text"
@@ -762,7 +759,7 @@
                   <label class="settings__label text-2" for="">Цель
                     <div class="form-group">
                       <div class="dropdown">
-                        <button class="dropdown__button settings__label text-4" data-value="goals">Говорить на
+                        <button class="dropdown__button settings__label text-4" data-value="goals" type="button">Говорить на
                           английском более свободно</button>
                         <ul class="dropdown__list">
                           <li class="dropdown__list-item text-2" data-value="goals">Говорить на английском более
@@ -814,7 +811,7 @@
                     </div>
                   </label>
                 </div>
-                <button class="settings__btn text-5">Сохранить</button>
+                <button class="settings__btn text-5" type="submit">Сохранить</button>
               </form>
             </div>
           </div>

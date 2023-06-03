@@ -101,41 +101,19 @@ $(function () {
   });
 });
 
-$(function () {
-  var grafik = mixitup('.grafik__tabs-items', {
-    animation: {
-      duration: 700,
-      effects: 'fade scale(0.41)',
-      easing: 'ease-in-out',
-    },
-    load: {
-      filter: '.grafik-1',
-    }
-  });
-})
-
 // $(function () {
-//   $('.tabs-grafik').slick({
-//     pagination: false,
-//     arrows: false,
-//     infinite: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     centerMode: true,
-//     useCSS: false,
-//     centerPadding: '100px',
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           useCSS: true,
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
-//     ]
+//   var grafik = mixitup('.grafik__tabs-items', {
+//     animation: {
+//       duration: 700,
+//       effects: 'fade scale(0.41)',
+//       easing: 'ease-in-out',
+//     },
+//     load: {
+//       filter: '.grafik-1',
+//     }
 //   });
 // })
+
 
 // $(function () {
 //   $('.club__content').slick({

@@ -229,7 +229,7 @@
                   </a>
                 </div>
                 <div class="nav__menu-item sidebar-profile">
-                  <a class="nav__menu-item--link" href="https://von808.github.io/Lingolands/profile">
+                  <a class="nav__menu-item--link" href="https://von808.github.io/Lingolands/profile" onclick="window.open('/Lingolands/profile')">
                     <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.492 11A7.431 7.431 0 0110 12.488 7.43 7.43 0 015.508 11C2.816 12.458 1 15.183 1 18.298v3.049c0 .36.313.653.698.653h16.604c.386 0 .698-.293.698-.654v-3.048c0-3.115-1.816-5.84-4.508-7.298z"
@@ -812,31 +812,31 @@
           <div class="grafik dashboard-block">
             <div class="grafik__left">
               <div class="tabs-grafik">
-                <button class="tabs-btn text-5" data-filter=".grafik-1">
+                <button class="tabs-btn text-5" data-filter=".grafik-#">
                   <svg class="grafik-btn-img">
                     <use xlink:href="#grafik-radio"></use>
                   </svg>
                   Прослушано радио
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-2">
+                <button class="tabs-btn text-5" data-filter=".grafik-#">
                   <svg class="grafik-btn-img">
                     <use xlink:href="#grafik-video"></use>
                   </svg>
                   Просмотр видео
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-3">
+                <button class="tabs-btn text-5" data-filter=".grafik-#">
                   <svg class="grafik-btn-img">
                     <use xlink:href="#grafik-read"></use>
                   </svg>
                   Чтение
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-4">
+                <button class="tabs-btn text-5" data-filter=".grafik-#">
                   <svg class="grafik-btn-img">
                     <use xlink:href="#grafik-talk"></use>
                   </svg>
                   Говорение
                 </button>
-                <button class="tabs-btn text-5" data-filter=".grafik-5">
+                <button class="tabs-btn text-5" data-filter=".grafik-#">
                   <svg class="grafik-btn-img">
                     <use xlink:href="#grafik-dictionary"></use>
                   </svg>
@@ -846,80 +846,32 @@
             </div>
             <div class="grafik__tabs-items">
 
-              <div class="grafik__tabs-item mix grafik-1">
+              <div class="grafik__tabs-item mix grafik-#">
                 <div class="form-group">
                   <div class="dropdown">
                     <button class="dropdown__button text-4" data-value="week">Неделя</button>
                     <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-#" data-value="day">День</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-#" data-value="week">Неделя</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-#" data-value="month">Месяц</li>
+                      <li class="dropdown__list-item" data-filter=".grafik-#" data-value="year">Год</li>
                     </ul>
                     <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
                   </div>
                 </div>
                 <canvas class="canvas" id="myChart" width="696px" height="278px"></canvas>
               </div>
-              <div class="grafik__tabs-item mix grafik-2">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas class="canvas" id="myChart" width="696px" height="278px"></canvas>               
+              <div class="grafik__tabs-item mix grafik-#">
+             
               </div>
-              <div class="grafik__tabs-item mix grafik-3">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas class="canvas" id="myChart" width="696px" height="278px"></canvas>
+              <div class="grafik__tabs-item mix grafik-#">
+                
               </div>
-              <div class="grafik__tabs-item mix grafik-4">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas class="canvas" id="myChart" width="696px" height="278px"></canvas>
+              <div class="grafik__tabs-item mix grafik-#">
+                
               </div>
-              <div class="grafik__tabs-item mix grafik-5">
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button class="dropdown__button text-4" data-value="week">Неделя</button>
-                    <ul class="dropdown__list text-2">
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="day">День</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="week">Неделя</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="month">Месяц</li>
-                      <li class="dropdown__list-item" data-filter=".grafik-1" data-value="year">Год</li>
-                    </ul>
-                    <input type="text" name="select-category" value="week" class="dropdown__input-hidden">
-                  </div>
-                </div>
-                <canvas class="canvas" id="myChart" width="696px" height="278px"></canvas>
+              <div class="grafik__tabs-item mix grafik-#">
+                
               </div>
 
             </div>
