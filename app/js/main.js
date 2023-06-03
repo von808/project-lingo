@@ -114,28 +114,6 @@ $(function () {
   });
 })
 
-// $(function () {
-//   $('.tabs-grafik').slick({
-//     pagination: false,
-//     arrows: false,
-//     infinite: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     centerMode: true,
-//     useCSS: false,
-//     centerPadding: '100px',
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           useCSS: true,
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
-//     ]
-//   });
-// })
 
 // $(function () {
 //   $('.club__content').slick({
