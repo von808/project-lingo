@@ -183,10 +183,8 @@ $(function () {
 
 
 $(function () {
-  let wrapper = $(".wrapper");
   let menuWrapper = $("#menu__wrapper");
   let menuToggle = $("#menu__toggle");
-  let menuBox = $("#menu__box");
   const body = document.body;
 
   menuToggle.on("click", function (event) {
