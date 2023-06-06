@@ -225,50 +225,333 @@ $(function () {
     viewContentHomework.addClass("items__view-item--table");
   });
 })
+$(function () {
+  let grafikBtn1 = $(".grafik-btn-1");
+  let grafik1 = $(".grafik-1");
+  let grafikBtn2 = $(".grafik-btn-2");
+  let grafik2 = $(".grafik-2");
+  let grafikBtn3 = $(".grafik-btn-3");
+  let grafik3 = $(".grafik-3");
+  let grafikBtn4 = $(".grafik-btn-4");
+  let grafik4 = $(".grafik-4");
+  let grafikBtn5 = $(".grafik-btn-5");
+  let grafik5 = $(".grafik-5");
 
-let ctx = document.querySelector('#myChart').getContext('2d');
-// ctx.canvas.parentNode.style.width = '696px';
-// ctx.canvas.parentNode.style.height = '278px';
-let myChart = new Chart(ctx, {
+  grafikBtn1.on("click", function (event) {
+    event.preventDefault();
+    grafik1.addClass("grafik-show");
+    grafikBtn1.addClass("grafik-btn-active");
+    grafik2.removeClass("grafik-show");
+    grafikBtn2.removeClass("grafik-btn-active");
+    grafik3.removeClass("grafik-show");
+    grafikBtn3.removeClass("grafik-btn-active");
+    grafik4.removeClass("grafik-show");
+    grafikBtn4.removeClass("grafik-btn-active");
+    grafik5.removeClass("grafik-show");
+    grafikBtn5.removeClass("grafik-btn-active");
+  });
+  grafikBtn2.on("click", function (event) {
+    event.preventDefault();
+    grafik1.removeClass("grafik-show");
+    grafikBtn1.removeClass("grafik-btn-active");
+    grafik2.addClass("grafik-show");
+    grafikBtn2.addClass("grafik-btn-active");
+    grafik3.removeClass("grafik-show");
+    grafikBtn3.removeClass("grafik-btn-active");
+    grafik4.removeClass("grafik-show");
+    grafikBtn4.removeClass("grafik-btn-active");
+    grafik5.removeClass("grafik-show");
+    grafikBtn5.removeClass("grafik-btn-active");
+  });
+  grafikBtn3.on("click", function (event) {
+    event.preventDefault();
+    grafik1.removeClass("grafik-show");
+    grafikBtn1.removeClass("grafik-btn-active");
+    grafik2.removeClass("grafik-show");
+    grafikBtn2.removeClass("grafik-btn-active");
+    grafik3.addClass("grafik-show");
+    grafikBtn3.addClass("grafik-btn-active");
+    grafik4.removeClass("grafik-show");
+    grafikBtn4.removeClass("grafik-btn-active");
+    grafik5.removeClass("grafik-show");
+    grafikBtn5.removeClass("grafik-btn-active");
+  });
+  grafikBtn4.on("click", function (event) {
+    event.preventDefault();
+    grafik1.removeClass("grafik-show");
+    grafikBtn1.removeClass("grafik-btn-active");
+    grafik2.removeClass("grafik-show");
+    grafikBtn2.removeClass("grafik-btn-active");
+    grafik3.removeClass("grafik-show");
+    grafikBtn3.removeClass("grafik-btn-active");
+    grafik4.addClass("grafik-show");
+    grafikBtn4.addClass("grafik-btn-active");
+    grafik5.removeClass("grafik-show");
+    grafikBtn5.removeClass("grafik-btn-active");
+  });
+  grafikBtn5.on("click", function (event) {
+    event.preventDefault();
+    grafik1.removeClass("grafik-show");
+    grafikBtn1.removeClass("grafik-btn-active");
+    grafik2.removeClass("grafik-show");
+    grafikBtn2.removeClass("grafik-btn-active");
+    grafik3.removeClass("grafik-show");
+    grafikBtn3.removeClass("grafik-btn-active");
+    grafik4.removeClass("grafik-show");
+    grafikBtn4.removeClass("grafik-btn-active");
+    grafik5.addClass("grafik-show");
+    grafikBtn5.addClass("grafik-btn-active");
+  });
+})
+
+let ctx1 = document.querySelector('#myChart1').getContext('2d');
+Chart.defaults.elements.line.borderWidth = 2;
+Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.plugins.legend.display = false;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
+Chart.defaults.plugins.tooltip.titleAlign = 'center';
+let xScaleConfig = {
+  color: '$black',
+  border: {
+    color: 'rgba(236, 241, 250, 1)'
+  },
+  grid: {
+    color: 'rgba(236, 241, 250, 0)'
+  }
+};
+let yScaleConfig = {
+  color: '$black',
+  border: {
+    color: 'rgba(236, 241, 250, 0)'
+  },
+};
+let myChart1 = new Chart(ctx1, {
   type: 'line',
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
-      label: 'book',
-      data: [6, 2, 1, 1, 2, 1, 6],
+      label: 'Книги',
+      data: [3, 2, 4, 1, 3, 1, 6],
+      fill: true,
       backgroundColor: [
-        '#5728DB'
+        'rgba(90, 127, 238, 0.5)'
       ],
       borderColor: [
         '#5728DB',
-        '#5728DB',
-        '#5728DB',
-        '#5728DB',
-        '#5728DB',
-        '#5728DB',
+      ],
+      pointBackgroundColor: [
         '#5728DB',
       ],
-      borderWidth: 4
     },
     {
-      label: 'articles',
-      data: [6, 8, 4, 6, 1, 4, 0],
+      label: 'Статьи',
+      data: [3, 7, 2, 6, 1, 4, 1],
+      fill: true,
       backgroundColor: [
-        '#5CB1FF'
+        'rgba(92, 177, 255, 0.5'
       ],
       borderColor: [
         '#5CB1FF',
-        '#5CB1FF',
-        '#5CB1FF',
-        '#5CB1FF',
-        '#5CB1FF',
-        '#5CB1FF',
+      ],
+      pointBackgroundColor: [
         '#5CB1FF',
       ],
-      borderWidth: 4
-    }]
+    }],
   },
   options: {
-    maintainAspectRatio: false,
-  }
+    pointStyle: true,
+    hitRadius: 30,
+    scales: {
+      x: xScaleConfig,
+      y: yScaleConfig
+    },
+  },
+});
+let ctx2 = document.querySelector('#myChart2').getContext('2d');
+Chart.defaults.elements.line.borderWidth = 2;
+Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
+Chart.defaults.plugins.tooltip.titleAlign = 'center';
+let myChart2 = new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    datasets: [{
+      label: 'Книги',
+      data: [4, 5, 3, 7, 1, 5, 2],
+      fill: true,
+      backgroundColor: [
+        'rgba(90, 127, 238, 0.5)'
+      ],
+      borderColor: [
+        '#5728DB',
+      ],
+      pointBackgroundColor: [
+        '#5728DB',
+      ],
+    },
+    {
+      label: 'Статьи',
+      data: [3, 2, 3, 1, 5, 3, 2],
+      fill: true,
+      backgroundColor: [
+        'rgba(92, 177, 255, 0.5'
+      ],
+      borderColor: [
+        '#5CB1FF',
+      ],
+      pointBackgroundColor: [
+        '#5CB1FF',
+      ],
+    }],
+  },
+  options: {
+    pointStyle: true,
+    hitRadius: 30,
+    scales: {
+      x: xScaleConfig,
+      y: yScaleConfig
+    },
+  },
+});
+let ctx3 = document.querySelector('#myChart3').getContext('2d');
+Chart.defaults.elements.line.borderWidth = 2;
+Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
+Chart.defaults.plugins.tooltip.titleAlign = 'center';
+let myChart3 = new Chart(ctx3, {
+  type: 'line',
+  data: {
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    datasets: [{
+      label: 'Книги',
+      data: [4, 2, 3, 2, 2, 1, 6],
+      fill: true,
+      backgroundColor: [
+        'rgba(90, 127, 238, 0.5)'
+      ],
+      borderColor: [
+        '#5728DB',
+      ],
+      pointBackgroundColor: [
+        '#5728DB',
+      ],
+    },
+    {
+      label: 'Статьи',
+      data: [6, 7, 4, 5, 1, 4, 1],
+      fill: true,
+      backgroundColor: [
+        'rgba(92, 177, 255, 0.5'
+      ],
+      borderColor: [
+        '#5CB1FF',
+      ],
+      pointBackgroundColor: [
+        '#5CB1FF',
+      ],
+    }],
+  },
+  options: {
+    pointStyle: true,
+    hitRadius: 30,
+    scales: {
+      x: xScaleConfig,
+      y: yScaleConfig
+    },
+  },
+});
+let ctx4 = document.querySelector('#myChart4').getContext('2d');
+Chart.defaults.elements.line.borderWidth = 2;
+Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
+Chart.defaults.plugins.tooltip.titleAlign = 'center';
+let myChart4 = new Chart(ctx4, {
+  type: 'line',
+  data: {
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    datasets: [{
+      label: 'Книги',
+      data: [4, 5, 4, 6, 1, 3, 1],
+      fill: true,
+      backgroundColor: [
+        'rgba(90, 127, 238, 0.5)'
+      ],
+      borderColor: [
+        '#5728DB',
+      ],
+      pointBackgroundColor: [
+        '#5728DB',
+      ],
+    },
+    {
+      label: 'Статьи',
+      data: [3, 2, 1, 1, 3, 2, 3],
+      fill: true,
+      backgroundColor: [
+        'rgba(92, 177, 255, 0.5'
+      ],
+      borderColor: [
+        '#5CB1FF',
+      ],
+      pointBackgroundColor: [
+        '#5CB1FF',
+      ],
+    }],
+  },
+  options: {
+    pointStyle: true,
+    hitRadius: 30,
+    scales: {
+      x: xScaleConfig,
+      y: yScaleConfig
+    },
+  },
+});
+let ctx5 = document.querySelector('#myChart5').getContext('2d');
+Chart.defaults.elements.line.borderWidth = 2;
+Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
+Chart.defaults.plugins.tooltip.titleAlign = 'center';
+let myChart5 = new Chart(ctx5, {
+  type: 'line',
+  data: {
+    labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    datasets: [{
+      label: 'Книги',
+      data: [4, 3, 1, 2, 3, 1, 6],
+      fill: true,
+      backgroundColor: [
+        'rgba(90, 127, 238, 0.5)'
+      ],
+      borderColor: [
+        '#5728DB',
+      ],
+      pointBackgroundColor: [
+        '#5728DB',
+      ],
+    },
+    {
+      label: 'Статьи',
+      data: [6, 7, 4, 6, 1, 4, 1],
+      fill: true,
+      backgroundColor: [
+        'rgba(92, 177, 255, 0.5'
+      ],
+      borderColor: [
+        '#5CB1FF',
+      ],
+      pointBackgroundColor: [
+        '#5CB1FF',
+      ],
+    }],
+  },
+  options: {
+    pointStyle: true,
+    hitRadius: 30,
+    scales: {
+      x: xScaleConfig,
+      y: yScaleConfig
+    },
+  },
 });

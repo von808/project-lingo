@@ -1,0 +1,40 @@
+<!--=include header.html-->
+<div class="wrapper-page">
+  <!--=include sidebar.html-->
+</div>
+<main class="main">
+  <section class="welcome welcome-3">
+    <div class="container-fluid">
+      <div class="welcome__inner">
+        <div class="welcome__content">
+          <h1 class="title">Выберите дату и время, когда вам провести пробный урок английского</h1>
+          <form class="welcome__form" action="" method="post">
+            <label class="welcome__label text-2" for="">Страна<input class="welcome__input text-4" type="text"
+                required></label>
+            <label class="welcome__label text-2" for="">Город<input class="welcome__input text-4" type="text"
+                required></label>
+            <label class="welcome__label text-2 sans" for="">Дата<input class="welcome__input text-4" type="date"
+                required></label>
+            <label class="welcome__label text-2" for="">Время
+              <div class="form-group">
+                <div class="dropdown">
+                  <button class="dropdown__button welcome__label text-4" data-value="time"
+                    type="button">6:00-9:00</button>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__list-item text-2" data-value="6:00-9:00">6:00-9:00</li>
+                    <li class="dropdown__list-item text-2" data-value="9:00-12:00">9:00-12:00</li>
+                    <li class="dropdown__list-item text-2" data-value="12:00-3:00">12:00-3:00</li>
+                    <li class="dropdown__list-item text-2" data-value="3:00-6:00">3:00-6:00</li>
+                  </ul>
+                  <input type="text" name="select-category" value="gender" class="dropdown__input-hidden">
+                </div>
+              </div>
+            </label>
+          </form>
+          <button class="btn" type="button">Далее</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html-->

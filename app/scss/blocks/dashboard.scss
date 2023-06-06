@@ -200,6 +200,10 @@
     width: 100%;
     margin-bottom: 7px;
     padding: 24px 0 24px 24px;
+    // overflow: hidden;
+    .tabs-grafik{
+      overflow: hidden;
+    }
   }
   &__right{
     width: 100%;
@@ -213,34 +217,30 @@
   &__tabs-items{
     padding: 130px 24px 31px;
     margin: 0 auto;
+    width: 100%;
   }
   &__tabs-item{
+    display: none;
+    max-width: 669px;
+    width: 100%;
+    height: 278px;
+    margin: 0 auto;
     position: relative;
     .form-group{
       position: absolute;
       top: -106px;
       right: 0;
     }
+    .dropdown__button {
+      width: 131px;
+      margin-left: auto;
+      background-color: $bg;
+    }
   }
 }
-// .tabs-grafik{
-//   width: 100%;
-//   height: 100%;
-//   display: block;
-//   max-width: 220px;
-//   margin: 0;
-// }
-// .tabs-btn-grafik{
-
-//   &:not(:last-child){
-//     margin-bottom: 8px;
-//   }
-//   &.mixitup-control-active{
-//     background: $grad1;
-//     color: $white;
-//     position: relative;
-//   }
-// }
+.grafik__tabs-item.grafik-show{
+  display: block;
+}
 .grafik__left{
   .tabs-btn{
     max-width: 220px;
@@ -266,5 +266,65 @@
   .tabs-btn.mixitup-control-active::after{
     bottom: -45px;
     transform: rotate(-15deg) scale(-1, 1);
+  }
+}
+.tabs-btn.grafik-btn-active{
+  background: $grad1;
+  color: $white;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    bottom: -38px;
+    background-image: url(../images/apple-t.svg);
+    width: 70.01px;
+    height: 88.65px;
+    scale: .8;
+    transform: rotate(-15deg) scale(-1, 1);
+  }
+  svg{
+    fill: $white;
+  }
+}
+.grafik-legends{
+  position: absolute;
+  width: 160px;
+  height: 23px;
+  top: -90px;
+  left: 0;
+  color: $black;
+}
+.grafik-legend{
+  position: relative;
+  padding-left: 18px;
+  margin-right: 10px;
+  &--book{
+    position: relative;
+    &::before{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: $grad3;
+      border-radius: 50%;
+    }
+  }
+  &--articles{
+    position: relative;
+    &::before{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: $grad1;
+      border-radius: 50%;
+    }
   }
 }
