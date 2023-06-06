@@ -1,0 +1,342 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .container-fluid {
+    max-width: 1240px;
+    width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 38px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 56px;
+    width: 100%;
+    min-height: 386px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &__item {
+    width: 178px;
+    color: $blue;
+
+    img {
+      margin-bottom: 32px;
+      width: 100%;
+      height: 217px;
+    }
+  }
+
+  .btn {
+    background-color: transparent;
+    width: 100%;
+    height: 55px;
+  }
+
+  &__item-end {
+    background: $grad1;
+    color: $white;
+  }
+
+  &__form {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 56px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 248.5px;
+
+    .dropdown__button {
+      background: $bg;
+      padding: 16px;
+      height: auto;
+      gap: 10px;
+    }
+
+    .dropdown__button::after {
+      transform: rotate(-90deg);
+      margin-top: -7px;
+    }
+
+    .dropdown__list {
+      top: 62px;
+    }
+
+    .dropdown__button--active::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__input {
+    border-radius: 10px;
+    background-color: $bg;
+    padding: 16px;
+    color: $blue;
+    max-width: 100%;
+    width: 100%;
+
+    &::-webkit-calendar-picker-indicator {
+      color: transparent;
+      opacity: 1;
+      background: url(../images/calendar.svg) no-repeat center;
+      background-size: contain;
+    }
+
+    &::placeholder {
+      color: $blue;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    color: $black;
+    margin-bottom: 56px;
+    width: 100%;
+
+    input {
+      margin-right: 10px;
+      height: 24px;
+      width: 24px;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .welcome-radio {
+  //   position: absolute;
+  //   z-index: -1;
+  //   opacity: 0;
+  // }
+
+  // .welcome-radio+label::before {
+  //   content: '';
+  //   display: inline-block;
+  //   width: 22px;
+  //   height: 22px;
+  //   flex-shrink: 0;
+  //   flex-grow: 0;
+  //   border: 1px solid #adb5bd;
+  //   border-radius: 50%;
+  //   margin-right: 0.5em;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   background-size: 50% 50%;
+  // }
+
+  // .welcome-radio:checked+label::before {
+  //   border-color: $blue;
+  //   border-width: 8px;
+  //   background-color: white;
+  //   box-sizing: border-box;
+  //   width: 24px;
+  //   height: 24px;
+  // }
+
+  &__checkbox-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.welcome-2 {
+
+  .welcome__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .welcome__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: $bg;
+    width: 100%;
+    height: 221px;
+
+    img {
+      width: 66px;
+      height: 84px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      padding: 0 50px;
+    }
+  }
+}
+
+.welcome-3 {
+
+  .welcome__content:after {
+    content: '';
+    position: absolute;
+    right: 93px;
+    bottom: -93px;
+    background-image: url(../../images/apple-bg-opacity-1.svg);
+    background-repeat: no-repeat;
+    width: 141px;
+    height: 179px;
+    transform: rotate(30deg);
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    width: 123px;
+  }
+}
+
+.welcome-4 {
+
+  .welcome__content:after {
+    content: "";
+    position: absolute;
+    right: -140px;
+    top: 86px;
+    background-image: url(../../images/apple-bg-opacity-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    transform: rotate(-60deg);
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    width: 123px;
+  }
+}
+
+.welcome-5 {
+
+  .welcome__content:after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    bottom: -86px;
+    background-image: url(../../images/apple-bg-opacity-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+  }
+
+  .welcome__label {
+    width: 379px;
+    margin-right: 40px;
+  }
+
+  .btn {
+    width: 123px;
+  }
+}
+
+.welcome-6 {
+
+  .welcome__content:after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    background-image: url(../../images/apple-welcome.png);
+    background-repeat: no-repeat;
+    width: 234px;
+    height: 111px;
+  }
+
+  .btn {
+    width: 146px;
+  }
+}
+
+.welcome-7 {
+  .welcome__content {
+    height: 328px;
+    padding: 0 204px;
+    text-align: center;
+    overflow: unset;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      bottom: -150px;
+      background-image: url(../../images/apple-red.png);
+      background-repeat: no-repeat;
+      width: 372px;
+      height: 363px;
+    }
+
+    p {
+      margin-bottom: 56px;
+    }
+
+    .btn {
+      width: 153px;
+    }
+  }
+}
+
+.welcome-8 {
+  .welcome__content {
+    height: 386px;
+    padding: 0 204px;
+    text-align: center;
+    overflow: unset;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 25px;
+      bottom: -150px;
+      background-image: url(../../images/apple-sad.png);
+      background-repeat: no-repeat;
+      width: 372px;
+      height: 363px;
+    }
+  }
+}
