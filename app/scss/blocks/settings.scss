@@ -23,6 +23,10 @@
     .icon {
       margin-right: 16px;
     }
+
+    a:-webkit-any-link {
+      color: $black;
+    }
   }
 
   &__block {

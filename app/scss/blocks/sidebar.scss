@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   position: fixed;
   max-width: $width-sidebar;
   width: 100%;
@@ -6,10 +6,12 @@
   height: 100vh;
   overflow-y: auto;
   z-index: $z-index-sidebar;
-  &__inner{
+
+  &__inner {
     padding: 40px 53px 28px 60px;
   }
 }
+
 .sidebar::-webkit-scrollbar {
   width: 5px;
 }
@@ -24,49 +26,60 @@
   border: 0px solid orange;
 }
 
-.logo{
+.logo {
   display: block;
   margin-bottom: 40px;
 }
-.account{
+
+.account {
   display: flex;
   gap: 24px;
   margin-bottom: 48px;
-  &__content{
+
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  &__avatar-image{
+
+  &__avatar-image {
     width: 60px;
     height: 60px;
     border-radius: 10px;
     object-fit: cover;
   }
-  &__name{
+
+  &__name {
     margin-bottom: 4px;
   }
-  &__status{
+
+  &__status {
     color: $blue;
   }
 }
-.nav{
-  &__menu-item{
-    &:not(:last-child){
+
+.nav {
+  &__menu-item {
+    &:not(:last-child) {
       margin-bottom: 24px;
     }
   }
-  &__menu-item--link{
+
+  &__menu-item--link {
     display: flex;
     gap: 16px;
-    svg{
+    color: $black;
+
+    svg {
       fill: $gray;
     }
   }
 }
+
 .notification {
-    position: relative;
-  &::after{
+  position: relative;
+
+  &::after {
     content: '';
     position: absolute;
     top: 1px;
@@ -77,11 +90,13 @@
     border-radius: 50%;
   }
 }
-.bottom-line{
+
+.bottom-line {
   position: relative;
   padding-bottom: 24px;
   margin-bottom: 24px;
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     width: 245px;
@@ -89,7 +104,7 @@
     background-color: $light-grey;
     left: -23px;
     bottom: 0;
-    
+
   }
 }
 
@@ -105,11 +120,12 @@
 .wrapper-support .sidebar-support,
 .wrapper-notification .sidebar-notification,
 .wrapper-setting .sidebar-settings,
-.wrapper-exit .sidebar-exit{
-  svg{
+.wrapper-exit .sidebar-exit {
+  svg {
     fill: $blue;
   }
-  .nav__menu-item--link{
+
+  .nav__menu-item--link {
     color: $blue;
   }
 }

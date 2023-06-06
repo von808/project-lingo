@@ -179,3 +179,17 @@
     padding: 0 5% 0 0;
   }
 }
+
+.club__content::-webkit-scrollbar {
+  height: 5px;
+}
+
+.club__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.club__content::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 20px;
+  border: 0px solid orange;
+}
