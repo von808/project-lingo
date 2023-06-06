@@ -304,6 +304,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   border: 1px $blue solid;
   color: $black;
+  cursor: pointer;
 
   &:hover {
     background: $grad1;
