@@ -598,7 +598,7 @@
   }
 
   .grafik__tabs-items {
-    width: 330px;
+    width: 100%;
     padding: 130px 0 31px;
   }
 
@@ -629,7 +629,18 @@
     margin-bottom: 17px;
     padding: 20px 0 0 0;
   }
-
+  .grafik__left .tabs-grafik {
+    overflow: auto;
+  }
+  .canvas{
+    width: 100%;
+  }
+  .grafik__tabs-item .dropdown__button{
+    margin: 0 24px 0 auto;
+  }
+  .grafik-legends{
+    left: 24px;
+  }
   .tabs-grafik {
     display: flex;
     max-width: 328px;
