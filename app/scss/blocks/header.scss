@@ -15,6 +15,12 @@
     z-index: 1001;
   }
 
+  .logo img{
+    object-fit: cover;
+    width: 282px;
+    height: 60px;
+  }
+
   .nav__menu-item {
     margin: 0;
 

@@ -1,4 +1,10 @@
 .homework {
+  
+  .feadback__apple {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 69px;
+  }
 
   .tabs-btn {
     max-width: 358px;
@@ -245,12 +251,6 @@
     padding: 16px 24px;
     height: 92px;
   }
-}
-
-.feadback__apple {
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 69px;
 }
 
 // media

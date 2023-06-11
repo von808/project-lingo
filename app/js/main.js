@@ -306,7 +306,7 @@ $(function () {
 
 let ctx1 = document.querySelector('#myChart1').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.legend.display = false;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
 Chart.defaults.plugins.tooltip.titleAlign = 'center';
@@ -316,13 +316,19 @@ let xScaleConfig = {
     color: 'rgba(236, 241, 250, 1)'
   },
   grid: {
-    color: 'rgba(236, 241, 250, 0)'
-  }
+    color: 'rgba(236, 241, 250, 0)',
+  },
 };
 let yScaleConfig = {
   color: '$black',
+  min: 0,
+  max: 8,
   border: {
-    color: 'rgba(236, 241, 250, 0)'
+    color: 'rgba(236, 241, 250, 0)',
+    dash: [8, 8],
+  },
+  grid: {
+    color: 'rgba(236, 241, 250, 1)',
   },
 };
 let myChart1 = new Chart(ctx1, {
@@ -363,13 +369,13 @@ let myChart1 = new Chart(ctx1, {
     hitRadius: 30,
     scales: {
       x: xScaleConfig,
-      y: yScaleConfig
+      y: yScaleConfig,
     },
   },
 });
 let ctx2 = document.querySelector('#myChart2').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
 Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart2 = new Chart(ctx2, {
@@ -416,7 +422,7 @@ let myChart2 = new Chart(ctx2, {
 });
 let ctx3 = document.querySelector('#myChart3').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
 Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart3 = new Chart(ctx3, {
@@ -425,7 +431,7 @@ let myChart3 = new Chart(ctx3, {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
       label: 'Книги',
-      data: [4, 2, 3, 2, 2, 1, 6],
+      data: [6.9, 2, 1, 1.6, 2, 1, 6],
       fill: true,
       backgroundColor: [
         'rgba(90, 127, 238, 0.5)'
@@ -439,7 +445,7 @@ let myChart3 = new Chart(ctx3, {
     },
     {
       label: 'Статьи',
-      data: [6, 7, 4, 5, 1, 4, 1],
+      data: [6.9, 8, 4, 6, 0.7, 4, 0],
       fill: true,
       backgroundColor: [
         'rgba(92, 177, 255, 0.5'
@@ -463,7 +469,7 @@ let myChart3 = new Chart(ctx3, {
 });
 let ctx4 = document.querySelector('#myChart4').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
 Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart4 = new Chart(ctx4, {
@@ -510,7 +516,7 @@ let myChart4 = new Chart(ctx4, {
 });
 let ctx5 = document.querySelector('#myChart5').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.3;
+Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
 Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart5 = new Chart(ctx5, {
