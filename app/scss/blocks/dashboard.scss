@@ -133,6 +133,14 @@
   &__progress-plan-complete{
     color: $blue;
   }
+  .dropdown__button {
+    width: 131px;
+    margin-left: auto;
+    background-color: $bg;
+  }
+  .dropdown__list{
+    background-color: $bg;
+  }
 }
 .homeworks{
   height: 351px;
@@ -223,7 +231,8 @@
     display: none;
     max-width: 669px;
     width: 100%;
-    height: 278px;
+    // height: 278px;
+    height: auto;
     margin: 0 auto;
     position: relative;
     .form-group{
@@ -234,6 +243,9 @@
     .dropdown__button {
       width: 131px;
       margin-left: auto;
+      background-color: $bg;
+    }
+    .dropdown__list{
       background-color: $bg;
     }
   }
