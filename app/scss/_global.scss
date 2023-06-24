@@ -5,7 +5,7 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
-  font-family: $raleway;
+  font-family: $rawline;
 }
 
 body::-webkit-scrollbar {
@@ -49,10 +49,6 @@ body::-webkit-scrollbar-thumb {
   max-width: 1600px;
   margin: 0 auto;
   padding: 57px 60px 33px 48px;
-}
-
-.sans {
-  font-family: $rawline;
 }
 
 .text-grad1{
