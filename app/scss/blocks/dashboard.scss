@@ -340,3 +340,48 @@
     }
   }
 }
+.tooltipDesign{
+  background: $grad1;
+  border-radius: 10px;
+  color: $white;
+  text-align: center;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -150%);
+  transition: all 0.1s ease;
+  // width: 63px;
+  min-width: 90px;
+  width: fit-content;
+  min-height: 43px;
+  padding: 10px;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: $grad1;
+    left: 50%;
+    bottom: -6px;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+  }
+}
+.tooltipul{
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  display: inline-block;
+  text-align: center;
+}
+.colorSquare {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.displayBlockSpan{
+  display: block;
+}

@@ -55,11 +55,13 @@ for (i = 0; i < acc.length; i++) {
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
   const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+  const dropDownListBorderBottom = dropDownWrapper.querySelector('.dropdown__list-border-bottom');
   const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
   const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
 
   dropDownBtn.addEventListener('click', function (e) {
     dropDownList.classList.toggle('dropdown__list--visible');
+    dropDownListBorderBottom.classList.toggle('dropdown__list--visible');
     this.classList.add('dropdown__button--active');
   });
 
@@ -70,6 +72,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
       dropDownBtn.focus();
       dropDownInput.value = this.dataset.value;
       dropDownList.classList.remove('dropdown__list--visible');
+      dropDownListBorderBottom.classList.remove('dropdown__list--visible');
     });
   });
 
@@ -77,6 +80,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
     if (e.target !== dropDownBtn) {
       dropDownBtn.classList.remove('dropdown__button--active');
       dropDownList.classList.remove('dropdown__list--visible');
+      dropDownListBorderBottom.classList.remove('dropdown__list--visible');
     }
   });
 
@@ -84,6 +88,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
     if (e.key === 'Tab' || e.key === 'Escape') {
       dropDownBtn.classList.remove('dropdown__button--active');
       dropDownList.classList.remove('dropdown__list--visible');
+      dropDownListBorderBottom.classList.remove('dropdown__list--visible');
     }
   });
 });
@@ -304,7 +309,6 @@ $(function () {
   });
 })
 
-let ctx1 = document.querySelector('#myChart1').getContext('2d');
 Chart.defaults.elements.line.borderWidth = 2;
 Chart.defaults.elements.line.tension = 0.4;
 Chart.defaults.plugins.legend.display = false;
@@ -331,6 +335,85 @@ let yScaleConfig = {
     color: 'rgba(236, 241, 250, 1)',
   },
 };
+
+const getOrCreateTooltip = (chart) => {
+  let tooltipEL = chart.canvas.parentNode.querySelector('div');
+  if(!tooltipEL) {
+    tooltipEL = document.createElement('DIV');
+    tooltipEL.classList.add('tooltipDesign');
+    tooltipUL = document.createElement('UL');
+    tooltipUL.classList.add('tooltipul');
+
+    tooltipEL.appendChild(tooltipUL);
+    chart.canvas.parentNode.appendChild(tooltipEL);
+    console.log(chart.canvas);
+  }
+  return tooltipEL;
+};
+
+const externalTooltipHandler = (context) => {
+  const {chart, tooltip } = context;
+  const tooltipEL = getOrCreateTooltip(chart);
+
+  if(tooltip.opacity === 0) {
+    tooltipEL.style.opacity = 0;
+    return;
+  };
+
+  if(tooltip.body) {
+    const titleLines = tooltip.title || [];
+    const bodyLines = tooltip.body.map (b => b.lines);
+    const tooltipLI = document.createElement('LI');
+
+    titleLines.forEach(title => {
+      tooltipUL.appendChild(tooltipLI);
+
+      const tooltipSPAN = document.createElement('SPAN');
+      tooltipLI.appendChild(tooltipSPAN);
+
+      const tooltipTitle = document.createTextNode(title);
+      tooltipSPAN.appendChild(tooltipTitle);
+    });
+
+    const tooltipBodyP = document.createElement('P');
+    bodyLines.forEach((body, i) => {
+      const displayBlockSpan = document.createElement('SPAN');
+      displayBlockSpan.classList.add('displayBlockSpan');
+      const colors = tooltip.labelColors[i];
+      const colorSquare = document.createElement('SPAN');
+      colorSquare.classList.add('colorSquare');
+      colorSquare.style.background = colors.borderColor;
+      colorSquare.style.border = colors.borderColor;
+
+      const textLabel = document.createTextNode(body);
+      // console.log(textLabel);
+
+      // displayBlockSpan.appendChild(colorSquare);
+      displayBlockSpan.appendChild(textLabel);
+      tooltipBodyP.appendChild(displayBlockSpan);
+    });
+
+    const ULnode = tooltipEL.querySelector('ul');
+
+    while (ULnode.firstChild) {
+       ULnode.firstChild.remove();
+    }
+
+    ULnode.appendChild(tooltipLI);
+    tooltipLI.appendChild(tooltipBodyP);
+    tooltipEL.style.opacity = 1;
+
+    const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
+    tooltipEL.style.left = positionX + tooltip.caretX + 'px';
+    tooltipEL.style.top = positionY + tooltip.caretY + 'px';
+    tooltipEL.style.font = tooltip.options.bodyFont.string;
+    tooltipEL.style.padding = tooltip.options.padding + 'px' + tooltip.options.padding + 'px';
+  };
+};
+
+// const ctx1book = [3, 2, 4, 1, 3, 1, 6];
+// const ctx1article = [3, 7, 2, 6, 1, 4, 1];
+let ctx1 = document.querySelector('#myChart1').getContext('2d');
 let myChart1 = new Chart(ctx1, {
   type: 'line',
   data: {
@@ -338,6 +421,7 @@ let myChart1 = new Chart(ctx1, {
     datasets: [{
       label: 'Книги',
       data: [3, 2, 4, 1, 3, 1, 6],
+      // data: ctx1book,
       fill: true,
       backgroundColor: [
         'rgba(90, 127, 238, 0.5)'
@@ -345,13 +429,14 @@ let myChart1 = new Chart(ctx1, {
       borderColor: [
         '#5728DB',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5728DB',
       ],
     },
     {
       label: 'Статьи',
       data: [3, 7, 2, 6, 1, 4, 1],
+      // data: ctx1article,
       fill: true,
       backgroundColor: [
         'rgba(92, 177, 255, 0.5'
@@ -359,14 +444,48 @@ let myChart1 = new Chart(ctx1, {
       borderColor: [
         '#5CB1FF',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5CB1FF',
       ],
     }],
   },
   options: {
+    responsive: true,
     pointStyle: true,
+    pointBackgroundColor: [
+      '#fff',
+    ],
+    pointBorderWidth: 0,
+    hoverBorderWidth: 5,
+    radius: 0,
+    hoverRadius: 6,
     hitRadius: 30,
+    plugins: {
+      tooltip: {
+        enabled: false,
+        external: externalTooltipHandler,
+        callbacks:{
+          title: function() {
+            return '';
+          },
+          // label: function(context) {
+          //   console.log(context);
+          //   return `${context[0].label} Day: ${data[context[0].dataIndex]}`;
+          // },
+          // label: function(context) {
+          //   let label = context.dataset.label || '';
+
+          //   if (label) {
+          //       label += ': ';
+          //   }
+          //   if (context.parsed.y !== null) {
+          //       label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+          //   }
+          //   return label;
+          // }
+        },
+      },
+    },
     scales: {
       x: xScaleConfig,
       y: yScaleConfig,
@@ -374,17 +493,13 @@ let myChart1 = new Chart(ctx1, {
   },
 });
 let ctx2 = document.querySelector('#myChart2').getContext('2d');
-Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.4;
-Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
-Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart2 = new Chart(ctx2, {
   type: 'line',
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
       label: 'Книги',
-      data: [4, 5, 3, 7, 1, 5, 2],
+      data: [4, 2, 3, 5, 4, 2, 3],
       fill: true,
       backgroundColor: [
         'rgba(90, 127, 238, 0.5)'
@@ -392,13 +507,13 @@ let myChart2 = new Chart(ctx2, {
       borderColor: [
         '#5728DB',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5728DB',
       ],
     },
     {
       label: 'Статьи',
-      data: [3, 2, 3, 1, 5, 3, 2],
+      data: [5, 4, 3, 3, 4, 5, 2],
       fill: true,
       backgroundColor: [
         'rgba(92, 177, 255, 0.5'
@@ -406,25 +521,40 @@ let myChart2 = new Chart(ctx2, {
       borderColor: [
         '#5CB1FF',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5CB1FF',
       ],
     }],
   },
   options: {
+    responsive: true,
     pointStyle: true,
+    pointBackgroundColor: [
+      '#fff',
+    ],
+    pointBorderWidth: 0,
+    hoverBorderWidth: 5,
+    radius: 0,
+    hoverRadius: 6,
     hitRadius: 30,
+    plugins: {
+      tooltip: {
+        enabled: false,
+        external: externalTooltipHandler,
+        callbacks:{
+          title: function() {
+            return '';
+          },
+        },
+      },
+    },
     scales: {
       x: xScaleConfig,
-      y: yScaleConfig
+      y: yScaleConfig,
     },
   },
 });
 let ctx3 = document.querySelector('#myChart3').getContext('2d');
-Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.4;
-Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
-Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart3 = new Chart(ctx3, {
   type: 'line',
   data: {
@@ -439,7 +569,7 @@ let myChart3 = new Chart(ctx3, {
       borderColor: [
         '#5728DB',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5728DB',
       ],
     },
@@ -453,25 +583,40 @@ let myChart3 = new Chart(ctx3, {
       borderColor: [
         '#5CB1FF',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5CB1FF',
       ],
     }],
   },
   options: {
+    responsive: true,
     pointStyle: true,
+    pointBackgroundColor: [
+      '#fff',
+    ],
+    pointBorderWidth: 0,
+    hoverBorderWidth: 5,
+    radius: 0,
+    hoverRadius: 6,
     hitRadius: 30,
+    plugins: {
+      tooltip: {
+        enabled: false,
+        external: externalTooltipHandler,
+        callbacks:{
+          title: function() {
+            return '';
+          },
+        },
+      },
+    },
     scales: {
       x: xScaleConfig,
-      y: yScaleConfig
+      y: yScaleConfig,
     },
   },
 });
 let ctx4 = document.querySelector('#myChart4').getContext('2d');
-Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.4;
-Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
-Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart4 = new Chart(ctx4, {
   type: 'line',
   data: {
@@ -486,7 +631,7 @@ let myChart4 = new Chart(ctx4, {
       borderColor: [
         '#5728DB',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5728DB',
       ],
     },
@@ -500,25 +645,40 @@ let myChart4 = new Chart(ctx4, {
       borderColor: [
         '#5CB1FF',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5CB1FF',
       ],
     }],
   },
   options: {
+    responsive: true,
     pointStyle: true,
+    pointBackgroundColor: [
+      '#fff',
+    ],
+    pointBorderWidth: 0,
+    hoverBorderWidth: 5,
+    radius: 0,
+    hoverRadius: 6,
     hitRadius: 30,
+    plugins: {
+      tooltip: {
+        enabled: false,
+        external: externalTooltipHandler,
+        callbacks:{
+          title: function() {
+            return '';
+          },
+        },
+      },
+    },
     scales: {
       x: xScaleConfig,
-      y: yScaleConfig
+      y: yScaleConfig,
     },
   },
 });
 let ctx5 = document.querySelector('#myChart5').getContext('2d');
-Chart.defaults.elements.line.borderWidth = 2;
-Chart.defaults.elements.line.tension = 0.4;
-Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(92, 177, 255, 1)';
-Chart.defaults.plugins.tooltip.titleAlign = 'center';
 let myChart5 = new Chart(ctx5, {
   type: 'line',
   data: {
@@ -533,7 +693,7 @@ let myChart5 = new Chart(ctx5, {
       borderColor: [
         '#5728DB',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5728DB',
       ],
     },
@@ -547,17 +707,36 @@ let myChart5 = new Chart(ctx5, {
       borderColor: [
         '#5CB1FF',
       ],
-      pointBackgroundColor: [
+      pointBorderColor: [
         '#5CB1FF',
       ],
     }],
   },
   options: {
+    responsive: true,
     pointStyle: true,
+    pointBackgroundColor: [
+      '#fff',
+    ],
+    pointBorderWidth: 0,
+    hoverBorderWidth: 5,
+    radius: 0,
+    hoverRadius: 6,
     hitRadius: 30,
+    plugins: {
+      tooltip: {
+        enabled: false,
+        external: externalTooltipHandler,
+        callbacks:{
+          title: function() {
+            return '';
+          },
+        },
+      },
+    },
     scales: {
       x: xScaleConfig,
-      y: yScaleConfig
+      y: yScaleConfig,
     },
   },
 });
