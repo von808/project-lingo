@@ -135,6 +135,7 @@
     grid-template-rows: auto;
     gap: 8px;
     margin-bottom: 24px;
+    font-size: 18px;
   }
 
   &__skills-item {
@@ -170,6 +171,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 16px;
+    &.btn:hover{
+      background: none;
+      color: $black;
+      border: 1px $light-grey solid;
+    }
+    &.btn:active{
+      background: $gray;
+    }
   }
 
   &__feadback {

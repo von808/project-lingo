@@ -308,6 +308,86 @@ $(function () {
     grafikBtn5.addClass("grafik-btn-active");
   });
 })
+$(function () {
+  let dropDownList1 = $(".dropdown__list-item--1");
+  let dropDownList2 = $(".dropdown__list-item--2");
+  let dropDownList3 = $(".dropdown__list-item--3");
+  let dropDownList4 = $(".dropdown__list-item--4");
+  let dropDownList5 = $(".dropdown__list-item--5");
+  let dropDownList6 = $(".dropdown__list-item--6");
+  let dropDownList7 = $(".dropdown__list-item--7");
+  
+  dropDownList1.on("click", function (event) {
+    event.preventDefault();
+    dropDownList1.addClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+  });
+  dropDownList2.on("click", function (event) {
+    event.preventDefault();
+    dropDownList2.addClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+  });
+  dropDownList3.on("click", function (event) {
+    event.preventDefault();
+    dropDownList3.addClass("dropdown__list-item--active");
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+  });
+  dropDownList4.on("click", function (event) {
+    event.preventDefault();
+    dropDownList4.addClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+  });
+  dropDownList5.on("click", function (event) {
+    event.preventDefault();
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.addClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+  });
+  dropDownList6.on("click", function (event) {
+    event.preventDefault();
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.addClass("dropdown__list-item--active");
+    dropDownList7.removeClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+  });
+  dropDownList7.on("click", function (event) {
+    event.preventDefault();
+    dropDownList4.removeClass("dropdown__list-item--active");
+    dropDownList5.removeClass("dropdown__list-item--active");
+    dropDownList6.removeClass("dropdown__list-item--active");
+    dropDownList7.addClass("dropdown__list-item--active");
+    dropDownList1.removeClass("dropdown__list-item--active");
+    dropDownList2.removeClass("dropdown__list-item--active");
+    dropDownList3.removeClass("dropdown__list-item--active");
+  });
+})
 
 Chart.defaults.elements.line.borderWidth = 2;
 Chart.defaults.elements.line.tension = 0.4;
@@ -322,6 +402,13 @@ let xScaleConfig = {
   grid: {
     color: 'rgba(236, 241, 250, 0)',
   },
+  ticks: {
+    color: '$black',
+    font: {
+      family: "'Raleway', sans-serif",
+      size: 21,
+    }
+  },
 };
 let yScaleConfig = {
   color: '$black',
@@ -333,6 +420,14 @@ let yScaleConfig = {
   },
   grid: {
     color: 'rgba(236, 241, 250, 1)',
+  },
+  ticks: {
+    color: '$black',
+    font: {
+      family: "'Rawline', sans-serif",
+      size: 21,
+    },
+    
   },
 };
 
