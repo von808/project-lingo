@@ -18,6 +18,10 @@
     overflow: hidden;
   }
 
+  &__item-after {
+    
+  }
+
   &__info-title {
     margin-bottom: 24px;
   }
@@ -44,7 +48,7 @@
   &__info-dislike {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 10px;
     background: transparent;
     backdrop-filter: blur(9px);
