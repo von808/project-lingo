@@ -294,7 +294,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     position: absolute;
     left: 40px;
-    top: 20px;
+    top: 18px;
     z-index: 1001;
     margin: 0;
     padding: 0;
@@ -332,6 +332,11 @@ body::-webkit-scrollbar-thumb {
   .dropdown__input-hidden {
     display: none;
   }
+}
+
+.lessons .feadback__circle-new .dropdown__list,
+.homework .feadback__circle-new .dropdown__list {
+  height: 26px;
 }
 .homework__item.items__view-item--table,
 .lessons__item.items__view-item--table{
