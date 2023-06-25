@@ -226,6 +226,132 @@ body::-webkit-scrollbar-thumb {
   border: 0px solid orange;
 }
 
+.feadback__circle-new{
+  .dropdown__button img{
+    pointer-events: none;
+    width: 56px;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-85%, -50%);
+  }
+  .dropdown__button {
+    position: relative;
+    display: block;
+    min-width: 66px;
+    max-width: 66px;
+    height: 66px;
+    text-align: left;
+    background: $light-grey;
+    color: $blue;
+    border-radius: 50%;
+    z-index: 1002;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left: 0;
+    padding-right: 0;
+    cursor: pointer;
+  }
+  
+  .feadback__apple{
+    position: relative;
+  }
+
+  .dropdown__button::after {
+    content: "";
+    position: absolute;
+    background-image: none;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  
+  .dropdown__button .feadback__apple-score {
+    content: "5";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 14px;
+    color: $black;
+    height: 22px;
+    background-image: none;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  
+  .dropdown__list .feadback__apple-score{
+    display: none;
+  }
+  
+  .dropdown__list {
+    display: none;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    z-index: 1001;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    list-style-type: none;
+    background: $light-grey;
+    box-shadow: none;
+    overflow: hidden;
+    color: $black;
+    border-radius: 10px;
+    width: 170px;
+    height: 26px;
+  }
+  
+  .dropdown__list--visible {
+    display: flex;
+  }
+  
+  .dropdown__list-item {
+    padding: 0;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+  }
+
+  .dropdown__list-item img{
+    width: 26px;
+    height: 26px;
+  }
+  
+  .dropdown__list-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+  
+  .dropdown__input-hidden {
+    display: none;
+  }
+}
+.homework__item.items__view-item--table,
+.lessons__item.items__view-item--table{
+  .feadback__circle-new .dropdown__list{
+    display: none;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: absolute;
+    left: 19px;
+    top: -130px;
+    z-index: 1001;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    list-style-type: none;
+    background: #ecf1fa;
+    box-shadow: none;
+    overflow: hidden;
+    color: #303030;
+    border-radius: 10px;
+    width: 26px;
+    height: 150px;
+  
+  }
+}
+
 .tabs {
   width: 100%;
   min-height: 99px;
