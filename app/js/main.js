@@ -68,7 +68,7 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   dropDownListItems.forEach(function (listItem) {
     listItem.addEventListener('click', function (e) {
       e.stopPropagation();
-      dropDownBtn.innerText = this.innerText;
+      dropDownBtn.innerHTML = this.innerHTML;
       dropDownBtn.focus();
       dropDownInput.value = this.dataset.value;
       dropDownList.classList.remove('dropdown__list--visible');
@@ -514,7 +514,7 @@ let myChart1 = new Chart(ctx1, {
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
-      label: 'Книги',
+      label: 'Радио',
       data: [3, 2, 4, 1, 3, 1, 6],
       // data: ctx1book,
       fill: true,
@@ -529,7 +529,7 @@ let myChart1 = new Chart(ctx1, {
       ],
     },
     {
-      label: 'Статьи',
+      label: 'Подкасты',
       data: [3, 7, 2, 6, 1, 4, 1],
       // data: ctx1article,
       fill: true,
@@ -593,7 +593,7 @@ let myChart2 = new Chart(ctx2, {
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
-      label: 'Книги',
+      label: 'Видео',
       data: [4, 2, 3, 5, 4, 2, 3],
       fill: true,
       backgroundColor: [
@@ -607,7 +607,7 @@ let myChart2 = new Chart(ctx2, {
       ],
     },
     {
-      label: 'Статьи',
+      label: 'Фильмы',
       data: [5, 4, 3, 3, 4, 5, 2],
       fill: true,
       backgroundColor: [
@@ -731,7 +731,7 @@ let myChart4 = new Chart(ctx4, {
       ],
     },
     {
-      label: 'Статьи',
+      label: 'Клуб',
       data: [3, 2, 1, 1, 3, 2, 3],
       fill: true,
       backgroundColor: [

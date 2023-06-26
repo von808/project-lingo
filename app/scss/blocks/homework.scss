@@ -125,8 +125,10 @@
 
   &__teacher-score {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    // justify-content: space-between;
     margin-bottom: 24px;
   }
 
@@ -231,7 +233,8 @@
   }
 
   .homework__stat {
-    max-width: 231px;
+    // max-width: 231px;
+    max-width: 308px;
     margin: 0;
     height: 63px;
   }
@@ -243,7 +246,7 @@
 
   .homework__teacher-score {
     max-width: 283px;
-    margin: 0 0 0 32px;
+    margin: 0 0 0 108px;
   }
 
   .homework__date {
@@ -252,40 +255,3 @@
     height: 92px;
   }
 }
-
-// media
-// .homework__item.items__view-item--table{
-//   max-width: 728px;
-//   width: 100%;
-//   min-height: 610px;
-//   column-gap: 57px;
-//   row-gap: 24px;
-//   grid-template-columns: auto auto;
-//   grid-template-rows: auto auto;
-//   background-position: 529px 0;
-// .homework__text {
-//   grid-column: 1/2;
-//   grid-row: 1/2;
-// }
-// .homework__text-title {
-//   min-height: 72px;
-// }
-// .homework__text-text{
-//   margin-bottom: 24px;
-// }
-// .feadback__other-score{
-//   height: 30px;
-//   img{
-//     transform: rotate(90deg);
-//   }
-// }
-// .feadback__circle:hover .feadback__other-score {
-//   transform: translate3d(-77px, -90px, 10px)rotate(-90deg);
-// }
-// .homework__btn{
-//   grid-column: 1/3;
-// }
-// .homework__stats {
-//   grid-row: 1/2;
-// }
-// }
