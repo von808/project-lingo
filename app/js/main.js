@@ -37,7 +37,7 @@ $(function () {
 });
 
 
-var acc = document.getElementsByClassName("faq__accardion-items");
+var acc = document.getElementsByClassName("faq__accardion-btn");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -316,7 +316,7 @@ $(function () {
   let dropDownList5 = $(".dropdown__list-item--5");
   let dropDownList6 = $(".dropdown__list-item--6");
   let dropDownList7 = $(".dropdown__list-item--7");
-  
+
   dropDownList1.on("click", function (event) {
     event.preventDefault();
     dropDownList1.addClass("dropdown__list-item--active");
@@ -427,13 +427,13 @@ let yScaleConfig = {
       family: "'Rawline', sans-serif",
       size: 21,
     },
-    
+
   },
 };
 
 const getOrCreateTooltip = (chart) => {
   let tooltipEL = chart.canvas.parentNode.querySelector('div');
-  if(!tooltipEL) {
+  if (!tooltipEL) {
     tooltipEL = document.createElement('DIV');
     tooltipEL.classList.add('tooltipDesign');
     tooltipUL = document.createElement('UL');
@@ -447,17 +447,17 @@ const getOrCreateTooltip = (chart) => {
 };
 
 const externalTooltipHandler = (context) => {
-  const {chart, tooltip } = context;
+  const { chart, tooltip } = context;
   const tooltipEL = getOrCreateTooltip(chart);
 
-  if(tooltip.opacity === 0) {
+  if (tooltip.opacity === 0) {
     tooltipEL.style.opacity = 0;
     return;
   };
 
-  if(tooltip.body) {
+  if (tooltip.body) {
     const titleLines = tooltip.title || [];
-    const bodyLines = tooltip.body.map (b => b.lines);
+    const bodyLines = tooltip.body.map(b => b.lines);
     const tooltipLI = document.createElement('LI');
 
     titleLines.forEach(title => {
@@ -491,7 +491,7 @@ const externalTooltipHandler = (context) => {
     const ULnode = tooltipEL.querySelector('ul');
 
     while (ULnode.firstChild) {
-       ULnode.firstChild.remove();
+      ULnode.firstChild.remove();
     }
 
     ULnode.appendChild(tooltipLI);
@@ -559,8 +559,8 @@ let myChart1 = new Chart(ctx1, {
       tooltip: {
         enabled: false,
         external: externalTooltipHandler,
-        callbacks:{
-          title: function() {
+        callbacks: {
+          title: function () {
             return '';
           },
           // label: function(context) {
@@ -636,8 +636,8 @@ let myChart2 = new Chart(ctx2, {
       tooltip: {
         enabled: false,
         external: externalTooltipHandler,
-        callbacks:{
-          title: function() {
+        callbacks: {
+          title: function () {
             return '';
           },
         },
@@ -698,8 +698,8 @@ let myChart3 = new Chart(ctx3, {
       tooltip: {
         enabled: false,
         external: externalTooltipHandler,
-        callbacks:{
-          title: function() {
+        callbacks: {
+          title: function () {
             return '';
           },
         },
@@ -760,8 +760,8 @@ let myChart4 = new Chart(ctx4, {
       tooltip: {
         enabled: false,
         external: externalTooltipHandler,
-        callbacks:{
-          title: function() {
+        callbacks: {
+          title: function () {
             return '';
           },
         },
@@ -822,8 +822,8 @@ let myChart5 = new Chart(ctx5, {
       tooltip: {
         enabled: false,
         external: externalTooltipHandler,
-        callbacks:{
-          title: function() {
+        callbacks: {
+          title: function () {
             return '';
           },
         },

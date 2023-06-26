@@ -184,5 +184,110 @@
     background: $grad1;
     padding: 10px 0;
     width: 186px;
+    margin-top: 8px;
   }
+}
+
+.settings .settings__tabs-btn:nth-child(1) {
+  a {
+    color: $blue;
+  }
+
+  .icon {
+    fill: $blue;
+  }
+}
+
+.settings-language .settings__tabs-btn:nth-child(2) {
+  a {
+    color: $blue;
+  }
+
+  .icon {
+    fill: $blue;
+  }
+}
+
+.settings-security .settings__tabs-btn:nth-child(3) {
+  a {
+    color: $blue;
+  }
+
+  .icon {
+    fill: $blue;
+  }
+}
+
+.checkbox,
+.checkbox::before,
+.checkbox::after {
+  box-sizing: border-box;
+}
+
+.checkbox *,
+.checkbox *::before,
+.checkbox *::after {
+  box-sizing: border-box;
+}
+
+.checkbox.style-c {
+  display: inline-block;
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox.style-c input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-c input:checked~.checkbox__checkmark {
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.checkbox.style-c input:checked~.checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.style-c:hover input~.checkbox__checkmark {
+  background-color: transparent;
+}
+
+.checkbox.style-c:hover input:checked~.checkbox__checkmark {
+  background-color: $blue;
+}
+
+.checkbox.style-c .checkbox__checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+  border-radius: 4px;
+  border: 1px solid $gray;
+}
+
+.checkbox.style-c .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 12px;
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }

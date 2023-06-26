@@ -18,6 +18,18 @@
     overflow: hidden;
   }
 
+  &__item-after::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: -40px;
+    z-index: 1;
+    background-image: url(../images/apple-full.svg);
+    width: 116px;
+    height: 147px;
+    transform: rotate(-30deg);
+  }
+
   &__info-title {
     margin-bottom: 24px;
   }
@@ -99,6 +111,8 @@
 
   &__item-button {
     width: 256px;
+    position: relative;
+    z-index: 2;
   }
 
   &__video {
