@@ -340,6 +340,10 @@
     }
   }
 }
+.chartBox canvas{
+  width: 100% !important;
+  height: 100% !important;
+}
 .tooltipDesign{
   background: $grad1;
   border-radius: 10px;
