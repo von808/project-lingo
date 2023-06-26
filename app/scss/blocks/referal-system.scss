@@ -38,6 +38,8 @@
 
     p {
       line-height: 117.38%;
+      display: flex;
+      gap: 10px;
     }
   }
 
@@ -81,10 +83,11 @@
     &::after {
       content: '';
       position: absolute;
-      right: 63px;
-      transform: rotate(30deg);
-      bottom: -68px;
-      background-image: url(../images/apple-bg-opacity-1.svg);
+      right: 300px;
+      top: -60px;
+      z-index: 1;
+      transform: rotate(180deg) scale(-1, 1);
+      background-image: url(../images/apple-full.svg);
       background-repeat: no-repeat;
       width: 116px;
       height: 147px;
@@ -100,13 +103,28 @@
     color: $blue;
     background-color: $bg;
     border-radius: 10px;
-    max-width: 567px;
+    // max-width: 567px;
     width: 100%;
     height: 61px;
   }
 
+  &__btn {
+    width: 111px;
+    height: 61px;
+    color: $white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: $grad2;
+  }
+
   &__title {
     margin-bottom: 64px;
+    position: relative;
+    z-index: 2;
   }
 
   &__steps {

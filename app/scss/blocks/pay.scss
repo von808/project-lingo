@@ -69,9 +69,9 @@
     text-align: center;
     color: $white;
 
+    width: 280px;
     height: 132px;
     border-radius: 20px;
-    padding: 0 8%;
     margin-bottom: 25px;
   }
 
@@ -197,5 +197,27 @@
       height: 88.65px;
       transform: rotate(-30deg);
     }
+  }
+}
+
+.pay-group,
+.pay-talk {
+
+  .pay__item-price {
+    margin-bottom: 24px;
+  }
+
+  .pay__item-text {
+    text-align: left;
+    padding: 0;
+  }
+
+  .pay__item-text p {
+    display: flex;
+    align-items: center;
+  }
+
+  .pay__item-text p:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
