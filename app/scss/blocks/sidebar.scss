@@ -25,6 +25,19 @@
   border-radius: 20px;
   border: 0px solid orange;
 }
+.menu__box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menu__box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu__box::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 20px;
+  border: 0px solid orange;
+}
 
 .logo {
   display: block;

@@ -248,6 +248,16 @@
     display: none;
   }
 
+  .menu__box .nav__menu-item--link:hover{
+    background: $bg;
+    svg{
+      fill: $blue;
+    }
+    h2{
+      color: $blue;
+    }
+  }
+
   .header {
     display: flex;
   }
