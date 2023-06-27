@@ -75,7 +75,6 @@
 
 .nav {
   &__menu-item {
-    overflow: hidden;
 
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -146,4 +145,8 @@
   .nav__menu-item--link {
     color: $blue;
   }
+}
+
+.menu__box .nav__menu-item {
+  overflow: hidden;
 }

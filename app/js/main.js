@@ -406,7 +406,8 @@ let xScaleConfig = {
     color: '$black',
     font: {
       family: "'Raleway', sans-serif",
-      size: 21,
+      size: 18,
+      weight: 300,
     }
   },
 };
@@ -426,6 +427,7 @@ let yScaleConfig = {
     font: {
       family: "'Rawline', sans-serif",
       size: 21,
+      weight: 300,
     },
 
   },

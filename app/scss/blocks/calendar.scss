@@ -8,6 +8,7 @@
 
   &__tabs-item {
     overflow-x: scroll;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -70,6 +71,7 @@
   }
 
   &__day {
+    max-width: 196px;
     min-width: 196px;
     min-height: 278px;
     height: fit-content;
@@ -124,7 +126,8 @@
       }
     }
   }
-  &__item-time{
+
+  &__item-time {
     color: $black;
   }
 
