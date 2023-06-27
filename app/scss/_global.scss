@@ -8,6 +8,10 @@ body {
   font-family: $rawline;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -236,8 +240,8 @@ body::-webkit-scrollbar-thumb {
   border: 0px solid orange;
 }
 
-.feadback__circle-new{
-  .dropdown__button img{
+.feadback__circle-new {
+  .dropdown__button img {
     pointer-events: none;
     width: 56px;
     position: absolute;
@@ -245,6 +249,7 @@ body::-webkit-scrollbar-thumb {
     left: 85%;
     transform: translate(-85%, -50%);
   }
+
   .dropdown__button {
     position: relative;
     display: block;
@@ -256,14 +261,14 @@ body::-webkit-scrollbar-thumb {
     color: $blue;
     border-radius: 50%;
     z-index: 1002;
-    padding-top:0;
-    padding-bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
     cursor: pointer;
   }
-  
-  .feadback__apple{
+
+  .feadback__apple {
     position: relative;
   }
 
@@ -274,7 +279,7 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     pointer-events: none;
   }
-  
+
   .dropdown__button .feadback__apple-score {
     content: "5";
     position: absolute;
@@ -288,11 +293,11 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     pointer-events: none;
   }
-  
-  .dropdown__list .feadback__apple-score{
+
+  .dropdown__list .feadback__apple-score {
     display: none;
   }
-  
+
   .dropdown__list {
     display: none;
     align-items: center;
@@ -312,11 +317,11 @@ body::-webkit-scrollbar-thumb {
     width: 170px;
     height: 26px;
   }
-  
+
   .dropdown__list--visible {
     display: flex;
   }
-  
+
   .dropdown__list-item {
     padding: 0;
     cursor: pointer;
@@ -324,15 +329,15 @@ body::-webkit-scrollbar-thumb {
     height: 26px;
   }
 
-  .dropdown__list-item img{
+  .dropdown__list-item img {
     width: 26px;
     height: 26px;
   }
-  
+
   .dropdown__list-item:not(:last-child) {
     margin-bottom: 0px;
   }
-  
+
   .dropdown__input-hidden {
     display: none;
   }
@@ -342,9 +347,10 @@ body::-webkit-scrollbar-thumb {
 .homework .feadback__circle-new .dropdown__list {
   height: 26px;
 }
+
 .homework__item.items__view-item--table,
-.lessons__item.items__view-item--table{
-  .feadback__circle-new .dropdown__list{
+.lessons__item.items__view-item--table {
+  .feadback__circle-new .dropdown__list {
     display: none;
     flex-direction: column-reverse;
     align-items: center;
@@ -363,7 +369,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     width: 26px;
     height: 150px;
-  
+
   }
 }
 

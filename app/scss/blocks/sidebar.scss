@@ -25,6 +25,7 @@
   border-radius: 20px;
   border: 0px solid orange;
 }
+
 .menu__box::-webkit-scrollbar {
   width: 5px;
 }
@@ -74,6 +75,8 @@
 
 .nav {
   &__menu-item {
+    overflow: hidden;
+
     &:not(:last-child) {
       margin-bottom: 24px;
     }

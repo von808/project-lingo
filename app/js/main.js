@@ -168,13 +168,13 @@ $(function () {
 $(function () {
   let menuWrapper = $("#menu__wrapper");
   let menuToggle = $("#menu__toggle");
-  const body = document.body;
+  let bodyBlock = $("#body");
 
   menuToggle.on("click", function (event) {
     event.preventDefault();
     menuToggle.toggleClass("active");
     menuWrapper.toggleClass("show");
-    body.toggleClass('no-scroll');
+    bodyBlock.toggleClass("no-scroll");
   });
 
 });
