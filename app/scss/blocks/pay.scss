@@ -1,5 +1,9 @@
 .pay {
 
+  &__inner {
+    padding: 0 0 38px 0;
+  }
+
   &__installation {
     display: flex;
     gap: 20px;
@@ -217,16 +221,4 @@
   .pay__item-text p:not(:last-child) {
     margin-bottom: 8px;
   }
-}
-
-.pay__inner {
-  padding: 0 0 38px 0;
-  scale: 0.6;
-  margin: -17% -32% 1% -32%;
-}
-.pay__lessons .pay__inner{
-  margin: -15% -32% 1% -32%;
-}
-.pay-talk .pay__inner{
-  margin: -14% -32% 1% -32%;
 }
