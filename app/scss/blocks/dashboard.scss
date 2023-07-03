@@ -39,7 +39,7 @@
   background: $grad2;
   margin-bottom: 20px;
   color: $white;
-  padding: 47px 90px 34px 24px;
+  padding: 47px 130px 34px 24px;
   position: relative;
   overflow: hidden;
   &__subtitle{
@@ -229,7 +229,7 @@
   }
   &__tabs-item{
     display: none;
-    max-width: 669px;
+    // max-width: 669px;
     width: 100%;
     // height: 278px;
     height: auto;

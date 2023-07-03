@@ -426,10 +426,9 @@ let yScaleConfig = {
     color: '$black',
     font: {
       family: "'Rawline', sans-serif",
-      size: 21,
+      size: 22,
       weight: 300,
     },
-
   },
 };
 
