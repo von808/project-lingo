@@ -431,6 +431,96 @@ let yScaleConfig = {
     },
   },
 };
+if( window.innerWidth <= 500 ){
+  xScaleConfig = {
+    color: '$black',
+    border: {
+      color: 'rgba(236, 241, 250, 1)'
+    },
+    grid: {
+      color: 'rgba(236, 241, 250, 0)',
+    },
+    ticks: {
+      color: '$black',
+      font: {
+        family: "'Raleway', sans-serif",
+        size: 15,
+        weight: 300,
+      }
+    },
+  };
+  yScaleConfig = {
+    color: '$black',
+    min: 0,
+    max: 8,
+    border: {
+      color: 'rgba(236, 241, 250, 0)',
+      dash: [8, 8],
+    },
+    grid: {
+      color: 'rgba(236, 241, 250, 1)',
+    },
+    ticks: {
+      color: '$black',
+      font: {
+        family: "'Rawline', sans-serif",
+        size: 15,
+        weight: 300,
+      },
+    },
+  };
+}
+// Chart.defaults.font.size = 11;
+
+// if( window.innerWidth >= 600 ){
+//   // Chart.defaults.font.size = 11;
+//   let yScaleConfig = {
+//     color: '$black',
+//     min: 0,
+//     max: 8,
+//     border: {
+//       color: 'rgba(236, 241, 250, 0)',
+//       dash: [8, 8],
+//     },
+//     grid: {
+//       color: 'rgba(236, 241, 250, 1)',
+//     },
+//     ticks: {
+//       color: '$black',
+//       font: {
+//         family: "'Rawline', sans-serif",
+//         size: 11,
+//         weight: 300,
+//       },
+//     },
+//   };
+// }
+
+// window.onload = () => {
+//   if (document.documentElement.clientWidth < 500) {
+
+//     let yScaleConfig = {
+//       color: '$black',
+//       min: 0,
+//       max: 8,
+//       border: {
+//         color: 'rgba(236, 241, 250, 0)',
+//         dash: [8, 8],
+//       },
+//       grid: {
+//         color: 'rgba(236, 241, 250, 1)',
+//       },
+//       ticks: {
+//         color: '$black',
+//         font: {
+//           family: "'Rawline', sans-serif",
+//           size: 11,
+//           weight: 300,
+//         },
+//       },
+//     };
+//   }
+// }
 
 const getOrCreateTooltip = (chart) => {
   let tooltipEL = chart.canvas.parentNode.querySelector('div');
