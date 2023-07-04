@@ -978,8 +978,10 @@
   }
 
   .dashboard__inner {
-    grid-template-columns: 1fr;
-    grid-template-rows: 160px 357px 357px 297px 684px 477px;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 160px 357px 357px 297px 684px 477px;
+    display: flex;
+    flex-direction: column;
   }
 
   .dashboard__columns--1 {
@@ -997,9 +999,9 @@
     height: 357px;
   }
 
-  .lesson {
-    margin-top: 400px;
-  }
+  // .lesson {
+  //   margin-top: 400px;
+  // }
 
   .homeworks {
     height: 357px;
@@ -1560,5 +1562,8 @@
   .lessons__item.items__view-item--table .lessons__skills-item--4,
   .lessons__skills-item--4{
     grid-column: 3/4;
+  }
+  .referal{
+    padding: 47px 120px 34px 15px;
   }
 }
