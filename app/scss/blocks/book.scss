@@ -48,14 +48,13 @@
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 20px;
   }
 
   &__item {
-    max-width: 484px;
     width: 100%;
     background: $white;
     border-radius: 20px;
@@ -76,6 +75,7 @@
   &__info {
     display: block;
     margin-left: 32px;
+    width: 100%;
   }
 
   &__item-title {
@@ -116,6 +116,7 @@
 
   .dropdown__button {
     height: 58px;
+    width: 131px;
   }
 
   .dropdown__list {
