@@ -63,11 +63,19 @@
     overflow-x: auto;
 
     &::-webkit-scrollbar {
-      width: 0;
+      height: 5px;
     }
-
-    ;
-    margin-right: -45px;
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue;
+      border-radius: 20px;
+      border: 0px solid orange;
+    }
+    // margin-right: -45px;
   }
 
   &__day {
