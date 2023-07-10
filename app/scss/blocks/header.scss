@@ -15,9 +15,9 @@
     z-index: 1001;
   }
 
-  .logo img{
+  .logo img {
     object-fit: cover;
-    width: 282px;
+    max-width: 282px;
     height: 60px;
   }
 
@@ -86,7 +86,7 @@
     align-items: center;
     gap: 6px;
 
-    &:active svg  {
+    &:active svg {
       fill: $blue;
     }
   }
@@ -135,6 +135,7 @@
     visibility: visible;
     left: -2px;
     overflow: scroll;
+
     &::-webkit-scrollbar {
       display: none;
     }

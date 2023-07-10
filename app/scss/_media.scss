@@ -72,8 +72,8 @@
   }
 
   .profile__block:first-child .profile__item {
-    min-width: 320px;
-    width: 320px;
+    // min-width: 320px;
+    // width: 320px;
   }
 
   .lessons__item {
@@ -89,7 +89,8 @@
   }
 
   .sidebar__inner {
-    padding: 28px 32px 28px 37px;
+    padding: 22px 42px 15px 42px;
+    height: 100vh;
   }
 
   .logo {
@@ -116,6 +117,10 @@
     .nav__menu-item--link h2 {
       display: none;
     }
+  }
+
+  .nav__menu+.nav__menu .nav__menu-item {
+    margin-bottom: 0;
   }
 
   .dashboard__inner {
@@ -323,6 +328,7 @@
 
   .preset-tabs .tabs {
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 
   .preset-tabs .tabs-btn:nth-child(1),
@@ -392,10 +398,7 @@
     justify-content: space-between;
     padding: 32px;
   }
-}
 
-
-@media (max-width:1400px) {
   .profile__content {
     flex-direction: column;
   }
@@ -405,7 +408,7 @@
     min-width: unset;
   }
 
-  .profile__item-avatar {
+  .profile__item-avatars .profile__item-avatar {
     height: 100%;
   }
 
@@ -417,9 +420,26 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 33%;
+    width: 37%;
+    height: 29.5%;
   }
 
+  .profile__information-list {
+    display: block;
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .profile__information-list .profile__informaion-item {
+    margin-bottom: 16px;
+  }
+}
+
+
+@media (max-width:1400px) {
+  .profile__left-lessons {
+    width: 36%;
+  }
 }
 
 @media (max-width:1300px) {
@@ -489,7 +509,11 @@
   }
 
   .profile__item {
-    width: 100%;
+    // width: 100%;
+  }
+
+  .profile__left-lessons {
+    width: 35.6%;
   }
 
   .level-scale__items {
@@ -577,6 +601,10 @@
   .welcome {
     height: 100%;
   }
+
+  .profile__left-lessons {
+    width: 38%;
+  }
 }
 
 @media (max-width:1200px) {
@@ -597,6 +625,10 @@
   .welcome__label {
     max-width: 314px;
     width: 100%;
+  }
+
+  .profile__left-lessons {
+    width: 36%;
   }
 }
 
@@ -852,6 +884,11 @@
     width: 100%;
   }
 
+  .profile__item-avatar {
+    max-width: 354px;
+    width: 100%;
+  }
+
   .profile__item:last-child .profile__information:first-child {
     width: 100%;
   }
@@ -860,7 +897,11 @@
     position: relative;
     top: 0;
     right: 0;
-    width: auto;
+    width: 100%;
+  }
+
+  .profile__information-list {
+    column-count: unset;
   }
 
   .referal-system__content {
@@ -911,6 +952,11 @@
   .pay .tabs-btn {
     min-width: fit-content;
     white-space: nowrap;
+  }
+
+  .profile__item-avatars {
+    max-width: 354px;
+    width: 100%;
   }
 }
 
@@ -1180,8 +1226,8 @@
   .preset-tabs .tabs-btn:nth-child(3),
   .preset-tabs .tabs-btn:nth-child(4),
   .preset-tabs .tabs-btn:nth-child(5) {
-    min-width: 400px;
-    width: 400px;
+    min-width: 300px;
+    width: 300px;
   }
 }
 
@@ -1440,6 +1486,10 @@
 
   .profile__block:first-child .profile__item {
     margin: 0 auto;
+  }
+
+  .profile__item-avatar {
+    max-width: unset;
   }
 }
 
@@ -1708,7 +1758,7 @@
   }
 
   .header .logo img {
-    width: 228px;
+    max-width: 228px;
     height: 49px;
   }
 
