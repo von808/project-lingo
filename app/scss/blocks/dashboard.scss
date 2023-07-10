@@ -340,9 +340,16 @@
     }
   }
 }
+.chartBox {
+  width: auto !important;
+  height: auto !important;
+  margin: auto !important;
+
+}
 .chartBox canvas{
   width: 100% !important;
-  height: 100% !important;
+  // height: 100% !important;
+  margin: 0 auto !important;
 }
 .tooltipDesign{
   background: $grad1;
