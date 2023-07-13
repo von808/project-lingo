@@ -757,18 +757,7 @@ let myChart4 = new Chart(ctx4, {
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
-      label: 'Книги',
-      data: [4, 5, 4, 6, 1, 3, 1],
-      fill: true,
-      backgroundColor: [
-        'rgba(90, 127, 238, 0.5)'
-      ],
-      borderColor: [
-        '#5728DB',
-      ],
-      pointBorderColor: [
-        '#5728DB',
-      ],
+
     },
     {
       label: 'Клуб',
@@ -819,21 +808,9 @@ let myChart5 = new Chart(ctx5, {
   data: {
     labels: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
     datasets: [{
-      label: 'Книги',
-      data: [4, 3, 1, 2, 3, 1, 6],
-      fill: true,
-      backgroundColor: [
-        'rgba(90, 127, 238, 0.5)'
-      ],
-      borderColor: [
-        '#5728DB',
-      ],
-      pointBorderColor: [
-        '#5728DB',
-      ],
     },
     {
-      label: 'Статьи',
+      label: 'Слова',
       data: [6, 7, 4, 6, 1, 4, 1],
       fill: true,
       backgroundColor: [
