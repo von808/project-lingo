@@ -218,3 +218,134 @@
     margin-bottom: 8px;
   }
 }
+
+.pay-payments {
+
+  .pay__installation {
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    border-radius: 10px;
+    background-color: $white;
+    padding: 16px;
+    color: $blue;
+    width: 316px;
+
+    &::-webkit-calendar-picker-indicator {
+      color: transparent;
+      opacity: 1;
+      background: url(../images/calendar.svg) no-repeat center;
+      background-size: contain;
+    }
+
+    &::placeholder {
+      color: $blue;
+    }
+  }
+
+  &__search {
+    max-width: 58px;
+    width: 100%;
+    height: 58px;
+    background-color: $blue;
+    background-image: url(../images/pay-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+  }
+
+  table:not(:first-child) tr:first-child {
+    display: none;
+  }
+
+  tr {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 4px 24px;
+  }
+
+  tr:first-child {
+    margin-bottom: 27px;
+    padding: 0 24px;
+  }
+
+  tr:not(:first-child) {
+    border-radius: 10px;
+    background-color: $white;
+    margin-top: 10px;
+  }
+
+  tr th,
+  tr td {
+    max-width: 200px;
+    width: 100%;
+    font-weight: inherit;
+    // white-space: nowrap;
+  }
+
+  tr td {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  tr th:nth-child(2),
+  tr td:nth-child(2) {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  td p {
+    display: none;
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    height: 42px;
+  }
+
+  .pagination__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .pagination__chevrons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pagination__link {
+    display: block;
+    color: $blue;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: transparent;
+    }
+  }
+
+  .pagination__link.active {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    color: $white;
+  }
+}

@@ -433,6 +433,17 @@
   .profile__information-list .profile__informaion-item {
     margin-bottom: 16px;
   }
+
+  .pay-payments {
+    .tabs {
+      flex-wrap: wrap;
+    }
+
+    .tabs-btn {
+      max-width: unset;
+      width: calc(50% - 10px);
+    }
+  }
 }
 
 
@@ -958,6 +969,13 @@
     max-width: 354px;
     width: 100%;
   }
+
+  .pay-payments {
+    .tabs-btn {
+      min-width: 200px;
+      white-space: unset;
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -1228,6 +1246,56 @@
   .preset-tabs .tabs-btn:nth-child(5) {
     min-width: 300px;
     width: 300px;
+  }
+
+  .pay-payments .pay__installation {
+    display: flex;
+  }
+
+  .pay-payments td p {
+    display: block;
+    width: min-content;
+  }
+
+  .pay-payments td:nth-child(2) p,
+  .pay-payments td:nth-child(5) p {
+    width: auto;
+  }
+
+  .pay-payments tr {
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .pay-payments tr:first-child {
+    display: none;
+  }
+
+  .pay-payments tr td,
+  .pay-payments tr th:nth-child(2),
+  .pay-payments tr td:nth-child(2) {
+    max-width: unset;
+    width: calc(33% - 16px);
+  }
+
+  .pay-payments tr td:nth-child(1),
+  .pay-payments tr td:nth-child(4) {
+    max-width: 195px;
+  }
+
+  .pay-payments tr:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .pay-payments tr:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .pay-payments__input {
+    max-width: 316px;
+    width: 100%;
   }
 }
 
@@ -1760,7 +1828,9 @@
 
   .header .logo img {
     max-width: 228px;
-    height: 49px;
+    width: 100%;
+    height: auto;
+    min-height: 43px;
   }
 
   .header .menu__btn {
@@ -1769,6 +1839,44 @@
     right: 0px;
     width: 59px;
     height: 59px;
+  }
+
+  .pay-payments .tabs {
+    flex-wrap: nowrap;
+  }
+
+  .pay-payments .tabs-btn {
+    min-width: fit-content;
+  }
+
+  .pay-payments .pay__installation {
+    flex-direction: column;
+  }
+
+  .pay-payments__input,
+  .pay-payments__search {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .pay-payments tr td,
+  .pay-payments tr th:nth-child(2),
+  .pay-payments tr td:nth-child(2) {
+    width: 100%;
+  }
+
+  .pay-payments tr td:nth-child(4),
+  .pay-payments tr td:nth-child(5) {
+    width: 45%;
+    padding-right: 20%;
+  }
+
+  .pay-payments td p {
+    width: 100%;
+  }
+
+  .pay-payments .pagination {
+    justify-content: center;
   }
 }
 
