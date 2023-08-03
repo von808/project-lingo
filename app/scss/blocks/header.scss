@@ -16,7 +16,7 @@
   }
 
   .logo img {
-    object-fit: cover;
+    object-fit: contain;
     max-width: 282px;
     height: 60px;
   }
@@ -259,8 +259,6 @@ body.no-scroll {
   align-content: flex-start;
   justify-content: center;
   gap: 9px;
-  // position: fixed;
-  // top: 0;
   z-index: 1001;
 
   width: 50%;

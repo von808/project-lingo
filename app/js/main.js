@@ -106,53 +106,6 @@ $(function () {
   });
 });
 
-// $(function () {
-//   var grafik = mixitup('.grafik__tabs-items', {
-//     animation: {
-//       duration: 700,
-//       effects: 'fade scale(0.41)',
-//       easing: 'ease-in-out',
-//     },
-//     load: {
-//       filter: '.grafik-1',
-//     }
-//   });
-// })
-
-
-// $(function () {
-//   $('.club__content').slick({
-//     pagination: false,
-//     arrows: false,
-//     infinite: true,
-//     slidesToShow: 4,
-//     slidesToScroll: 4,
-//     responsive: [
-//       {
-//         breakpoint: 1600,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//         }
-//       },
-//       {
-//         breakpoint: 1000,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2
-//         }
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
-//     ]
-//   });
-// })
-
 $(function () {
   let listenBlock = $("#listenBlock");
   let listenToggle = $("#listenToggle");
@@ -431,7 +384,7 @@ let yScaleConfig = {
     },
   },
 };
-if( window.innerWidth <= 500 ){
+if (window.innerWidth <= 500) {
   xScaleConfig = {
     color: '$black',
     border: {
