@@ -1,1 +1,1 @@
-# Lingolands: https://von808.github.io/Lingolands
+# Lingolands: https://von808.github.io/project-lingo/
